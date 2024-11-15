@@ -1,0 +1,75 @@
+SOP for Creating a Gradient Border Card with Text Overflow, Badge, and Background Image
+
+Objective: To design a card with a gradient border, a background image, a verified badge, and a text section that slightly exceeds the card width for a modern, eye-catching look.
+
+1. Main Card Structure
+
+	•	Shape and Dimensions:
+	•	Set the card to a portrait-oriented rectangle with rounded corners (radius: 10-15px).
+	•	Dimensions: Width around 300px and height around 400px, adjustable based on content.
+	•	Border Styling:
+	•	Apply a linear gradient border around the card to create a modern effect.
+	•	Gradient Colors: Use a combination of blues and purples (e.g., #00AEEF to #9B51E0).
+	•	Border Thickness: 2-3px for a subtle yet visible effect.
+	•	Background Color:
+	•	Use a dark overlay (e.g., #000000 at 20-30% opacity) on top of the background image to increase text readability.
+
+2. Background Image Placement
+
+	•	Image Settings:
+	•	Place the background image inside the card, covering the entire card area.
+	•	Set the image with a full cover fit, so it scales proportionally to fill the card without distortion.
+	•	Apply a subtle gradient overlay (e.g., dark to transparent) on the image for depth and enhanced text visibility.
+
+3. Verified Badge
+
+	•	Badge Placement:
+	•	Position a verified badge at the top center of the card, slightly overlapping the border.
+	•	Shape: Use a circular or star-shaped icon with a small border (1-2px) matching the card’s gradient color.
+	•	Badge Color:
+	•	Use a bright, eye-catching color (e.g., #00AEEF) to stand out against the background.
+	•	Badge Icon:
+	•	Place a small verified checkmark or star icon inside the badge to indicate verification.
+
+4. Text Styling and Overflow Effect
+
+	•	Heading Text:
+	•	Place the heading text at the bottom of the card. Use a bold font with a slight shadow to make it stand out against the background.
+	•	Font Size: 20-24px, depending on card size.
+	•	Text Color: White or a light gray for contrast.
+	•	Overflow Effect:
+	•	Allow the text box containing the heading to slightly exceed the card’s width on the left and right sides, creating a dynamic effect.
+	•	Text Shadow: Apply a subtle shadow (e.g., black at 15% opacity) to enhance readability.
+	•	Subheading Text:
+	•	Place a smaller line of text just below the heading, using a font size of 16-18px.
+	•	Align the subheading slightly to the left or right to add visual interest.
+	•	Font Color: White or slightly dimmed gray.
+
+5. Action Button (Optional)
+
+	•	Button Placement:
+	•	Center-align a call-to-action button (e.g., “Take Action Now”) just below the card if necessary.
+	•	Button Style: Use a rounded button with the same gradient as the card’s border for consistency.
+	•	Text Color: White, bold, with a slight shadow for visibility.
+
+6. Final Touches and Effects
+
+	•	Shadow on Card:
+	•	Add a subtle shadow around the card to make it appear elevated:
+	•	Color: #000000 at 15% opacity
+	•	Blur: 20px, Offset: 0px X-axis, 5px Y-axis.
+	•	Glow Effect on Border:
+	•	Apply a slight glow or inner shadow on the gradient border for a soft, 3D effect.
+	•	Alignment:
+	•	Ensure all elements (badge, text, image) are centered and balanced within the card for a clean and professional look.
+
+7. Consistency Check
+
+	•	Contrast and Readability:
+	•	Verify that the text is readable against the background image and that the gradient border contrasts well with the image.
+	•	Responsive Design:
+	•	Test the card design on mobile and desktop views to ensure it scales well and maintains visual appeal.
+	•	Final Review:
+	•	Make sure the text overflow effect, badge positioning, and gradient border look balanced and cohesive.
+
+Use this SOP as a prompt for your AI website builder to replicate this style. Adjust dimensions and colors as needed based on your brand and platform requirements.

@@ -1,0 +1,76 @@
+SOP for Styling a Professional Card with Elevated Portrait Image
+
+Objective: To create a professional and visually appealing card design with a portrait image on the left, extending above the main rectangle container. The container has a linear gradient blue border for added emphasis.
+
+1. Main Container Styling
+
+	•	Shape and Size:
+	•	Set the main container as a landscape rectangle with a width of 300-400px and a height of 150-200px.
+	•	Rounded Corners: Apply a border radius of 10-15px to give a modern, soft edge.
+	•	Border:
+	•	Use a linear gradient blue for the border to add a polished effect.
+	•	Gradient Colors: Start from a lighter blue (e.g., #00AEEF) to a darker blue (e.g., #0066CC).
+	•	Border Thickness: 2-4px to make the card’s edge stand out without overwhelming the design.
+	•	Background Color:
+	•	Set a light or white background within the main container to enhance readability and contrast with the gradient border.
+
+2. Image Styling
+
+	•	Image Placement:
+	•	Place a portrait-style image on the left side of the card, partially overlapping the main container.
+	•	Image Size: Set the image to a width of approximately 100px and a height of 200-250px, so it extends above and below the container height.
+	•	Image Border Radius:
+	•	Apply a subtle border radius (5-8px) to the image for a soft, modern look.
+	•	Shadow on Image:
+	•	Add a subtle shadow effect to create depth:
+	•	Shadow Color: #000000 at 15% opacity
+	•	Blur: 10-15px
+	•	Offset: 0px X-axis, 5px Y-axis.
+	•	Ensure the shadow is only applied to the image, enhancing its floating effect over the main container.
+
+3. Content Section Styling (Within Main Container)
+
+	•	Padding and Spacing:
+	•	Add 15-20px padding inside the main container for comfortable spacing between the image and text.
+	•	Leave additional padding on the right side for balance.
+	•	Heading Text:
+	•	Place the heading at the top of the content section, using a bold, gradient blue text to match the border.
+	•	Font Size: 18-22px for readability, with a weight that complements the container’s overall design.
+	•	Description Text:
+	•	Add a brief description below the heading in dark gray or black.
+	•	Font Size: 14-16px, regular weight for readability, and limit text to 2-4 lines.
+	•	Value Tag (Optional):
+	•	Place a rounded rectangle “Value” tag at the top-right corner of the container for emphasis.
+	•	Background Color: Solid gradient blue matching the border color.
+	•	Font: Bold, white text (Font Size: 12-14px) with a label like “VALUE 600JT+ PER YEAR”.
+
+4. Action Button Styling (Optional)
+
+	•	Button Placement:
+	•	Place a CTA button (e.g., “Learn More”) at the bottom of the content section within the container.
+	•	Button Style:
+	•	Background Color: Gradient blue matching the border for consistency.
+	•	Text Color: White, bold text (Font Size: 14-16px).
+	•	Rounded Corners: Border radius of 5-10px to maintain the card’s soft, modern aesthetic.
+	•	Padding: 8-12px to ensure a clickable, comfortable button size.
+
+5. Shadow and Depth Effects
+
+	•	Container Shadow:
+	•	Add a soft shadow to the main container to create a floating effect:
+	•	Shadow Color: #000000 at 10-15% opacity
+	•	Blur: 20-30px, Offset: 0px X-axis, 5px Y-axis.
+	•	Highlight on Border:
+	•	Apply a subtle inner shadow or glow on the gradient border to give it a slight 3D effect.
+	•	Use a light blue overlay (e.g., #00AEEF at 15% opacity) around the border.
+
+6. Final Alignment and Consistency
+
+	•	Alignment:
+	•	Ensure that all elements within the card (image, text, and button) are properly aligned and evenly spaced for a balanced appearance.
+	•	Contrast and Readability Check:
+	•	Check that text is legible against the background and that all gradient elements have sufficient contrast.
+	•	Final Review:
+	•	Ensure that the image overlap, gradient borders, and shadow effects maintain a professional and clean look across different screens and resolutions.
+
+By following these styling steps, you will achieve a card design with a portrait image extending above a gradient-bordered rectangle container, ensuring a visually professional and engaging appearance. Adjust the specifics based on brand guidelines or platform requirements.

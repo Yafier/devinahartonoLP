@@ -14,8 +14,8 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Hero />
       <Transformation />
-      <Included />
       <CaseStudies />
+      <Included />
       <Benefits />
       <HowItWorks />
       <SocialProof />
