@@ -3,7 +3,6 @@ import Transformation from '@/components/transformation'
 import Included from '@/components/included'
 import CaseStudies from '@/components/case-studies'
 import Benefits from '@/components/benefits'
-import HowItWorks from '@/components/how-it-works'
 import SocialProof from '@/components/social-proof'
 import FAQ from '@/components/faq'
 import CTA from '@/components/cta'
@@ -17,7 +16,6 @@ export default function Home() {
       <CaseStudies />
       <Included />
       <Benefits />
-      <HowItWorks />
       <SocialProof />
       <FAQ />
       <CTA />

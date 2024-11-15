@@ -43,7 +43,7 @@ export default function HowItWorks() {
           <p className="text-lg text-orange-100/70 max-w-2xl mx-auto leading-relaxed">
             Proses yang simple dan terstruktur untuk memulai karir barumu!
             <span className="block mt-2 text-orange-200/60 text-base">
-              Simple and structured process to start your new career!
+              Simple and structured process to start your  career!
             </span>
           </p>
         </div>
