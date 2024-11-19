@@ -42,7 +42,7 @@ export default function CaseStudies() {
       <div className="container mx-auto px-4 relative">
         {/* Header */}
         <div className="text-center mb-8 md:mb-12">
-          <p className="text-xs md:text-sm text-orange-400 px-3 py-1.5 rounded-full border border-orange-800 bg-orange-950/30 backdrop-blur-sm inline-block mb-3">
+          <p className="text-xs md:text-sm text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
             Real Success Stories
           </p>
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
