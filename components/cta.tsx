@@ -23,7 +23,7 @@ export default function CTA() {
               di Dunia ini Ada 2 Tipe Orang
             </h2>
             <p className="text-sm md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Pilihan ada di tangan kamu. The choice is in your hands.
+              Pilihan ada di tangan kamu!
             </p>
           </div>
 
