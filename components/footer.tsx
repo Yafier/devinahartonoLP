@@ -13,7 +13,7 @@ export default function Footer() {
           <Link href="/" className="flex items-center space-x-2 group">
             <CircleDot className="h-8 w-8 transition-transform group-hover:rotate-90 duration-500 text-orange-400" />
             <span className="text-xl font-medium bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-              Devina Hartono Team
+              Test
             </span>
           </Link>
         </div>

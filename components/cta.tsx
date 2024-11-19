@@ -20,10 +20,10 @@ export default function CTA() {
               Make Your Choice
             </p>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-6">
-              di Dunia ini Ada 2 Tipe Orang
+              di Dunia ini Ada 2 Tipe 
             </h2>
             <p className="text-sm md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Pilihan ada di tangan kamu. The choice is in your hands.
+              Pilihan ada di tangan kamu!
             </p>
           </div>
 
