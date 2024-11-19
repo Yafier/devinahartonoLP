@@ -10,48 +10,43 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 const cases = [
   {
     name: "Michael Wijaya",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
+    image: "/galaxy.mp4",
     income: "Rp 150.000.000+",
     yearsJoined: 2,
     position: "Senior Insurance Advisor",
     story: "Dulu aku cuma karyawan biasa dengan gaji UMR. Sekarang? Income aku naik 10x lipat dalam 2 tahun aja!",
-    englishStory: "From a minimum wage employee to a successful advisor.",
   },
   {
     name: "Jessica Tanadi",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop",
+    image: "/galaxy.mp4",
     income: "Rp 200.000.000+",
     yearsJoined: 3,
     position: "Regional Manager",
     story: "Sistem mentoring yang ada tuh bener-bener ngebantu banget! Dari yang gak tau apa-apa.",
-    englishStory: "The mentoring system truly helped me grow from zero.",
   },
   {
     name: "David Susanto",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop",
+    image: "/galaxy.mp4",
     income: "Rp 180.000.000+",
     yearsJoined: 2.5,
     position: "Elite Insurance Consultant",
     story: "Yang bikin betah? Tim yang supportive dan sharing knowledge tanpa ditutup-tutupi.",
-    englishStory: "What keeps me here? The supportive team and open knowledge sharing.",
   },
   {
     name: "Sarah Chen",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop",
+    image: "/galaxy.mp4",
     income: "Rp 170.000.000+",
     yearsJoined: 2,
     position: "Senior Advisor",
     story: "Sistem yang proven dan support yang luar biasa dari tim senior.",
-    englishStory: "Proven system and incredible support from senior team members.",
   },
   {
     name: "Kevin Zhang",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop",
+    image: "/galaxy.mp4",
     income: "Rp 190.000.000+",
     yearsJoined: 2.8,
     position: "Elite Consultant",
     story: "Transformasi karir yang luar biasa berkat guidance yang tepat.",
-    englishStory: "Amazing career transformation thanks to proper guidance.",
   }
 ];
 
@@ -112,12 +107,16 @@ export default function CaseStudies() {
               >
                 <div className="bg-black/90 backdrop-blur-sm border border-red-900/10 rounded-xl overflow-hidden">
                   <div className="relative h-[225px] md:h-[300px]">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      className="object-cover"
-                    />
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover"
+                    >
+                      <source src={item.image} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50" />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <IoPlayCircle className="text-white/80 text-5xl hover:text-white transition-colors" />
@@ -135,8 +134,7 @@ export default function CaseStudies() {
                       </div>
                       <p className="text-red-400 font-bold">{item.income}</p>
                     </div>
-                    <p className="text-sm text-gray-400 mb-2">"{item.story}"</p>
-                    <p className="text-xs text-gray-500">{item.englishStory}</p>
+                    <p className="text-sm text-gray-400">{item.story}</p>
                   </div>
                 </div>
               </motion.div>
