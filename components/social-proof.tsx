@@ -1,96 +1,137 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { SilverGradientDivider } from "./ui/silver-gradient-divider";
-import Marquee from "./ui/marquee";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const testimonials = [
   {
+    name: "Sarah Anderson",
+    role: "Senior Software Engineer",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2000&auto=format&fit=crop",
+    quote: "The development environment and tech stack here are cutting-edge. The team's commitment to clean code and best practices makes it a dream workplace for any engineer."
+  },
+  {
     name: "Michael Chen",
-    role: "Tech Lead & Senior Developer",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940",
+    role: "Technical Lead",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2000&auto=format&fit=crop",
+    quote: "What sets this team apart is the culture of continuous learning and innovation. We're constantly pushing boundaries and exploring new technologies."
   },
   {
     name: "Emily Rodriguez",
-    role: "Software Architect",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2940",
-  },
-  {
-    name: "David Park",
-    role: "DevOps Engineer",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2940",
-  },
-  {
-    name: "Sarah Johnson",
-    role: "Frontend Specialist",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940",
+    role: "DevOps Specialist",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2000&auto=format&fit=crop",
+    quote: "The infrastructure and automation pipelines we've built are state-of-the-art. It's incredible to work with a team that values efficiency and scalability."
   }
 ];
 
 export default function SocialProof() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
   return (
-    <section className="pt-16 pb-24 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
+    <section className="pt-8 md:pt-12 pb-16 md:pb-20 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
 
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16 relative z-10">
-          <p className="text-sm md:text-base text-orange-400 px-4 py-2 rounded-full border border-orange-800 bg-orange-950/30 backdrop-blur-sm inline-block mb-4">
-            Meet Our Expert Team
+        <div className="text-center mb-12 relative z-10">
+          <p className="text-xs md:text-sm text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
+            Team Insights
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Engineering Excellence
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
+            Voices of Excellence
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Driven by innovation and technical expertise
+          <p className="text-sm md:text-base text-gray-400 max-w-xl mx-auto leading-relaxed">
+            Hear from our team of passionate developers
           </p>
         </div>
 
-        {/* 3D Marquee Container */}
-        <div className="relative flex h-[400px] w-full items-center justify-center overflow-hidden">
-          <div className="flex flex-row gap-4 [perspective:1000px]">
-            <Marquee
-              className="justify-center overflow-hidden [--duration:40s] [--gap:2rem]"
-              pauseOnHover
-              style={{
-                transform: "translateX(0px) translateY(0px) translateZ(-50px) rotateX(0deg) rotateY(-20deg) rotateZ(0deg) scale(1.2)",
-              }}
-            >
-              {testimonials.map((profile, index) => (
-                <div key={index} className="relative w-[300px] h-[350px] rounded-xl overflow-hidden group">
-                  {/* Image Container */}
-                  <div className="relative h-full w-full">
-                    <Image
-                      src={profile.image}
-                      alt={profile.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/80" />
-                  </div>
+        {/* Magic Card Container */}
+        <div className="max-w-4xl mx-auto relative">
+          {/* Navigation Buttons */}
+          <button 
+            onClick={prevSlide}
+            className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-red-950/10 border border-red-900/10 backdrop-blur-sm hover:bg-red-900/20 transition-colors"
+          >
+            <ChevronLeft className="w-5 h-5 text-white" />
+          </button>
+          <button 
+            onClick={nextSlide}
+            className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-red-950/10 border border-red-900/10 backdrop-blur-sm hover:bg-red-900/20 transition-colors"
+          >
+            <ChevronRight className="w-5 h-5 text-white" />
+          </button>
 
-                  {/* Floating Text */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-center transform transition-transform duration-300 group-hover:-translate-y-2">
-                    <h3 className="text-xl font-bold text-white mb-2 drop-shadow-lg">
-                      {profile.name}
-                    </h3>
-                    <p className="text-gray-200 text-sm backdrop-blur-sm bg-black/30 px-3 py-1 rounded-full inline-block">
-                      {profile.role}
-                    </p>
-                  </div>
+          {/* Card */}
+          <div className="relative h-[280px] md:h-[320px]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="absolute inset-0"
+              >
+                <div className="bg-gradient-to-br from-black/60 via-zinc-900/30 to-black/60 rounded-xl overflow-hidden border border-red-900/10 backdrop-blur-sm shadow-xl">
+                  <div className="flex flex-col md:flex-row h-full">
+                    {/* Image Section */}
+                    <div className="relative w-full md:w-[280px] h-[140px] md:h-full">
+                      <Image
+                        src={testimonials[currentIndex].image}
+                        alt={testimonials[currentIndex].name}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 280px"
+                        priority
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/50 md:bg-gradient-to-l" />
+                    </div>
 
-                  {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-radial from-orange-500/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    {/* Content Section */}
+                    <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
+                      <p className="text-lg md:text-xl text-white font-light italic mb-6">
+                        "{testimonials[currentIndex].quote}"
+                      </p>
+                      <div>
+                        <h3 className="text-base font-semibold text-white">
+                          {testimonials[currentIndex].name}
+                        </h3>
+                        <p className="text-sm text-gray-400">
+                          {testimonials[currentIndex].role}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              ))}
-            </Marquee>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
-          {/* Gradient Overlays */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#0a0a0a] z-10"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#0a0a0a] z-10"></div>
+          {/* Navigation Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'bg-red-800 w-4' 
+                    : 'bg-gray-600 hover:bg-gray-500'
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
