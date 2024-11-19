@@ -9,11 +9,13 @@ import CTA from '@/components/cta'
 import CTA2 from '@/components/cta2'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
+import Problem from "@/components/problem";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <Hero />
+      <Problem />
       <Transformation />
       <CaseStudies />
       <Included />
