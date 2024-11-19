@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const partners = [
   {
     id: 1,
-    name: "Insurance Co",
+    name: "Richie",
     logo: "https://placehold.co/100x100/333/white?text=IC",
     text: "Leading Provider"
   },
