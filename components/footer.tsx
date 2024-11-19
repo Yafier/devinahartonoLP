@@ -5,11 +5,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-12 bg-gray-950 border-t border-orange-900/20">
+    <footer className="py-12 relative bg-black/80 border-t border-orange-900/20" style={{ backgroundColor: '#0a0a0a' }}>
       <div className="container mx-auto px-4">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900/30 to-gray-950" />
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-orange-900/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-orange-900/30 rounded-full blur-3xl translate-y-1/4" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
 
         <div className="flex justify-center relative">
           <Link href="/" className="flex items-center space-x-2 group">

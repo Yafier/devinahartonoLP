@@ -1,185 +1,93 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { MagicCard } from "./magic-card";
-import { BookOpen, Brain, Workflow } from "lucide-react";
-import { GradientSeparator } from "./ui/gradient-separator";
-import { motion } from "framer-motion";
-import { InfiniteMovingCards } from "./ui/moving-cards";
-
-const communityImages = [
-  {
-    quote: "Annual Team Gathering - Celebrating Success Together",
-    name: "Team Events",
-    title: "Building Strong Bonds",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070",
-  },
-  {
-    quote: "Award Ceremony - Recognizing Top Performers",
-    name: "Recognition",
-    title: "Rewarding Excellence",
-    image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070",
-  },
-  {
-    quote: "Training Session - Learning from the Best",
-    name: "Development",
-    title: "Continuous Growth",
-    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=2070",
-  },
-  {
-    quote: "Team Building - Creating Lasting Connections",
-    name: "Community",
-    title: "Strong Together",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070",
-  },
-  {
-    quote: "Company Trip - Exploring New Horizons",
-    name: "Rewards",
-    title: "Work Hard, Play Hard",
-    image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=2070",
-  },
-];
+import Image from "next/image";
+import { SilverGradientDivider } from "@/components/ui/silver-gradient-divider";
 
 export default function Transformation() {
-  const steps = [
+  const rightSideCards = [
     {
       title: "Mulai dari Nol",
-      description: "Gak perlu pengalaman! Kita mulai dari basic dan berkembang bareng. No experience needed, we'll grow together!",
-      icon: BookOpen,
+      description: "Gak perlu pengalaman! Kita mulai dari basic dan berkembang bareng.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
     },
     {
       title: "Proses yang Terbukti",
-      description: "System yang udah menghasilkan ratusan agen sukses. Join the proven system that created hundreds of successful agents!",
-      icon: Brain,
+      description: "System yang udah menghasilkan ratusan agen sukses.",
+      image: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=2070",
     },
     {
       title: "Support System 24/7",
-      description: "Tim support yang selalu siap bantu kamu kapanpun. Our team is always ready to help you anytime!",
-      icon: Workflow,
+      description: "Tim support yang selalu siap bantu kamu kapanpun.",
+      image: "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2070",
     },
   ];
 
-  const containerVariants = {
-    hidden: {
-      opacity: 1,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.3,
-      x: 0,
-      y: 200,
-      rotateX: 45,
-    },
-    visible: (index: number) => ({
-      opacity: 1,
-      scale: 1,
-      x: index === 0 ? -40 : index === 2 ? 40 : 0,
-      y: index === 1 ? 48 : 0,
-      rotateX: 0,
-      transition: {
-        type: "spring",
-        bounce: 0.3,
-        duration: 0.6,
-        mass: 0.8,
-        stiffness: 120,
-      },
-    }),
-  };
-
   return (
-    <>
-      <section className="relative py-24 px-4 overflow-hidden bg-gray-950">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900/30 to-gray-950" />
+    <section className="relative py-4 md:py-12 overflow-hidden bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
 
-        <div className="relative max-w-5xl mx-auto flex flex-col items-center pt-8">
-          <div className="text-center max-w-2xl mb-16">
-            <p className="text-sm md:text-base text-orange-400 px-4 py-2 rounded-full border border-orange-800 bg-orange-950/30 backdrop-blur-sm inline-block mb-4">
-              Your Success Journey Starts Here
-            </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transformasi Karirmu
-            </h2>
-            <p className="text-lg text-orange-100/70 leading-relaxed">
-              Ratusan agen sudah membuktikan! Saatnya kamu yang next.
-              <span className="block mt-2 text-orange-200/60 text-base">
-                Hundreds have proven it! It's your turn to shine.
-              </span>
-            </p>
-          </div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={containerVariants}
-            className="w-full grid md:grid-cols-3 gap-6 mb-16"
-          >
-            {steps.map((step, index) => (
-              <motion.div
-                key={index}
-                custom={index}
-                variants={cardVariants}
-                className="transform"
-              >
-                <MagicCard 
-                  gradientColor="rgba(249, 115, 22, 0.2)"
-                  className="h-[280px] bg-black relative overflow-hidden hover:shadow-lg hover:shadow-orange-900/30 transition-all duration-300 group"
-                >
-                  <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-red-500/40 via-blue-500/20 via-black/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-blue-500/40 via-blue-500/20 via-black/40 to-transparent" />
-                  
-                  <div className="flex flex-col items-center text-center h-full p-6 relative z-10">
-                    <h3 className="text-2xl font-semibold mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                      {step.title}
-                    </h3>
-                    <p className="text-orange-100/70 text-sm leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </MagicCard>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          <div className="relative mt-4">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-1">
-                Life at Devina Hartono Team
-              </h3>
-              <p className="text-orange-200/70 text-base">
-                Join our vibrant community of achievers
+      <div className="relative max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-6 lg:gap-8">
+        {/* Left side - Large Image (60%) */}
+        <div className="w-full lg:w-[60%] relative aspect-[4/3] rounded-xl overflow-hidden group">
+          {/* Glow Effect */}
+          <div className="absolute -inset-2 bg-gradient-radial from-orange-500/20 via-orange-500/5 to-transparent blur-xl" />
+          
+          <div className="relative h-full">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            >
+              <source src="/galaxy.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+            <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 right-4 md:right-6">
+              <p className="text-xs md:text-sm text-orange-400 px-3 py-1.5 rounded-full border border-orange-800 bg-orange-950/30 backdrop-blur-sm inline-block mb-2 md:mb-3">
+                Your Success Journey Starts Here
               </p>
-            </div>
-
-            <div className="relative w-full overflow-hidden">
-              <InfiniteMovingCards
-                items={communityImages}
-                speed="slow"
-                className="py-4"
-              />
-            </div>
-
-            <div className="mt-12 text-center">
-              <Button 
-                className="group relative px-8 py-6 text-lg bg-gradient-to-tr from-orange-700 via-orange-600 to-red-500 text-white hover:opacity-90 transition-all duration-300 rounded-xl backdrop-blur-sm border border-orange-400/30 shadow-[0_8px_16px_rgb(249_115_22_/_0.1)] hover:shadow-[0_8px_20px_rgb(249_115_22_/_0.3)] w-full md:w-auto"
-              >
-                <span className="relative z-10">Mulai Perjalananmu</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-xl" />
-              </Button>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-white">
+                Transform Your <span className="italic">Career</span>
+              </h2>
+              <p className="text-sm md:text-base text-gray-400 mt-2 max-w-xl">
+                Join our team and unlock your potential in the insurance industry
+              </p>
             </div>
           </div>
         </div>
-      </section>
-    </>
+
+        {/* Right side - 3 Vertical Cards (40%) */}
+        <div className="w-full lg:w-[40%] flex flex-col gap-3 md:gap-4">
+          {rightSideCards.map((card, index) => (
+            <div key={index} className="relative h-[140px] md:h-[160px] rounded-lg overflow-hidden group">
+              {/* Glow Effect */}
+              <div className="absolute -inset-2 bg-gradient-radial from-orange-500/10 via-orange-500/5 to-transparent blur-xl" />
+              
+              <div className="relative h-full">
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute bottom-3 md:bottom-4 left-3 md:left-4 right-3 md:right-4">
+                  <h3 className="text-base md:text-lg font-semibold text-white mb-1">{card.title}</h3>
+                  <p className="text-xs md:text-sm text-gray-300">{card.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-500/50 to-transparent" />
+        <SilverGradientDivider />
+      </div>
+    </section>
   );
 }

@@ -14,6 +14,7 @@ export function InfiniteMovingCards({
   items,
   speed = "slow",
   className,
+  direction = "left"
 }: {
   items: Item[];
   direction?: "left" | "right";
@@ -23,7 +24,7 @@ export function InfiniteMovingCards({
   const [duplicatedItems, setDuplicatedItems] = useState<Item[]>([]);
 
   useEffect(() => {
-    setDuplicatedItems([...items, ...items, ...items, ...items, ...items, ...items, ...items, ...items]);
+    setDuplicatedItems([...items, ...items, ...items, ...items]);
   }, [items]);
 
   const getAnimationDuration = () => {
@@ -52,10 +53,9 @@ export function InfiniteMovingCards({
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
       </div>
 
-      {/* Card Content - Simplified to only show title */}
+      {/* Card Content */}
       <div className="relative h-full p-6 flex items-end">
         <div className="relative z-10 w-full">
-          {/* Border Gradient */}
           <div 
             className="absolute inset-0 rounded-xl border-2 border-transparent bg-gradient-to-r from-blue-400 to-blue-600 opacity-20 group-hover:opacity-100 transition-opacity" 
             style={{ 
@@ -63,8 +63,6 @@ export function InfiniteMovingCards({
               maskComposite: 'exclude' 
             }} 
           />
-          
-          {/* Updated title styling */}
           <h3 className="text-base text-white/90 text-center">
             {item.name}
           </h3>
@@ -75,37 +73,19 @@ export function InfiniteMovingCards({
 
   return (
     <div className="w-full overflow-hidden">
-      <div className="flex flex-col gap-12">
-        {/* Top row - moving right */}
-        <div className="relative w-full overflow-hidden">
-          <div 
-            className="flex items-center gap-6"
-            style={{
-              animation: `scroll-right ${getAnimationDuration()}s linear infinite`,
-              width: "max-content",
-              willChange: "transform"
-            }}
-          >
-            {duplicatedItems.map((item, idx) => (
-              <Card key={`right-${idx}`} item={item} idx={idx} />
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom row - moving left */}
-        <div className="relative w-full overflow-hidden">
-          <div 
-            className="flex items-center gap-6"
-            style={{
-              animation: `scroll-left ${getAnimationDuration()}s linear infinite`,
-              width: "max-content",
-              willChange: "transform"
-            }}
-          >
-            {duplicatedItems.map((item, idx) => (
-              <Card key={`left-${idx}`} item={item} idx={idx} />
-            ))}
-          </div>
+      {/* Single row moving in specified direction */}
+      <div className="relative w-full overflow-hidden">
+        <div 
+          className="flex items-center gap-6"
+          style={{
+            animation: `scroll-${direction} ${getAnimationDuration()}s linear infinite`,
+            width: "max-content",
+            willChange: "transform"
+          }}
+        >
+          {duplicatedItems.map((item, idx) => (
+            <Card key={idx} item={item} idx={idx} />
+          ))}
         </div>
       </div>
     </div>
