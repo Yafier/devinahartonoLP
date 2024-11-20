@@ -78,26 +78,43 @@ export default function Included() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
 
       <div className="container mx-auto px-4 relative">
-        {/* Header */}
-        <div className="text-center mb-8 md:mb-12">
-          <p className="text-xs md:text-sm text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
-            What You'll Get
-          </p>
-          <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
-            Semua yang Kamu Butuhkan
-          </h2>
-          <p className="text-sm md:text-base text-gray-400 leading-relaxed max-w-xl mx-auto">
+        {/* Header - Updated text */}
+        <div className="text-center mb-12 md:mb-16 relative z-10">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-xs md:text-sm text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3"
+          >
+            Kamu Akan Mendapat
+          </motion.p>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-xl md:text-3xl lg:text-4xl text-white mb-3"
+          >
+            Semua yang Kamu Butuhkan<br/>
+            <span className="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text">
+              For Your Success Journey
+            </span>
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto"
+          >
             Tools lengkap buat kamu jadi agen sukses!
-          </p>
+          </motion.p>
         </div>
 
         {/* Content Container */}
         <div className="relative max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
           {/* Timeline */}
           <div className="relative lg:w-1/2">
-            <div className="absolute left-[20px] md:left-[28px] top-[40px] bottom-[40px] w-[2px] bg-gradient-to-b from-red-900/20 via-red-800/30 to-red-900/20">
+            <div className="absolute left-[16px] md:left-[22px] top-[40px] bottom-[40px] w-[1.5px] bg-gradient-to-b from-gray-600/20 via-gray-300/30 to-gray-600/20">
               <div 
-                className="absolute top-0 left-0 w-full bg-gradient-to-b from-red-500/30 via-red-400/40 to-red-500/30 transition-all duration-500"
+                className="absolute top-0 left-0 w-full bg-gradient-to-b from-gray-100/40 via-white/50 to-gray-100/40 transition-all duration-500"
                 style={{ height: `${(activeNumber / 5) * 100}%` }}
               />
             </div>
@@ -107,7 +124,7 @@ export default function Included() {
                 <motion.div 
                   key={feature.id}
                   data-number={feature.id}
-                  className={`flex items-start gap-4 md:gap-6 relative pl-12 md:pl-16 cursor-pointer transition-all duration-300 ${
+                  className={`flex items-start gap-4 md:gap-6 relative pl-10 md:pl-14 cursor-pointer transition-all duration-300 ${
                     activeNumber === feature.id ? 'scale-105' : 'hover:scale-102'
                   }`}
                   initial={{ opacity: 0, x: -20 }}
@@ -117,25 +134,33 @@ export default function Included() {
                   onClick={() => handleFeatureClick(feature.id)}
                 >
                   <div 
-                    className={`absolute left-0 w-10 h-10 md:w-14 md:h-14 rounded-xl flex items-center justify-center 
+                    className={`absolute left-0 w-7 h-7 md:w-10 md:h-10 rounded-lg flex items-center justify-center 
                       ${activeNumber === feature.id 
-                        ? 'bg-gradient-to-br from-red-500 via-red-600 to-red-500 border-red-400/20 scale-110' 
-                        : 'bg-gradient-to-br from-red-950 via-red-900 to-red-950 border-red-800/20 opacity-40'
-                      } border transition-all duration-300 shadow-lg hover:shadow-red-500/20`}
+                        ? 'bg-gradient-to-br from-gray-100 via-white to-gray-200 border-white/20 scale-110 shadow-[0_0_15px_rgba(255,255,255,0.2)]' 
+                        : 'bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 border-gray-700/40 opacity-40'
+                      } border transition-all duration-300 backdrop-blur-sm`}
                   >
-                    <span className="text-lg md:text-xl font-bold text-white">
+                    <span className={`text-base md:text-lg font-bold ${
+                      activeNumber === feature.id 
+                        ? 'bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text text-transparent' 
+                        : 'text-gray-300'
+                    }`}>
                       {feature.id}
                     </span>
                   </div>
 
                   <div className="flex-1 space-y-2">
                     <Badge 
-                      className={`bg-gradient-to-r from-red-950 to-red-900 text-white border-red-800 px-2 py-1 text-xs rounded-full shadow-md ${
-                        activeNumber === feature.id ? 'from-red-600 to-red-700' : ''
+                      className={`bg-gradient-to-r from-gray-900 to-gray-800 text-white border-gray-700 px-2 py-1 text-xs rounded-full shadow-md ${
+                        activeNumber === feature.id ? 'from-gray-100 to-gray-200 text-gray-900' : ''
                       }`}
                     >
                       <CheckCircle className="w-3 h-3 mr-1" />
-                      Feature
+                      {feature.id === 1 && "Sistem"}
+                      {feature.id === 2 && "Training"}
+                      {feature.id === 3 && "Support"}
+                      {feature.id === 4 && "Tools"}
+                      {feature.id === 5 && "Rewards"}
                     </Badge>
                     <h3 className="text-base md:text-lg font-semibold text-white">
                       {feature.title}
@@ -151,10 +176,13 @@ export default function Included() {
 
           {/* Video Section */}
           <div className="lg:w-1/2 relative aspect-[4/3] rounded-xl overflow-hidden group">
-            <div className="absolute -inset-2 bg-gradient-radial from-red-500/20 via-red-500/5 to-transparent blur-xl" />
+            {/* Glow Effects - Behind everything */}
+            <div className="absolute -inset-2 bg-gradient-radial from-red-500/20 via-red-500/5 to-transparent blur-xl opacity-60" />
+            <div className="absolute inset-0 bg-gradient-radial from-red-500/10 via-transparent to-transparent blur-[100px] opacity-60" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 via-gray-100/20 to-red-500/20 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
             
             <div className="relative h-full">
-              <AnimatePresence mode="wait" initial={false} presenceAffectsLayout={false}>
+              <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={activeNumber}
                   initial={{ opacity: 0 }}
@@ -165,36 +193,45 @@ export default function Included() {
                     type: "tween",
                     ease: "linear"
                   }}
-                  className="relative h-full"
+                  className="relative h-full w-full"
                 >
-                  <video
-                    key={`video-${activeNumber}`}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="auto"
-                    onError={(e) => {
-                      console.warn(`Failed to load video: ${videos[activeNumber - 1].src}`);
-                      setVideoError(true);
-                    }}
-                    onLoadedData={() => {
-                      setVideoError(false);
-                    }}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-100 group-hover:scale-105"
-                  >
-                    <source 
-                      src={videos[activeNumber - 1].src} 
-                      type={videos[activeNumber - 1].type}
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                  {videoError && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/50">
-                      <p className="text-white text-sm">Error loading video</p>
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  {/* Container with border - Made to fill entire space */}
+                  <div className="absolute inset-0 rounded-xl overflow-hidden border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] group-hover:border-red-500/20 transition duration-500">
+                    {/* Video - Made to fill entire container */}
+                    <video
+                      key={`video-${activeNumber}`}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="auto"
+                      onError={(e) => {
+                        console.warn(`Failed to load video: ${videos[activeNumber - 1].src}`);
+                        setVideoError(true);
+                      }}
+                      onLoadedData={() => {
+                        setVideoError(false);
+                      }}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-100 group-hover:scale-105"
+                    >
+                      <source 
+                        src={videos[activeNumber - 1].src} 
+                        type={videos[activeNumber - 1].type}
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+
+                    {/* Overlays - On top of video */}
+                    <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-red-500/10 via-transparent to-red-500/10 pointer-events-none" />
+                    
+                    {/* Error State */}
+                    {videoError && (
+                      <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/50">
+                        <p className="text-white text-sm">Error loading video</p>
+                      </div>
+                    )}
+                  </div>
                 </motion.div>
               </AnimatePresence>
             </div>

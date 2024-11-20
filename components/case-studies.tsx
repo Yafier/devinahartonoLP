@@ -74,25 +74,42 @@ export default function CaseStudies() {
   };
 
   return (
-    <section className="pt-8 md:pt-12 pb-16 md:pb-20 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
+    <section className="pt-6 md:pt-12 pb-6 md:pb-20 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
 
       <div className="container mx-auto px-4 relative">
-        {/* Header */}
-        <div className="text-center mb-8 md:mb-12">
-          <p className="text-xs md:text-sm text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
-            Real Success Stories
-          </p>
-          <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
-            Kisah Sukses Tim Kami
-          </h2>
-          <p className="text-sm md:text-base text-gray-400 leading-relaxed max-w-xl mx-auto">
+        {/* Header - Updated text */}
+        <div className="text-center mb-2 md:mb-8">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-xs md:text-sm text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3"
+          >
+            Ini Buktinya
+          </motion.p>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-xl md:text-3xl lg:text-4xl text-white mb-3"
+          >
+            Kisah Sukses Tim Kami<br/>
+            <span className="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text">
+              They've Made It, So Can You
+            </span>
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto"
+          >
             Mereka udah buktiin kalau sistem kita work banget!
-          </p>
+          </motion.p>
         </div>
 
-        {/* 3D Carousel */}
-        <div className="relative h-[600px] max-w-5xl mx-auto">
+        {/* 3D Carousel - Adjusted height and top margin */}
+        <div className="relative h-[480px] md:h-[600px] max-w-5xl mx-auto">
           <div className="absolute inset-0 flex items-center justify-center">
             {cases.map((item, index) => (
               <motion.div
@@ -105,7 +122,7 @@ export default function CaseStudies() {
                 style={{ perspective: 1000 }}
               >
                 <div className="bg-black/90 backdrop-blur-sm border border-red-900/10 rounded-xl overflow-hidden">
-                  <div className="relative h-[225px] md:h-[300px]">
+                  <div className="relative h-[180px] md:h-[250px]">
                     <video
                       autoPlay
                       muted
@@ -117,20 +134,20 @@ export default function CaseStudies() {
                       Your browser does not support the video tag.
                     </video>
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50" />
-                    <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
-                      <p className="text-xs text-white">{item.yearsJoined} years</p>
+                    <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm px-2 py-0.5 rounded-full">
+                      <p className="text-[10px] md:text-xs text-white">{item.yearsJoined} years</p>
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
+                  <div className="p-4 md:p-6">
+                    <div className="flex justify-between items-start mb-3">
                       <div>
-                        <h3 className="text-xl font-bold text-white">{item.name}</h3>
-                        <p className="text-sm text-gray-400">{item.position}</p>
+                        <h3 className="text-base md:text-lg font-bold text-white">{item.name}</h3>
+                        <p className="text-xs md:text-sm text-gray-400">{item.position}</p>
                       </div>
-                      <p className="text-red-400 font-bold">{item.income}</p>
+                      <p className="text-sm md:text-base text-red-400 font-bold">{item.income}</p>
                     </div>
-                    <p className="text-sm text-gray-400">{item.story}</p>
+                    <p className="text-xs md:text-sm text-gray-400">{item.story}</p>
                   </div>
                 </div>
               </motion.div>
@@ -142,17 +159,17 @@ export default function CaseStudies() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => navigate(-1)}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-red-500/20 hover:bg-red-500/30 p-3 rounded-full text-white/80 hover:text-white transition-colors"
+            className="absolute left-1 md:left-4 top-1/2 -translate-y-1/2 z-10 bg-red-500/20 hover:bg-red-500/30 p-2 md:p-3 rounded-full text-white/80 hover:text-white transition-colors"
           >
-            <FiChevronLeft className="text-2xl" />
+            <FiChevronLeft className="text-lg md:text-2xl" />
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => navigate(1)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-red-500/20 hover:bg-red-500/30 p-3 rounded-full text-white/80 hover:text-white transition-colors"
+            className="absolute right-1 md:right-4 top-1/2 -translate-y-1/2 z-10 bg-red-500/20 hover:bg-red-500/30 p-2 md:p-3 rounded-full text-white/80 hover:text-white transition-colors"
           >
-            <FiChevronRight className="text-2xl" />
+            <FiChevronRight className="text-lg md:text-2xl" />
           </motion.button>
         </div>
       </div>
