@@ -154,16 +154,16 @@ export default function Included() {
             <div className="absolute -inset-2 bg-gradient-radial from-red-500/20 via-red-500/5 to-transparent blur-xl" />
             
             <div className="relative h-full">
-              <AnimatePresence mode="wait" initial={false}>
+              <AnimatePresence mode="wait" initial={false} presenceAffectsLayout={false}>
                 <motion.div
                   key={activeNumber}
-                  initial={{ opacity: 0, scale: 0.99 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ 
-                    duration: 0.15,
+                    duration: 0.1,
                     type: "tween",
-                    ease: "easeOut"
+                    ease: "linear"
                   }}
                   className="relative h-full"
                 >
@@ -173,6 +173,7 @@ export default function Included() {
                     muted
                     loop
                     playsInline
+                    preload="auto"
                     onError={(e) => {
                       console.warn(`Failed to load video: ${videos[activeNumber - 1].src}`);
                       setVideoError(true);
@@ -180,7 +181,7 @@ export default function Included() {
                     onLoadedData={() => {
                       setVideoError(false);
                     }}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-100 group-hover:scale-105"
                   >
                     <source 
                       src={videos[activeNumber - 1].src} 
@@ -194,9 +195,6 @@ export default function Included() {
                     </div>
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <IoPlayCircle className="text-white/80 text-5xl hover:text-white transition-colors" />
-                  </div>
                 </motion.div>
               </AnimatePresence>
             </div>

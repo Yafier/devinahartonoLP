@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { SilverGradientDivider } from "./ui/silver-gradient-divider";
 import { useState } from "react";
-import { IoPlayCircle } from "react-icons/io5";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const cases = [
@@ -118,9 +117,6 @@ export default function CaseStudies() {
                       Your browser does not support the video tag.
                     </video>
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <IoPlayCircle className="text-white/80 text-5xl hover:text-white transition-colors" />
-                    </div>
                     <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full">
                       <p className="text-xs text-white">{item.yearsJoined} years</p>
                     </div>
