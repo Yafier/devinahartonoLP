@@ -1,9 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Plus_Jakarta_Sans, Instrument_Serif } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
 
-const inter = Inter({ subsets: ['latin'] })
+const plusJakarta = Plus_Jakarta_Sans({ 
+  subsets: ['latin'],
+  // Include various weights for flexibility
+  weight: ['200', '300', '400', '500'],
+  variable: '--font-plus-jakarta'
+})
+
+const instrumentSerif = Instrument_Serif({ 
+  weight: ['400'],
+  style: ['italic'],
+  subsets: ['latin'],
+  variable: '--font-instrument'
+})
 
 export const metadata: Metadata = {
   title: 'Insurance Elite Team',
@@ -17,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${plusJakarta.variable} ${instrumentSerif.variable}`}>
         <Providers>
           {children}
         </Providers>

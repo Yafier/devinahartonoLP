@@ -74,12 +74,8 @@ export default function Transformation() {
                     Step 1: Transform
                   </p>
                   <div className="relative">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 via-white/5 to-red-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
-                    <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
-                      <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 text-transparent bg-clip-text group-hover:from-red-400 group-hover:to-red-300 transition-all duration-300">
-                        Mindset Upgrade
-                      </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    <h2 className="text-base md:text-lg lg:text-xl bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text mb-4 group-hover:from-red-600 group-hover:to-red-500 transition-all duration-300 font-medium">
+                      Mindset Upgrade
                     </h2>
                   </div>
                   <p className="text-sm md:text-base text-white/90 leading-relaxed">
@@ -106,17 +102,13 @@ export default function Transformation() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
                 <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0)_100%)]" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-sm text-red-400 px-2 py-1 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-2">
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="text-xs text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
                     Step 2: Learn
                   </p>
                   <div className="relative">
-                    <div className="absolute -inset-4 bg-red-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
-                      <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 text-transparent bg-clip-text group-hover:from-red-400 group-hover:to-red-300 transition-all duration-300">
-                        Belajar dari Orang yang Sudah Berhasil.
-                      </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    <h2 className="text-base md:text-lg lg:text-xl bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text mb-4 group-hover:from-red-600 group-hover:to-red-500 transition-all duration-300 font-medium">
+                      Belajar dari Orang yang Sudah Berhasil.
                     </h2>
                   </div>
                   <p className="text-sm md:text-base text-white/90 leading-relaxed">
@@ -153,11 +145,8 @@ export default function Transformation() {
                     Step 3: Implement
                   </p>
                   <div className="relative">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 via-white/5 to-red-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
-                    <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
-                      <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 text-transparent bg-clip-text group-hover:from-red-400 group-hover:to-red-300 transition-all duration-300">
-                        Terjun Langsung ke Lapangan
-                      </span>
+                    <h2 className="text-base md:text-lg lg:text-xl bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text mb-4 group-hover:from-red-600 group-hover:to-red-500 transition-all duration-300 font-medium">
+                      Terjun Langsung ke Lapangan
                     </h2>
                   </div>
                   <p className="text-sm md:text-base text-white/90 leading-relaxed max-w-xl">
@@ -184,17 +173,13 @@ export default function Transformation() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
                 <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0)_100%)]" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-sm text-red-400 px-2 py-1 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-2">
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="text-xs text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
                     Step 4: Consistent
                   </p>
                   <div className="relative">
-                    <div className="absolute -inset-4 bg-red-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
-                      <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 text-transparent bg-clip-text group-hover:from-red-400 group-hover:to-red-300 transition-all duration-300">
-                        Take Action & Keep It Going.
-                      </span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    <h2 className="text-base md:text-lg lg:text-xl bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text mb-4 group-hover:from-red-600 group-hover:to-red-500 transition-all duration-300 font-medium">
+                      Take Action & Keep It Going.
                     </h2>
                   </div>
                   <p className="text-sm md:text-base text-white/90 leading-relaxed max-w-xl">

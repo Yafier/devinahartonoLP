@@ -32,7 +32,7 @@ const problems = [
   {
     id: 6,
     title: "No Clear Path dan No Proven System",
-    description: "Banyak yang bilang 'just start', tapi start from where? Kita butuh guidance yang jelas dan proven system yang udah tested.",
+    description: "Banyak yang bilang 'just start', tapi start from where? Kita butuh guidance yang jelas dan proven system yang udah tested. Kita pasti punya something to lose kalau gagal. So the next step we took harus berhasil.",
   }
 ];
 
@@ -50,9 +50,9 @@ export default function Problem() {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto relative">
+        <div className="max-w-5xl mx-auto relative">
           {/* Header */}
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-12 md:mb-16">
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -64,9 +64,10 @@ export default function Problem() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl md:text-3xl lg:text-4xl text-white mb-3"
+              className="text-xl md:text-3xl lg:text-4xl text-white mb-3 max-w-4xl mx-auto"
             >
-              Ngerasa you can do more with what you have?<br/>
+              <span className="inline-block">Ngerasa you can do more with what you have?</span>
+              <br/>
               <span className="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text">
                 Tapi kamu gak tau caranya?
               </span>
@@ -77,12 +78,12 @@ export default function Problem() {
               transition={{ delay: 0.2 }}
               className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto"
             >
-                Aku juga pernah ada di posisi yang sama.
+              Aku juga pernah ada di posisi yang sama.
             </motion.p>
           </div>
 
-          {/* Problem Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {/* Problem Grid - Modified for landscape cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {problems.map((problem, index) => (
               <motion.div
                 key={index}
@@ -91,23 +92,25 @@ export default function Problem() {
                 transition={{ delay: index * 0.1 }}
                 className="group relative"
               >
-                {/* Metallic Effect */}
+                {/* Enhanced Metallic Effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 via-gray-100/20 to-red-500/20 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
                 
                 {/* Content */}
-                <div className="relative bg-gradient-to-br from-black/90 via-zinc-900/90 to-black/90 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.4)] group-hover:border-red-500/20 transition duration-500 p-6 md:p-8">
-                  {/* Title - Dark Red Gradient */}
-                  <h3 className="text-base md:text-lg bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text mb-3 group-hover:from-red-600 group-hover:to-red-500 transition-all duration-300">
-                    {problem.title}
-                  </h3>
-                  
-                  {/* Description - Pure White */}
-                  <p className="text-sm text-white leading-relaxed">
-                    {problem.description}
-                  </p>
+                <div className="relative bg-gradient-to-br from-black/90 via-zinc-900/90 to-black/90 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.4)] group-hover:border-red-500/20 transition duration-500">
+                  <div className="p-8 md:p-10">
+                    {/* Title - Dark Red Gradient */}
+                    <h3 className="text-base md:text-lg lg:text-xl bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text mb-4 group-hover:from-red-600 group-hover:to-red-500 transition-all duration-300 font-medium">
+                      {problem.title}
+                    </h3>
+                    
+                    {/* Description - Pure White */}
+                    <p className="text-sm md:text-base text-white/90 leading-relaxed">
+                      {problem.description}
+                    </p>
 
-                  {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-transparent to-red-500/10 opacity-0 group-hover:opacity-100 transition duration-500" />
+                    {/* Enhanced Hover Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-transparent to-red-500/10 opacity-0 group-hover:opacity-100 transition duration-500" />
+                  </div>
                 </div>
               </motion.div>
             ))}
