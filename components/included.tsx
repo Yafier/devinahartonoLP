@@ -136,14 +136,14 @@ export default function Included() {
                   <div 
                     className={`absolute left-0 w-7 h-7 md:w-10 md:h-10 rounded-lg flex items-center justify-center 
                       ${activeNumber === feature.id 
-                        ? 'bg-gradient-to-br from-gray-100 via-white to-gray-200 border-white/20 scale-110 shadow-[0_0_15px_rgba(255,255,255,0.2)]' 
-                        : 'bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 border-gray-700/40 opacity-40'
+                        ? 'bg-gradient-to-br from-zinc-900 via-zinc-800 to-black border-zinc-700/40 scale-110 shadow-[0_0_20px_rgba(0,0,0,0.5)]' 
+                        : 'bg-gradient-to-br from-zinc-900 via-zinc-800 to-black border-zinc-800/30 opacity-40'
                       } border transition-all duration-300 backdrop-blur-sm`}
                   >
                     <span className={`text-base md:text-lg font-bold ${
                       activeNumber === feature.id 
-                        ? 'bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text text-transparent' 
-                        : 'text-gray-300'
+                        ? 'bg-gradient-to-br from-zinc-300 via-zinc-400 to-zinc-300 bg-clip-text text-transparent' 
+                        : 'text-zinc-400'
                     }`}>
                       {feature.id}
                     </span>
@@ -151,16 +151,24 @@ export default function Included() {
 
                   <div className="flex-1 space-y-2">
                     <Badge 
-                      className={`bg-gradient-to-r from-gray-900 to-gray-800 text-white border-gray-700 px-2 py-1 text-xs rounded-full shadow-md ${
-                        activeNumber === feature.id ? 'from-gray-100 to-gray-200 text-gray-900' : ''
+                      className={`bg-gradient-to-r from-zinc-900 via-black to-zinc-900 text-white border-zinc-800/30 px-2 py-1 text-xs rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.5)] ${
+                        activeNumber === feature.id 
+                          ? 'bg-gradient-to-br from-zinc-900 via-zinc-800 to-black border-zinc-700/40 shadow-[0_0_20px_rgba(0,0,0,0.5)]' 
+                          : ''
                       }`}
                     >
                       <CheckCircle className="w-3 h-3 mr-1" />
-                      {feature.id === 1 && "Sistem"}
-                      {feature.id === 2 && "Training"}
-                      {feature.id === 3 && "Support"}
-                      {feature.id === 4 && "Tools"}
-                      {feature.id === 5 && "Rewards"}
+                      <span className={`${
+                        activeNumber === feature.id 
+                          ? 'bg-gradient-to-br from-zinc-300 via-zinc-400 to-zinc-300 bg-clip-text text-transparent' 
+                          : 'text-zinc-400'
+                      }`}>
+                        {feature.id === 1 && "System"}
+                        {feature.id === 2 && "Training"}
+                        {feature.id === 3 && "Support"}
+                        {feature.id === 4 && "Tools"}
+                        {feature.id === 5 && "Rewards"}
+                      </span>
                     </Badge>
                     <h3 className="text-base md:text-lg font-semibold text-white">
                       {feature.title}
