@@ -11,7 +11,8 @@ const benefits = [
     description: "Gak ada batas untuk penghasilan kamu! Makin giat hustling, makin gede income yang masuk. Our top performers udah buktiin dengan penghasilan 100jt+ per bulan! 🚀",
     value: "Rp. 50.000.000 / Tahun",
     tag: "HIGHEST EARNING",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400",
+    video: "/Included 1.mp4",
+    type: "video/mp4"
   },
   {
     title: "Perks & Recognition For Excellence Performance",
@@ -84,22 +85,38 @@ export default function Benefits() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative w-full pt-32"
               >
-                {/* Floating Image */}
+                {/* Floating Media Container */}
                 <div className="absolute -top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] z-20 transform group-hover:-translate-y-2 transition-transform duration-500">
                   <div className="relative w-full h-full">
-                    {/* Image Shadow */}
+                    {/* Shadow */}
                     <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[90%] h-[20px] bg-black/50 blur-xl rounded-full" />
                     
-                    {/* Image Container */}
+                    {/* Media Container */}
                     <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
-                      <Image
-                        src={benefit.image}
-                        alt={benefit.title}
-                        fill
-                        className="object-cover"
-                        style={{ objectPosition: 'center 20%' }}
-                      />
-                      {/* Image Overlay */}
+                      {benefit.tag === "HIGHEST EARNING" ? (
+                        // Video for HIGHEST EARNING
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="absolute inset-0 w-full h-full object-cover"
+                        >
+                          <source src={benefit.video} type={benefit.type} />
+                          Your browser does not support the video tag.
+                        </video>
+                      ) : (
+                        // Image for other benefits
+                        <Image
+                          src={benefit.image}
+                          alt={benefit.title}
+                          fill
+                          className="object-cover"
+                          style={{ objectPosition: 'center 20%' }}
+                        />
+                      )}
+                      
+                      {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                       
                       {/* Value Tag */}

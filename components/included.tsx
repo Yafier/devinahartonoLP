@@ -10,7 +10,7 @@ import { IoPlayCircle } from "react-icons/io5";
 const videos = [
   {
     id: 1,
-    src: "/galaxy.mp4",
+    src: "/Included 1.mp4",
     type: "video/mp4"
   },
   {
@@ -218,6 +218,7 @@ export default function Included() {
                         setVideoError(true);
                       }}
                       onLoadedData={() => {
+                        console.log('Video loaded successfully:', videos[activeNumber - 1].src);
                         setVideoError(false);
                       }}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-100 group-hover:scale-105"
