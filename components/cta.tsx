@@ -9,7 +9,7 @@ import { SilverGradientDivider } from "@/components/ui/silver-gradient-divider";
 
 export default function CTA() {
   return (
-    <section className="pt-8 md:pt-16 pb-8 md:pb-12 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
+    <section id="cta" className="pt-8 md:pt-16 pb-8 md:pb-12 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
       {/* Enhanced Dramatic Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Base dark gradient */}

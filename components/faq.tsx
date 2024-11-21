@@ -36,7 +36,7 @@ const accordionTriggerClassName = "flex flex-1 items-center justify-between py-4
 
 export default function FAQ() {
   return (
-    <section className="pt-8 md:pt-12 pb-16 md:pb-20 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
+    <section id="faq" className="pt-8 md:pt-12 pb-16 md:pb-20 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
 
       <div className="container mx-auto px-4">
