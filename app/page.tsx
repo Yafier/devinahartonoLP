@@ -1,4 +1,4 @@
-import Hero from '@/components/hero'
+import Hero2 from '@/components/hero2'
 import Transformation from '@/components/transformation'
 import Included from '@/components/included'
 import CaseStudies from '@/components/case-studies'
@@ -10,6 +10,7 @@ import CTA2 from '@/components/cta2'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
 import Problem from "@/components/problem";
+import Hero from '@/components/hero'
 
 export default function Home() {
   return (
