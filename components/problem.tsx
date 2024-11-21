@@ -64,9 +64,9 @@ export default function Problem() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl md:text-3xl lg:text-4xl text-white mb-3 max-w-4xl mx-auto"
+              className="text-lg md:text-2xl lg:text-3xl text-white mb-3 max-w-4xl mx-auto"
             >
-              <span className="inline-block">Ngerasa you can do more with what you have?</span>
+              <span className="inline-block">Ngerasa kamu bisa do more with your life?</span>
               <br/>
               <span className="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text">
                 Tapi kamu gak tau caranya?
@@ -76,7 +76,7 @@ export default function Problem() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-sm md:text-base text-gray-400 max-w-2xl mx-auto"
+              className="text-xs md:text-sm text-gray-400 max-w-2xl mx-auto"
             >
               Aku juga pernah ada di posisi yang sama.
             </motion.p>

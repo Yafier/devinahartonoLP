@@ -150,12 +150,25 @@ const config: Config = {
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
   			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear'
-  		}
+  		},
+  		boxShadow: {
+  			'inner-lg': 'inset 0 2px 4px 0 rgba(255, 255, 255, 0.06)',
+  		},
+  		textShadow: {
+  			'sm': '0 1px 2px rgba(0, 0, 0, 0.2)',
+  		},
   	}
   },
   plugins: [
     require('tailwindcss-animate'),
-    addVariablesForColors
+    addVariablesForColors,
+    function ({ addUtilities }) {
+      addUtilities({
+        '.text-shadow-sm': {
+          'text-shadow': '0 1px 2px rgba(0, 0, 0, 0.2)',
+        },
+      });
+    },
   ],
 };
 

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Transformation() {
   return (
-    <section className="relative py-8 md:py-12 overflow-hidden bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
+    <section className="relative py-12 md:py-16 overflow-hidden bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
 
       {/* Title Section */}
@@ -27,7 +27,7 @@ export default function Transformation() {
           >
             Please Pay Attention Closely<br/>
             <span className="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text">
-              This Might Be The Game Changer For You
+              This Might Help You to Change.
             </span>
           </motion.h2>
           <motion.p 
@@ -36,7 +36,7 @@ export default function Transformation() {
             transition={{ delay: 0.2 }}
             className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto"
           >
-            Every big things in your life come from unexpected angle.
+            Cuman 4 langkah sederhana yang akan ngebantu kamu to feel the difference.
           </motion.p>
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function Transformation() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative aspect-[3/4] rounded-2xl overflow-hidden group bg-black/40"
+              className="relative aspect-[4/3] rounded-2xl overflow-hidden group bg-black/40"
             >
               {/* Enhanced Border Effect */}
               <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-red-500/30 via-white/20 to-red-500/30 blur-sm opacity-50 group-hover:opacity-100 transition-all duration-500" />
@@ -76,7 +76,7 @@ export default function Transformation() {
                   <div className="relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 via-white/5 to-red-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
                     <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
-                      <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 text-transparent bg-clip-text group-hover:from-red-400 group-hover:to-red-300 transition-all duration-300">
+                      <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
                         Mindset Upgrade
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
@@ -117,7 +117,7 @@ export default function Transformation() {
                   <div className="relative">
                     <div className="absolute -inset-4 bg-red-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
-                      <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 text-transparent bg-clip-text group-hover:from-red-400 group-hover:to-red-300 transition-all duration-300">
+                      <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
                         Belajar dari Orang yang Sudah Berhasil.
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
@@ -138,7 +138,7 @@ export default function Transformation() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="relative aspect-[16/9] rounded-2xl overflow-hidden group bg-black/40"
+              className="relative aspect-[4/3] rounded-2xl overflow-hidden group bg-black/40"
             >
               {/* Enhanced Border Effect */}
               <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-r from-red-500/30 via-white/20 to-red-500/30 blur-sm opacity-50 group-hover:opacity-100 transition-all duration-500" />
@@ -163,7 +163,7 @@ export default function Transformation() {
                   <div className="relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 via-white/5 to-red-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
                     <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
-                      <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 text-transparent bg-clip-text group-hover:from-red-400 group-hover:to-red-300 transition-all duration-300">
+                      <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
                         Terjun Langsung ke Lapangan
                       </span>
                     </h2>
@@ -180,7 +180,7 @@ export default function Transformation() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="relative aspect-[21/9] rounded-2xl overflow-hidden group bg-black/40 flex-1"
+              className="relative aspect-[4/3] rounded-2xl overflow-hidden group bg-black/40 flex-1"
             >
               <div className="absolute -inset-2 bg-gradient-radial from-red-500/20 via-red-500/5 to-transparent blur-xl" />
               <div className="relative h-full">
@@ -203,7 +203,7 @@ export default function Transformation() {
                   <div className="relative">
                     <div className="absolute -inset-4 bg-red-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
-                      <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-500 text-transparent bg-clip-text group-hover:from-red-400 group-hover:to-red-300 transition-all duration-300">
+                      <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
                         Take Action & Keep It Going.
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
