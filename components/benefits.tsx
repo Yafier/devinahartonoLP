@@ -88,8 +88,8 @@ export default function Benefits() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative w-full pt-32"
               >
-                {/* Floating Media Container */}
-                <div className="absolute -top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] z-20 transform group-hover:-translate-y-2 transition-transform duration-500">
+                {/* Floating Media Container - Updated top spacing */}
+                <div className="absolute -top-0 md:-top-0 left-1/2 -translate-x-1/2 w-[300px] md:w-[500px] h-[250px] md:h-[300px] z-20 transform group-hover:-translate-y-2 transition-transform duration-500">
                   <div className="relative w-full h-full">
                     {/* Shadow */}
                     <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[90%] h-[20px] bg-black/50 blur-xl rounded-full" />

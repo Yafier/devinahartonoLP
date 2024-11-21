@@ -91,21 +91,13 @@ export default function CaseStudies() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl md:text-3xl lg:text-4xl text-white mb-3"
+            className="text-xl md:text-3xl lg:text-4xl text-white mb-0"
           >
             Kisah Sukses Tim Kami<br/>
             <span className="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text">
               They've Made It, So Can You
             </span>
           </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto"
-          >
-            Mereka udah buktiin kalau sistem kita work banget!
-          </motion.p>
         </div>
 
         {/* 3D Carousel - Adjusted height and top margin */}
