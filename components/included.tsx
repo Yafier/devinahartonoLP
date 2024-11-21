@@ -38,8 +38,6 @@ const videos = [
 export default function Included() {
   const [activeNumber, setActiveNumber] = useState(1);
   const [videoError, setVideoError] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   const features = [
     {
@@ -108,8 +106,8 @@ export default function Included() {
           </motion.p>
         </div>
 
-        {/* Content Container */}
-        <div className="relative max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
+        {/* Desktop View */}
+        <div className="hidden md:flex relative max-w-6xl mx-auto flex-row gap-8">
           {/* Timeline */}
           <div className="relative lg:w-1/2">
             <div className="absolute left-[16px] md:left-[22px] top-[40px] bottom-[40px] w-[1.5px] bg-gradient-to-b from-gray-600/20 via-gray-300/30 to-gray-600/20">
@@ -245,6 +243,64 @@ export default function Included() {
               </AnimatePresence>
             </div>
           </div>
+        </div>
+
+        {/* Mobile View */}
+        <div className="md:hidden space-y-8">
+          {features.map((feature) => (
+            <div key={feature.id} className="space-y-4">
+              {/* Feature Content */}
+              <div className="flex items-start gap-4 relative pl-10">
+                {/* Number Circle */}
+                <div 
+                  className={`absolute left-0 w-7 h-7 rounded-lg flex items-center justify-center 
+                    bg-gradient-to-br from-zinc-900 via-zinc-800 to-black border-zinc-700/40 
+                    border transition-all duration-300 backdrop-blur-sm`}
+                >
+                  <span className="text-base font-bold bg-gradient-to-br from-zinc-300 via-zinc-400 to-zinc-300 bg-clip-text text-transparent">
+                    {feature.id}
+                  </span>
+                </div>
+
+                {/* Text Content */}
+                <div className="flex-1 space-y-2">
+                  <Badge 
+                    className="bg-gradient-to-r from-zinc-900 via-black to-zinc-900 text-white border-zinc-800/30 px-2 py-1 text-xs rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.5)]"
+                  >
+                    <CheckCircle className="w-3 h-3 mr-1" />
+                    <span className="text-zinc-400">
+                      {feature.id === 1 && "System"}
+                      {feature.id === 2 && "Training"}
+                      {feature.id === 3 && "Support"}
+                      {feature.id === 4 && "Tools"}
+                      {feature.id === 5 && "Rewards"}
+                    </span>
+                  </Badge>
+                  <h3 className="text-base font-semibold text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Video Below Content */}
+              <div className="relative aspect-video rounded-xl overflow-hidden">
+                <div className="absolute -inset-2 bg-gradient-radial from-red-500/20 via-red-500/5 to-transparent blur-xl opacity-60" />
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="relative w-full h-full object-cover rounded-xl border border-white/10"
+                >
+                  <source src={videos[feature.id - 1].src} type={videos[feature.id - 1].type} />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
