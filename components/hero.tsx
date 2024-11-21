@@ -18,7 +18,7 @@ const requirements = [
 
 export default function Hero() {
   return (
-    <div className="relative min-h-[100vh] overflow-hidden bg-black/95" style={{ backgroundColor: '#0a0a0a' }}>
+    <div className="relative min-h-[90vh] overflow-hidden bg-black/95" style={{ backgroundColor: '#0a0a0a' }}>
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black/90" />
         
@@ -114,9 +114,26 @@ export default function Hero() {
             className="pt-12 md:pt-16"
           >
             <Button 
-              className="w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 text-base md:text-lg bg-white/10 text-white hover:bg-white/20 rounded-full shadow-xl transition-all duration-300"
+              className="relative group overflow-hidden w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 text-base md:text-lg 
+              bg-gradient-to-br from-red-500 via-red-600 to-red-700 
+              hover:from-red-600 hover:via-red-700 hover:to-red-800
+              text-white rounded-full shadow-[0_0_20px_rgba(220,38,38,0.3)] 
+              transition-all duration-300 transform hover:scale-[1.02]"
             >
-              Start Your Journey Now
+              {/* Metallic shine effect overlay */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-white/20 via-white/5 to-transparent opacity-50" />
+              
+              {/* Moving gradient shine on hover */}
+              <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] 
+                bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000" />
+              
+              {/* Inner shadow for depth */}
+              <div className="absolute inset-0 rounded-full shadow-inner-lg" />
+              
+              {/* Button text with subtle text shadow */}
+              <span className="relative z-10 font-medium tracking-wide text-shadow-sm">
+                Start Your Journey Now
+              </span>
             </Button>
           </motion.div>
 
@@ -129,18 +146,18 @@ export default function Hero() {
             <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent mb-6" />
 
             <div className="relative w-full overflow-hidden">
-              <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
-              <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-black via-black/80 to-transparent z-10" />
+              <div className="absolute left-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
+              <div className="absolute right-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-l from-black via-black/80 to-transparent z-10" />
 
               <div className="flex whitespace-nowrap animate-marquee-infinite">
-                <div className="flex gap-6 shrink-0">
+                <div className="flex gap-3 md:gap-6 shrink-0">
                   {requirements.map((req, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
+                      className="flex items-center gap-1.5 md:gap-2 px-2.5 md:px-4 py-1.5 md:py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
                     >
                       <svg 
-                        className="w-4 h-4 text-white/70" 
+                        className="w-3 h-3 md:w-4 md:h-4 text-white/70" 
                         fill="none" 
                         viewBox="0 0 24 24" 
                         stroke="currentColor"
@@ -152,7 +169,7 @@ export default function Hero() {
                           d="M5 13l4 4L19 7" 
                         />
                       </svg>
-                      <span className="text-white/90 text-sm whitespace-nowrap">
+                      <span className="text-white/90 text-xs md:text-sm whitespace-nowrap">
                         {req}
                       </span>
                     </div>
@@ -163,10 +180,10 @@ export default function Hero() {
                   {requirements.map((req, index) => (
                     <div
                       key={`duplicate-${index}`}
-                      className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
+                      className="flex items-center gap-1.5 md:gap-2 px-2.5 md:px-4 py-1.5 md:py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
                     >
                       <svg 
-                        className="w-4 h-4 text-white/70" 
+                        className="w-3 h-3 md:w-4 md:h-4 text-white/70" 
                         fill="none" 
                         viewBox="0 0 24 24" 
                         stroke="currentColor"
@@ -178,7 +195,7 @@ export default function Hero() {
                           d="M5 13l4 4L19 7" 
                         />
                       </svg>
-                      <span className="text-white/90 text-sm whitespace-nowrap">
+                      <span className="text-white/90 text-xs md:text-sm whitespace-nowrap">
                         {req}
                       </span>
                     </div>
