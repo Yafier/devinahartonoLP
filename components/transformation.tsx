@@ -54,7 +54,7 @@ export default function Transformation() {
               className="relative aspect-[3/4] rounded-2xl overflow-hidden group bg-black/40"
             >
               {/* Enhanced Border Effect */}
-              <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-r from-red-500/30 via-white/20 to-red-500/30 blur-sm opacity-50 group-hover:opacity-100 transition-all duration-500" />
+              <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-red-500/30 via-white/20 to-red-500/30 blur-sm opacity-50 group-hover:opacity-100 transition-all duration-500" />
               
               <div className="relative h-full">
                 <video
@@ -64,11 +64,11 @@ export default function Transformation() {
                   playsInline
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 >
-                  <source src="/galaxy.mp4" type="video/mp4" />
+                  <source src="/tablet.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0)_100%)]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-xs text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
                     Step 1: Transform
@@ -98,14 +98,18 @@ export default function Transformation() {
             >
               <div className="absolute -inset-2 bg-gradient-radial from-red-500/20 via-red-500/5 to-transparent blur-xl" />
               <div className="relative h-full">
-                <Image
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070"
-                  alt="Development Process"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0)_100%)]" />
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                >
+                  <source src="/meeting.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <p className="text-sm text-red-400 px-2 py-1 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-2">
                     Step 2: Learn
@@ -140,14 +144,18 @@ export default function Transformation() {
               <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-r from-red-500/30 via-white/20 to-red-500/30 blur-sm opacity-50 group-hover:opacity-100 transition-all duration-500" />
               
               <div className="relative h-full">
-                <Image
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070"
-                  alt="Team Collaboration"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0)_100%)]" />
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                >
+                  <source src="/deal.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-xs text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
                     Step 3: Implement
@@ -176,14 +184,18 @@ export default function Transformation() {
             >
               <div className="absolute -inset-2 bg-gradient-radial from-red-500/20 via-red-500/5 to-transparent blur-xl" />
               <div className="relative h-full">
-                <Image
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070"
-                  alt="Innovation"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_30%,rgba(0,0,0,0.2)_70%,rgba(0,0,0,0)_100%)]" />
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                >
+                  <source src="/worker.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <p className="text-sm text-red-400 px-2 py-1 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-2">
                     Step 4: Consistent
