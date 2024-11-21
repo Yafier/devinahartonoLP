@@ -43,7 +43,7 @@ export default function Included() {
     {
       id: 1,
       title: "Sistem Teruji & Terpercaya",
-      description: "Sistem yang udah terbukti bantu ratusan agen capai target finansial mereka. Dengan track record yang jelas dan terukur, kamu bisa yakin sistem ini bakal work buat kamu juga!",
+      description: "Sistem yang udah terbukti bantu ratusan pembisnis capai target finansial mereka. Dengan track record yang jelas dan terukur, kamu bisa yakin sistem ini bakal work buat kamu juga!",
     },
     {
       id: 2,
@@ -57,8 +57,8 @@ export default function Included() {
     },
     {
       id: 4,
-      title: "Digital Marketing Tools",
-      description: "Akses ke tools marketing modern buat boost performa kamu. Dari social media management sampe lead generation tools, semua disediakan!",
+      title: "Bimbingan Langsung dari Leader",
+      description: "Kamu bakal aku temenin untuk ketemu potensial leads dan aku bantu nge-close! Gak perlu takut bingung atau stress, karena aku siap bantu!",
     },
     {
       id: 5,
