@@ -4,6 +4,7 @@ const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   darkMode: ['class'],
@@ -162,17 +163,20 @@ const config: Config = {
   plugins: [
     require('tailwindcss-animate'),
     addVariablesForColors,
-    function ({ addUtilities }) {
+    plugin(function ({ addUtilities }) {
       addUtilities({
         '.text-shadow-sm': {
           'text-shadow': '0 1px 2px rgba(0, 0, 0, 0.2)',
         },
       });
-    },
+    }),
   ],
 };
 
-function addVariablesForColors({ addBase, theme }: any) {
+function addVariablesForColors({ addBase, theme }: { 
+  addBase: (base: Record<string, any>) => void;
+  theme: (path: string) => Record<string, string>;
+}) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
