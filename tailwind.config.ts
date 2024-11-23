@@ -139,6 +139,14 @@ const config: Config = {
   				'100%': {
   					transform: 'translateZ(0) rotate(360deg)'
   				}
+  			},
+  			'shiny-text': {
+  				'0%, 90%, 100%': {
+  					'background-position': 'calc(-100% - var(--shiny-width)) 0'
+  				},
+  				'30%, 60%': {
+  					'background-position': 'calc(100% + var(--shiny-width)) 0'
+  				}
   			}
   		},
   		animation: {
@@ -150,14 +158,15 @@ const config: Config = {
   			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
-  			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear'
+  			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
+  			'shiny-text': 'shiny-text 8s infinite'
   		},
   		boxShadow: {
-  			'inner-lg': 'inset 0 2px 4px 0 rgba(255, 255, 255, 0.06)',
+  			'inner-lg': 'inset 0 2px 4px 0 rgba(255, 255, 255, 0.06)'
   		},
   		textShadow: {
-  			'sm': '0 1px 2px rgba(0, 0, 0, 0.2)',
-  		},
+  			sm: '0 1px 2px rgba(0, 0, 0, 0.2)'
+  		}
   	}
   },
   plugins: [

@@ -6,6 +6,9 @@ import Navbar from "./navbar";
 import Image from "next/image";
 import { SilverGradientDivider } from "@/components/ui/silver-gradient-divider";
 import { motion } from "framer-motion";
+import Particles from "@/components/ui/particles";
+import AnimatedShinyText from "@/components/ui/animated-shiny-text";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 
 const requirements = [
   "Without Previous Experience",
@@ -19,105 +22,157 @@ const requirements = [
 export default function Hero() {
   return (
     <div className="relative min-h-[90vh] overflow-hidden bg-black/95" style={{ backgroundColor: '#0a0a0a' }}>
-      <div className="absolute inset-0">
+      <Particles
+        className="absolute inset-0 z-10 hidden md:block"
+        quantity={800}
+        staticity={30}
+        ease={35}
+        size={0.5}
+        color="#FFF"
+        vx={0.4}
+        vy={-0.3}
+      />
+
+      <Particles
+        className="absolute inset-0 z-10 md:hidden"
+        quantity={500}
+        staticity={35}
+        ease={40}
+        size={0.3}
+        color="#FFF"
+        vx={0.3}
+        vy={-0.2}
+      />
+
+      <div className="absolute inset-0 z-[5]">
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black/90" />
         
-        <div className="absolute left-0 inset-y-0 w-[400px] md:w-[800px] opacity-30 md:opacity-40">
-          <div className="absolute top-1/4 -left-20 w-[300px] md:w-[600px] h-[400px] md:h-[800px] bg-gradient-radial from-red-900/40 via-red-800/20 to-transparent blur-[100px] md:blur-[150px] rotate-[15deg] animate-blob" />
-          <div className="absolute bottom-1/3 -left-40 w-[350px] md:w-[700px] h-[300px] md:h-[600px] bg-gradient-radial from-red-950/40 via-red-900/20 to-transparent blur-[80px] md:blur-[130px] -rotate-[20deg] animate-blob animation-delay-2000" />
+        <div className="absolute left-0 inset-y-0 w-[600px] md:w-[1000px] opacity-30 md:opacity-40">
+          <div className="absolute top-1/4 -left-20 w-[400px] md:w-[800px] h-[500px] md:h-[1000px] bg-gradient-radial from-red-900/40 via-red-800/20 to-transparent blur-[120px] md:blur-[180px] rotate-[15deg] animate-blob" />
+          <div className="absolute bottom-1/3 -left-40 w-[450px] md:w-[900px] h-[400px] md:h-[800px] bg-gradient-radial from-red-950/40 via-red-900/20 to-transparent blur-[100px] md:blur-[150px] -rotate-[20deg] animate-blob animation-delay-2000" />
+          <div className="absolute top-2/3 left-1/4 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-gradient-radial from-red-800/30 via-red-900/15 to-transparent blur-[90px] md:blur-[130px] rotate-[45deg] animate-blob animation-delay-4000" />
         </div>
 
-        <div className="absolute right-0 inset-y-0 w-[400px] md:w-[800px] opacity-30 md:opacity-40">
-          <div className="absolute top-1/3 -right-20 w-[300px] md:w-[600px] h-[400px] md:h-[800px] bg-gradient-radial from-red-800/30 via-red-900/15 to-transparent blur-[100px] md:blur-[150px] -rotate-[15deg] animate-blob animation-delay-4000" />
-          <div className="absolute bottom-1/4 -right-40 w-[350px] md:w-[700px] h-[300px] md:h-[600px] bg-gradient-radial from-red-900/40 via-red-800/20 to-transparent blur-[80px] md:blur-[130px] rotate-[20deg] animate-blob" />
+        <div className="absolute right-0 inset-y-0 w-[600px] md:w-[1000px] opacity-30 md:opacity-40">
+          <div className="absolute top-1/3 -right-20 w-[400px] md:w-[800px] h-[500px] md:h-[1000px] bg-gradient-radial from-red-800/30 via-red-900/15 to-transparent blur-[120px] md:blur-[180px] -rotate-[15deg] animate-blob animation-delay-4000" />
+          <div className="absolute bottom-1/4 -right-40 w-[450px] md:w-[900px] h-[400px] md:h-[800px] bg-gradient-radial from-red-900/40 via-red-800/20 to-transparent blur-[100px] md:blur-[150px] rotate-[20deg] animate-blob" />
+          <div className="absolute top-1/4 right-1/4 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-gradient-radial from-red-950/30 via-red-800/15 to-transparent blur-[90px] md:blur-[130px] -rotate-[45deg] animate-blob animation-delay-2000" />
+        </div>
+
+        <div className="absolute inset-0 opacity-30 md:opacity-40">
+          <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[500px] md:w-[1000px] h-[300px] md:h-[600px] bg-gradient-radial from-red-800/30 via-red-900/15 to-transparent blur-[100px] md:blur-[150px] animate-pulse" />
+          
+          <div className="absolute top-1/3 left-1/3 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-gradient-radial from-red-900/20 via-red-800/10 to-transparent blur-[120px] md:blur-[180px] animate-blob animation-delay-3000" />
+          <div className="absolute top-2/3 right-1/3 w-[350px] md:w-[700px] h-[350px] md:h-[700px] bg-gradient-radial from-red-950/25 via-red-900/15 to-transparent blur-[90px] md:blur-[140px] animate-blob animation-delay-5000" />
+          
+          <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[500px] md:w-[1000px] h-[300px] md:h-[600px] bg-gradient-radial from-red-900/30 via-red-800/15 to-transparent blur-[100px] md:blur-[150px] animate-pulse animation-delay-1000" />
+        </div>
+
+        <div className="absolute inset-0 opacity-40 hidden md:block">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-radial from-red-800/40 via-red-900/20 to-transparent blur-[150px] animate-pulse" />
+          
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-gradient-radial from-red-900/30 via-red-800/15 to-transparent blur-[180px] animate-blob animation-delay-3000" />
+          
+          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-radial from-red-950/35 via-red-900/20 to-transparent blur-[130px] rotate-45 animate-blob animation-delay-2000" />
+          <div className="absolute bottom-1/4 right-1/4 w-[700px] h-[700px] bg-gradient-radial from-red-800/35 via-red-900/20 to-transparent blur-[140px] -rotate-45 animate-blob animation-delay-4000" />
+          
+          <div className="absolute top-1/3 left-2/3 w-[400px] h-[400px] bg-gradient-radial from-red-900/25 to-transparent blur-[100px] animate-float" />
+          <div className="absolute bottom-1/3 right-2/3 w-[450px] h-[450px] bg-gradient-radial from-red-800/30 to-transparent blur-[110px] animate-float animation-delay-2000" />
+          <div className="absolute top-[15%] left-[25%] w-[600px] h-[600px] bg-gradient-radial from-red-900/30 to-transparent blur-[120px] animate-float" />
+          <div className="absolute bottom-[20%] right-[30%] w-[500px] h-[500px] bg-gradient-radial from-red-800/25 to-transparent blur-[100px] animate-float animation-delay-2000" />
+          <div className="absolute top-[40%] right-[15%] w-[400px] h-[400px] bg-gradient-radial from-red-950/35 to-transparent blur-[90px] animate-float animation-delay-4000" />
+          <div className="absolute top-[60%] left-[35%] w-[450px] h-[450px] bg-gradient-radial from-red-900/20 to-transparent blur-[110px] animate-pulse" />
+          <div className="absolute bottom-[40%] left-[20%] w-[550px] h-[550px] bg-gradient-radial from-red-800/25 to-transparent blur-[130px] animate-pulse animation-delay-3000" />
+          <div className="absolute top-[25%] right-[40%] w-[300px] h-[300px] bg-gradient-radial from-red-950/30 to-transparent blur-[70px] animate-blob" />
+          <div className="absolute bottom-[30%] right-[25%] w-[250px] h-[250px] bg-gradient-radial from-red-900/25 to-transparent blur-[60px] animate-blob animation-delay-1000" />
+          <div className="absolute top-[45%] left-[45%] w-[350px] h-[350px] bg-gradient-radial from-red-800/20 to-transparent blur-[80px] animate-blob animation-delay-5000" />
         </div>
       </div>
 
-      <div className="relative z-50">
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 w-[95%] md:w-[90%] max-w-7xl">
-          <div className="relative">
-            <div className="relative bg-black/10 backdrop-blur-sm rounded-full border border-white/5 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-              <div className="px-4 md:px-6 py-2">
-                <Navbar />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 pt-32 md:pt-48 pb-16 md:pb-24">
-        <div className="max-w-5xl mx-auto text-center space-y-8 md:space-y-12">
+      <div className="relative z-50 container-fluid px-4 pt-16 md:pt-40 pb-4 md:pb-24">
+        <div className="max-w-[1920px] mx-auto text-center space-y-2 md:space-y-4">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-block mx-auto"
           >
-            <p className="text-[10px] md:text-sm text-gray-400 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
-              Mau Tau Rahasia Sukses di Insurance Industry?
-            </p>
+            <AnimatedShinyText
+              className="text-sm sm:text-xs md:text-2xl text-white/90 px-3 sm:px-6 py-1.5 sm:py-2.5 rounded-full border border-red-500/20 bg-gradient-to-r from-red-500/10 via-red-600/5 to-red-500/10 backdrop-blur-sm"
+              shimmerWidth={300}
+            >
+              Waktunya Perubahan.
+            </AnimatedShinyText>
           </motion.div>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="space-y-4 md:space-y-8"
+            className="space-y-1 md:space-y-4"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-normal tracking-tight text-white leading-tight px-2">
-              Ready to Scale<br/>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-normal tracking-tight text-white leading-[1.05] px-2">
+              Ready to Scale<br className="block" />
               <span className="relative inline-block text-white">
                 <div className="relative font-instrument-serif italic">
                   Your Income With Us?
                 </div>
               </span>
             </h1>
-            <p className="text-sm md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-light tracking-normal">
-              Udah saatnya kamu stop berada di zona nyaman. Join our elite team dan akses proven system yang udah tested. Your time is now!
+            <p className="text-sm sm:text-xl md:text-3xl text-gray-300/80 max-w-[90%] sm:max-w-3xl mx-auto leading-relaxed font-light tracking-normal">
+              Udah saatnya kamu stop berada di zona nyaman.
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="relative aspect-video w-full max-w-5xl mx-auto mt-12 md:mt-16"
-          >
-            <div className="absolute -inset-4 bg-gradient-radial from-red-500/20 via-red-800/10 to-transparent blur-[40px]" />
-            <div className="absolute -inset-8 bg-gradient-conic from-orange-500/10 via-red-500/10 to-orange-500/10 blur-[50px] animate-spin-slow" />
-            <div className="absolute -inset-2 bg-gradient-to-b from-red-500/20 via-orange-400/10 to-white/5 blur-[30px] animate-pulse" />
+          <div className="absolute inset-0 opacity-50 hidden md:block">
+            <div className="absolute top-[20%] left-[30%] w-[800px] h-[800px] bg-gradient-radial from-red-800/40 via-red-900/20 to-transparent blur-[150px] animate-float" />
+            <div className="absolute bottom-[30%] right-[25%] w-[700px] h-[700px] bg-gradient-radial from-red-700/35 via-red-800/20 to-transparent blur-[130px] animate-float animation-delay-2000" />
             
-            <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl bg-black/90">
-              <div className="absolute inset-0 bg-gradient-to-t from-red-900/30 via-orange-900/10 to-transparent opacity-50" />
-              
-              <iframe
-                className="w-full h-full relative z-10"
-                src="https://www.youtube.com/embed/w532SXmLGC8"
-                title="Introduction Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  borderRadius: '0.75rem',
-                }}
-              />
-              
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-radial from-red-500/30 to-transparent blur-2xl animate-pulse" />
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-radial from-orange-500/20 to-transparent blur-2xl animate-pulse delay-75" />
-            </div>
-          </motion.div>
+            <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-gradient-radial from-red-600/30 via-red-700/20 to-transparent blur-[90px] animate-pulse" />
+            <div className="absolute bottom-1/3 right-1/3 w-[350px] h-[350px] bg-gradient-radial from-red-500/25 via-red-600/15 to-transparent blur-[80px] animate-pulse animation-delay-3000" />
+            
+            <div className="absolute top-[45%] right-[40%] w-[300px] h-[300px] bg-gradient-radial from-red-500/35 to-transparent blur-[70px] animate-blob" />
+            <div className="absolute bottom-[40%] left-[35%] w-[250px] h-[250px] bg-gradient-radial from-red-600/30 to-transparent blur-[60px] animate-blob animation-delay-4000" />
+            
+            <div className="absolute inset-0 bg-gradient-to-t from-red-900/10 via-transparent to-red-900/10 opacity-70" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(220,38,38,0.08),transparent_70%)] opacity-80" />
+          </div>
+
+          <div className="relative -mt-2 md:mt-0">
+            <ContainerScroll
+              titleComponent={null}
+            >
+              <div className="relative w-full h-full">
+                <div className="absolute -inset-1 bg-gradient-radial from-red-500/10 via-red-800/5 to-transparent blur-[40px]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/50" />
+                
+                <div className="relative w-full h-full rounded-[28px] overflow-hidden shadow-2xl">
+                  <iframe
+                    className="w-full h-full relative z-10 scale-110"
+                    src="https://www.youtube.com/embed/w532SXmLGC8"
+                    title="Introduction Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      border: '1px solid rgba(255,255,255,0.05)',
+                      borderRadius: '28px',
+                    }}
+                  />
+                </div>
+              </div>
+            </ContainerScroll>
+          </div>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="pt-12 md:pt-16"
+            className="pt-0 md:pt-8 px-2 sm:px-4 space-y-2 md:space-y-6"
           >
             <Button 
-              className="relative group overflow-hidden w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 text-base md:text-lg 
+              className="relative group overflow-hidden w-[90%] sm:w-auto px-6 sm:px-16 md:px-24 py-3 sm:py-7 md:py-9 text-base sm:text-xl md:text-3xl 
               bg-gradient-to-br from-red-500 via-red-600 to-red-700 
               hover:from-red-600 hover:via-red-700 hover:to-red-800
-              text-white rounded-full shadow-[0_0_20px_rgba(220,38,38,0.3)] 
+              text-white rounded-full shadow-[0_0_40px_rgba(220,38,38,0.4)] 
               transition-all duration-300 transform hover:scale-[1.02]"
             >
               {/* Metallic shine effect overlay */}
@@ -135,13 +190,20 @@ export default function Hero() {
                 Start Your Journey Now
               </span>
             </Button>
+
+            <AnimatedShinyText
+              className="text-sm md:text-3xl text-white/60 max-w-2xl mx-auto leading-relaxed font-light tracking-normal"
+              shimmerWidth={200}
+            >
+              Watch how we can help you transform your life
+            </AnimatedShinyText>
           </motion.div>
 
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="pt-12 md:pt-16 relative"
+            className="pt-8 md:pt-16 relative"
           >
             <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent mb-6" />
 
@@ -154,10 +216,10 @@ export default function Hero() {
                   {requirements.map((req, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-1.5 md:gap-2 px-2.5 md:px-4 py-1.5 md:py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
+                      className="flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
                     >
                       <svg 
-                        className="w-3 h-3 md:w-4 md:h-4 text-white/70" 
+                        className="w-4 h-4 md:w-5 md:h-5 text-red-500/70" 
                         fill="none" 
                         viewBox="0 0 24 24" 
                         stroke="currentColor"
@@ -169,21 +231,24 @@ export default function Hero() {
                           d="M5 13l4 4L19 7" 
                         />
                       </svg>
-                      <span className="text-white/90 text-xs md:text-sm whitespace-nowrap">
+                      <AnimatedShinyText
+                        className="text-sm md:text-lg text-white/90 whitespace-nowrap font-medium"
+                        shimmerWidth={100}
+                      >
                         {req}
-                      </span>
+                      </AnimatedShinyText>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex gap-6 shrink-0">
+                <div className="flex gap-3 md:gap-6 shrink-0">
                   {requirements.map((req, index) => (
                     <div
                       key={`duplicate-${index}`}
-                      className="flex items-center gap-1.5 md:gap-2 px-2.5 md:px-4 py-1.5 md:py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
+                      className="flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
                     >
                       <svg 
-                        className="w-3 h-3 md:w-4 md:h-4 text-white/70" 
+                        className="w-4 h-4 md:w-5 md:h-5 text-red-500/70" 
                         fill="none" 
                         viewBox="0 0 24 24" 
                         stroke="currentColor"
@@ -195,9 +260,12 @@ export default function Hero() {
                           d="M5 13l4 4L19 7" 
                         />
                       </svg>
-                      <span className="text-white/90 text-xs md:text-sm whitespace-nowrap">
+                      <AnimatedShinyText
+                        className="text-sm md:text-lg text-white/90 whitespace-nowrap font-medium"
+                        shimmerWidth={100}
+                      >
                         {req}
-                      </span>
+                      </AnimatedShinyText>
                     </div>
                   ))}
                 </div>
@@ -209,7 +277,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute bottom-0 left-0 right-0 z-50">
         <SilverGradientDivider />
       </div>
     </div>
