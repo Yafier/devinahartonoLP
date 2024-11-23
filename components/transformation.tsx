@@ -15,7 +15,7 @@ export default function Transformation() {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-xs md:text-sm text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3"
+            className="text-xs md:text-lg text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3"
           >
             Kalau itu kamu.
           </motion.p>
@@ -23,7 +23,7 @@ export default function Transformation() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl md:text-3xl lg:text-4xl text-white mb-3"
+            className="text-xl md:text-4xl lg:text-5xl text-white mb-3"
           >
             Please Pay Attention Closely<br/>
             <span className="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text">
@@ -34,7 +34,7 @@ export default function Transformation() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto"
+            className="text-base md:text-2xl text-gray-400 max-w-3xl mx-auto"
           >
             Cuman 4 langkah sederhana yang akan ngebantu kamu to feel the difference.
           </motion.p>
@@ -70,19 +70,19 @@ export default function Transformation() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
                 <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-xs text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
+                  <p className="text-xs md:text-lg text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
                     Step 1: Transform
                   </p>
                   <div className="relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 via-white/5 to-red-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
-                    <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
+                    <h2 className="relative text-lg md:text-3xl font-bold mb-3 z-10">
                       <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
                         Mindset Upgrade
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
                     </h2>
                   </div>
-                  <p className="text-sm md:text-base text-white/90 leading-relaxed">
+                  <p className="text-sm md:text-xl text-white/90 leading-relaxed">
                     The only thing that holding you back is your mind. Kalau kamu belum lihat what's possible, kamu gak bakal percaya.
                   </p>
                 </div>
@@ -111,19 +111,19 @@ export default function Transformation() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
                 <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-sm text-red-400 px-2 py-1 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-2">
+                  <p className="text-sm md:text-lg text-red-400 px-2 py-1 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-2">
                     Step 2: Learn
                   </p>
                   <div className="relative">
                     <div className="absolute -inset-4 bg-red-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
+                    <h2 className="relative text-lg md:text-3xl font-bold mb-3 z-10">
                       <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
                         Belajar dari Orang yang Sudah Berhasil.
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
                     </h2>
                   </div>
-                  <p className="text-sm md:text-base text-white/90 leading-relaxed">
+                  <p className="text-sm md:text-xl text-white/90 leading-relaxed">
                     Belajar langsung dari orang yang sudah berhasil, and the person yang udah punya apa yang kamu ingin. The blind can't lead the blind, right?
                   </p>
                 </div>
@@ -157,18 +157,18 @@ export default function Transformation() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
                 <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-xs text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
+                  <p className="text-xs md:text-lg text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
                     Step 3: Implement
                   </p>
                   <div className="relative">
                     <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 via-white/5 to-red-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
-                    <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
+                    <h2 className="relative text-lg md:text-3xl font-bold mb-3 z-10">
                       <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
                         Terjun Langsung ke Lapangan
                       </span>
                     </h2>
                   </div>
-                  <p className="text-sm md:text-base text-white/90 leading-relaxed max-w-xl">
+                  <p className="text-sm md:text-xl text-white/90 leading-relaxed max-w-xl">
                     Theory and Preparation bakal nge hold you back from impactful result. The only way to learn is by doing and we are here to make sure you do, learn, and grow.
                   </p>
                 </div>
@@ -197,19 +197,19 @@ export default function Transformation() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
                 <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-sm text-red-400 px-2 py-1 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-2">
+                  <p className="text-sm md:text-lg text-red-400 px-2 py-1 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-2">
                     Step 4: Consistent
                   </p>
                   <div className="relative">
                     <div className="absolute -inset-4 bg-red-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <h2 className="relative text-lg md:text-xl font-bold mb-3 z-10">
+                    <h2 className="relative text-lg md:text-3xl font-bold mb-3 z-10">
                       <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
                         Take Action & Keep It Going.
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
                     </h2>
                   </div>
-                  <p className="text-sm md:text-base text-white/90 leading-relaxed max-w-xl">
+                  <p className="text-sm md:text-xl text-white/90 leading-relaxed max-w-xl">
                     Yes there are no overnight success, but kecepatan kamu bakal capai sukses dengan komunitas yang benar will be massive.
                   </p>
                 </div>

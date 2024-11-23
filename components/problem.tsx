@@ -38,25 +38,22 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="pt-16 md:pt-24 pb-16 md:pb-20 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
-      {/* Enhanced Dramatic Background Effects */}
+    <section className="pt-16 md:pt-32 pb-16 md:pb-32 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
+      {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Base dark gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
-        
-        {/* Fire effect layers */}
-        <div className="absolute inset-0 bg-gradient-to-t from-red-900/30 via-red-800/5 to-transparent animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-600/20 via-red-900/5 to-transparent blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-t from-red-900/20 via-red-800/5 to-transparent animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-950/30 via-red-900/5 to-transparent blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto relative">
-          {/* Header */}
-          <div className="text-center mb-12 md:mb-16">
+        <div className="max-w-7xl mx-auto relative"> {/* Increased max-width */}
+          {/* Header with larger text */}
+          <div className="text-center mb-16 md:mb-24">
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-xs md:text-sm text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3"
+              className="text-xs md:text-base text-red-400 px-4 py-2 rounded-full border border-red-800/30 bg-red-950/20 backdrop-blur-sm inline-block mb-4"
             >
               Hey You.
             </motion.p>
@@ -64,7 +61,7 @@ export default function Problem() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-lg md:text-2xl lg:text-3xl text-white mb-3 max-w-4xl mx-auto"
+              className="text-lg md:text-4xl lg:text-5xl text-white mb-4 max-w-4xl mx-auto font-medium"
             >
               <span className="inline-block">Ngerasa kamu bisa do more with your life?</span>
               <br/>
@@ -76,14 +73,14 @@ export default function Problem() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-xs md:text-sm text-gray-400 max-w-2xl mx-auto"
+              className="text-xs md:text-lg text-gray-400 max-w-3xl mx-auto"
             >
               Aku juga pernah ada di posisi yang sama.
             </motion.p>
           </div>
 
-          {/* Problem Grid - Modified for landscape cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {/* Problem Grid with larger cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
             {problems.map((problem, index) => (
               <motion.div
                 key={index}
@@ -92,38 +89,43 @@ export default function Problem() {
                 transition={{ delay: index * 0.1 }}
                 className="group relative"
               >
-                {/* Enhanced Metallic Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 via-gray-100/20 to-red-500/20 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
+                {/* Dark Red/Black Glow Effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-red-950/30 via-black/40 to-red-950/30 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
                 
-                {/* Content */}
-                <div className="relative bg-gradient-to-br from-black/90 via-zinc-900/90 to-black/90 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.4)] group-hover:border-red-500/20 transition duration-500">
-                  <div className="p-8 md:p-10">
-                    {/* Title - Dark Red Gradient */}
-                    <h3 className="text-base md:text-lg lg:text-xl bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text mb-4 group-hover:from-red-600 group-hover:to-red-500 transition-all duration-300 font-medium">
-                      {problem.title}
-                    </h3>
+                {/* Content with metallic black gradient */}
+                <div className="relative bg-[linear-gradient(110deg,rgba(20,20,20,0.95),rgba(10,10,10,0.95),rgba(0,0,0,0.95))] rounded-xl overflow-hidden border border-zinc-800/20 backdrop-blur-sm shadow-[0_8px_32px_rgba(15,15,15,0.9)] group-hover:border-red-900/20 transition duration-500">
+                  <div className="p-8 md:p-12">
+                    {/* Metallic overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/50 via-black/50 to-zinc-900/50 opacity-50" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-zinc-800/10 to-black/10" />
                     
-                    {/* Description - Pure White */}
-                    <p className="text-sm md:text-base text-white/90 leading-relaxed">
-                      {problem.description}
-                    </p>
+                    {/* Content remains the same */}
+                    <div className="relative z-10">
+                      <h3 className="text-base md:text-2xl lg:text-3xl bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text mb-6 group-hover:from-red-600 group-hover:to-red-500 transition-all duration-300 font-medium">
+                        {problem.title}
+                      </h3>
+                      
+                      <p className="text-sm md:text-xl text-white/80 leading-relaxed">
+                        {problem.description}
+                      </p>
+                    </div>
 
-                    {/* Enhanced Hover Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-transparent to-red-500/10 opacity-0 group-hover:opacity-100 transition duration-500" />
+                    {/* Subtle hover effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-red-950/5 via-black/5 to-red-950/5 opacity-0 group-hover:opacity-100 transition duration-500" />
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Bottom Message */}
+          {/* Bottom Message with larger font */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="text-center mt-12 md:mt-16"
+            className="text-center mt-16 md:mt-24"
           >
-            <p className="text-base md:text-lg text-white">
+            <p className="text-base md:text-2xl text-white">
               Coba deh jujur <span className="bg-gradient-to-r from-red-600 to-red-400 text-transparent bg-clip-text font-medium">Bener ngga sih?</span>?
             </p>
           </motion.div>
