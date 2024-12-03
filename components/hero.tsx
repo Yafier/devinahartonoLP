@@ -196,6 +196,73 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
+
+        {/* Magazine-style About Us Section */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+          className="mt-24 mb-20"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-5 text-left">
+              <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+                About Us
+              </span>
+              
+              <h2 className="mt-6 font-instrument-serif">
+                <span className="block text-[2.5rem] sm:text-6xl leading-[1.1] text-neutral-900">
+                  More than
+                </span>
+                <span className="block text-[2rem] sm:text-5xl uppercase mt-2">
+                  BUSINESS
+                </span>
+                <span className="block text-[1.8rem] sm:text-4xl italic font-light mt-1">
+                  we create
+                </span>
+                <span className="block text-[2.2rem] sm:text-5xl uppercase mt-1">
+                  LEGACY
+                </span>
+              </h2>
+            </div>
+
+            <div className="lg:col-span-7 lg:pl-12">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-instrument-serif leading-snug text-neutral-800 mb-8">
+                Ready to change your life? Join a high-value community where dreams become reality.
+              </h3>
+              
+              <p className="text-neutral-600 leading-relaxed mb-6">
+                Di ALIFE, kami tidak hanya berbicara tentang kesuksesan finansial. We're building a movement of ambitious individuals who dare to dream bigger. Bersama tim kami, Anda akan menemukan IKIGAI — purpose dan goal dalam menjalankan bisnis yang meaningful.
+              </p>
+
+              <p className="text-neutral-600 leading-relaxed">
+                Stop wasting your time with limited income potential. Bergabunglah dengan komunitas yang telah menghasilkan puluhan successful entrepreneurs dengan penghasilan 100 juta hingga miliaran per bulan.
+              </p>
+
+              <div className="grid grid-cols-2 gap-8 mt-12">
+                <div>
+                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">100JT+</p>
+                  <p className="text-sm text-neutral-600 mt-2">Monthly Income Potential</p>
+                </div>
+                <div>
+                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">3X</p>
+                  <p className="text-sm text-neutral-600 mt-2">Income Growth in First Year</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-8 mt-8">
+                <div>
+                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">50+</p>
+                  <p className="text-sm text-neutral-600 mt-2">High-Value Leaders</p>
+                </div>
+                <div>
+                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">24/7</p>
+                  <p className="text-sm text-neutral-600 mt-2">Community Support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
