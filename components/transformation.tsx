@@ -4,7 +4,25 @@ import Image from "next/image";
 import { SilverGradientDivider } from "./ui/silver-gradient-divider";
 import { motion } from "framer-motion";
 
-const steps = [
+// Add these interfaces at the top of the file
+interface Step {
+  id: number;
+  step: string;
+  title: string;
+  description: string;
+  video: string;
+}
+
+interface VideoCardProps {
+  step: string;
+  title: string;
+  description: string;
+  video: string;
+  featured?: boolean;
+}
+
+// Update the steps array with proper typing
+const steps: Step[] = [
   {
     id: 1,
     step: "Step 01 — Foundation",
@@ -166,7 +184,7 @@ export default function Transformation() {
 }
 
 // Video Card Component
-function VideoCard({ step, title, description, video, featured = false }) {
+function VideoCard({ step, title, description, video, featured = false }: VideoCardProps) {
   return (
     <div className="relative h-full transform transition-transform duration-700 group-hover:scale-105">
       <video

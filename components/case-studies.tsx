@@ -5,7 +5,19 @@ import { motion } from "framer-motion";
 import { SilverGradientDivider } from "./ui/silver-gradient-divider";
 import Marquee from "./ui/marquee";
 
-const cases = [
+interface Case {
+  name: string;
+  image: string;
+  income: string;
+  yearsJoined: number;
+  position: string;
+  story: string;
+  englishStory: string;
+  date: string;
+  category: string;
+}
+
+const cases: Case[] = [
   {
     name: "Michael Wijaya",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
@@ -75,7 +87,7 @@ export default function CaseStudies() {
             <div className="absolute right-0 top-0 bottom-0 w-40 md:w-60 bg-gradient-to-l from-neutral-100 via-neutral-100/80 to-transparent z-10" />
 
             <Marquee className="py-4" pauseOnHover>
-              {cases.map((item, index) => (
+              {cases.map((item: Case, index: number) => (
                 <motion.article
                   key={index}
                   initial={{ opacity: 0 }}
