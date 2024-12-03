@@ -9,22 +9,40 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    name: "Jessica Wijaya",
-    role: "Senior Insurance Advisor",
-    image: "/testi1.png",
-    quote: "Gak nyangka banget bisa achieve my dreams disini! From zero knowledge about insurance sampe bisa jadi top performer. The training system disini bener-bener next level dan supportive banget. Best decision ever! 🌟"
+    name: "Mariska Karsana",
+    role: "Joined Alife 2019 • Monthly Income: 300jt+",
+    image: "/mariskakarsana.jpg",
+    quote: "Semenjak join Alife menemukan IKIGAI — purpose dan goal dalam menjalankan bisnis bukan hanya sekedar mencari uang tapi mendapatkan personal dan financial growth. Yang membuat aku jatuh cinta dengan Alife adalah komunitasnya yang solid dan positive."
   },
   {
-    name: "Melinda Kusuma",
-    role: "Protection Specialist",
-    image: "/testi1.png",
-    quote: "Awalnya ragu untuk join industri asuransi, tapi sistem mentoring disini changed everything! In just 8 months, udah bisa beli apartment sendiri. Super grateful for the opportunity dan team yang super solid! ✨"
+    name: "Gwen Sembada",
+    role: "MDiT 4 Stars • Joined Alife 2019",
+    image: "/gwensembada.jpg",
+    quote: "Alife has been a life-changing experience, offering not only financial growth but also incredible opportunities for personal development. What truly sets Alife apart is its supportive and inspiring community—a network of high-achievers who uplift one another like family."
   },
   {
-    name: "Angela Hartono",
-    role: "Financial Freedom Advisor",
-    image: "/testi1.png",
-    quote: "Who knew kalau jadi insurance advisor bisa se-rewarding ini! Started from scratch, sekarang udah punya passive income yang stable. The best part? Bisa bantu banyak orang while living my dream life! 💫"
+    name: "Jessica Suwarsono",
+    role: "Monthly Income: 100jt+ • Joined Alife 2020",
+    image: "/jessicasuwarsono.jpg",
+    quote: "Sejak join ALIFE aku merasakan perubahan hidup yg signifikan since now I can have flexible working hours jadi bisa punya lebih banyak waktu untuk keluarga dan income nya pun sudah mencapai 3x lipat dari gaji aku sebelumnya."
+  },
+  {
+    name: "Martha Teja",
+    role: "3 Digit Monthly Income • Joined Alife 2019",
+    image: "/marthateja.jpg",
+    quote: "Satu satunya komunitas yang kasi full support dari segi edukasi maupun entertainnya. Di alife bener2 bisa menjadi kendaraan tercepat gw buat numbuhin growth income yang bisa ngebantu hidup gw dan seluruh tim."
+  },
+  {
+    name: "Shannon Subeno",
+    role: "Monthly Income: 120jt+",
+    image: "/shannonsubeno.jpg",
+    quote: "Devina is a straightforward and nurturing leader. When it comes to other aspects of growing the business, such as working together with other leaders, she's very reliable and is such an amazing team player!"
+  },
+  {
+    name: "Anastasia Inez",
+    role: "Monthly Income: 110jt+",
+    image: "/anastasiainez.jpg",
+    quote: "Environment yg positive, creative & smart! Income acceleration nya luar biasa dengan plenty of room for growth in many different aspects. Devina itu calm but organized and fun, consistent, selalu ada, dan sangat dependable!"
   }
 ];
 
@@ -40,16 +58,16 @@ export default function SocialProof() {
   };
 
   return (
-    <section className="pt-8 md:pt-12 pb-16 md:pb-20 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
+    <section className="pt-8 md:pt-12 pb-16 md:pb-20 relative bg-white" style={{ backgroundColor: '#ffffff' }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-100 via-white to-neutral-100" />
 
       <div className="container mx-auto px-4">
-        {/* Header - Updated to match benefits.tsx style */}
+        {/* Header - Updated to match hero.tsx magazine style but with original size */}
         <div className="text-center mb-12 md:mb-16 relative z-10">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-xs md:text-sm text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3"
+            className="text-xs md:text-sm tracking-[0.3em] text-neutral-500 uppercase px-3 py-1.5 rounded-full border border-neutral-300 bg-white/80 backdrop-blur-sm inline-block mb-3"
           >
             Success Stories
           </motion.p>
@@ -57,10 +75,14 @@ export default function SocialProof() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl md:text-3xl lg:text-4xl text-white mb-3"
+            className="relative mt-3 sm:mt-4"
           >
-            Meet Our Rising Stars<br/>
-            <span className="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-transparent bg-clip-text">
+            <span className="text-2xl md:text-3xl lg:text-4xl font-instrument-serif italic 
+            leading-[1.2] text-neutral-900 max-w-[95%] mx-auto block">
+              Meet Our Rising Stars
+            </span>
+            <span className="text-xl md:text-2xl lg:text-3xl font-instrument-serif 
+            leading-[1.2] text-neutral-800 normal-case block mt-2">
               Your Success Story Starts Here
             </span>
           </motion.h2>
@@ -68,32 +90,32 @@ export default function SocialProof() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto"
+            className="text-base md:text-lg text-neutral-600 max-w-2xl mx-auto mt-4"
           >
             Dari fresh graduate sampe jadi top achiever!
           </motion.p>
         </div>
 
-        {/* Magic Card Container - Adjusted for mobile */}
+        {/* Magic Card Container - Updated colors */}
         <div className="max-w-4xl mx-auto relative">
           {/* Navigation Buttons */}
           <button 
             onClick={prevSlide}
-            className="absolute -left-2 md:-left-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-red-950/10 border border-red-900/10 backdrop-blur-sm hover:bg-red-900/20 transition-colors"
+            className="absolute -left-2 md:-left-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-neutral-100 border border-neutral-200 backdrop-blur-sm hover:bg-neutral-200 transition-colors"
           >
-            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-white" />
+            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-neutral-600" />
           </button>
           <button 
             onClick={nextSlide}
-            className="absolute -right-2 md:-right-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-red-950/10 border border-red-900/10 backdrop-blur-sm hover:bg-red-900/20 transition-colors"
+            className="absolute -right-2 md:-right-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-neutral-100 border border-neutral-200 backdrop-blur-sm hover:bg-neutral-200 transition-colors"
           >
-            <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-white" />
+            <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-neutral-600" />
           </button>
 
-          {/* Enhanced Card - Adjusted height for mobile */}
+          {/* Enhanced Card */}
           <div className="relative h-[300px] md:h-[320px]">
-            {/* Radial Gradient Overlay - Sunshine Effect */}
-            <div className="absolute inset-0 bg-gradient-radial from-red-500/10 via-transparent to-transparent blur-[100px] opacity-60" />
+            {/* Updated gradient overlays */}
+            <div className="absolute inset-0 bg-gradient-radial from-neutral-200/50 via-transparent to-transparent blur-[100px] opacity-60" />
             
             <AnimatePresence mode="wait">
               <motion.div
@@ -105,9 +127,9 @@ export default function SocialProof() {
                 className="absolute inset-0"
               >
                 <div className="relative group">
-                  {/* Metallic Effect behind testimonials */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 via-gray-100/20 to-red-500/20 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
-                  <div className="relative bg-gradient-to-br from-black/90 via-zinc-900/90 to-black/90 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.4)] group-hover:border-red-500/20 transition duration-500">
+                  {/* Updated metallic effect */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-neutral-300/20 via-white/20 to-neutral-300/20 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
+                  <div className="relative bg-gradient-to-br from-white/90 via-neutral-50/90 to-white/90 rounded-xl overflow-hidden border border-neutral-200 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.1)] group-hover:border-neutral-300 transition duration-500">
                     <div className="flex flex-col md:flex-row h-full">
                       {/* Image Section - Adjusted height for mobile */}
                       <div className="relative w-full md:w-[280px] h-[180px] md:h-full overflow-hidden">
@@ -171,8 +193,8 @@ export default function SocialProof() {
                 onClick={() => setCurrentIndex(index)}
                 className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
                   index === currentIndex 
-                    ? 'bg-red-800 w-4' 
-                    : 'bg-gray-600 hover:bg-gray-500'
+                    ? 'bg-neutral-800 w-4' 
+                    : 'bg-neutral-300 hover:bg-neutral-400'
                 }`}
               />
             ))}
@@ -181,7 +203,7 @@ export default function SocialProof() {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0">
-        <SilverGradientDivider />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
       </div>
     </section>
   );
