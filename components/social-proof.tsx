@@ -62,38 +62,32 @@ export default function SocialProof() {
       <div className="absolute inset-0 bg-gradient-to-b from-neutral-100 via-white to-neutral-100" />
 
       <div className="container mx-auto px-4">
-        {/* Header - Updated to match hero.tsx magazine style but with original size */}
-        <div className="text-center mb-12 md:mb-16 relative z-10">
-          <motion.p 
+        {/* Header - Updated to match problem.tsx magazine style */}
+        <div className="text-center mb-20 relative z-10">
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-xs md:text-sm tracking-[0.3em] text-neutral-500 uppercase px-3 py-1.5 rounded-full border border-neutral-300 bg-white/80 backdrop-blur-sm inline-block mb-3"
           >
-            Success Stories
-          </motion.p>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="relative mt-3 sm:mt-4"
-          >
-            <span className="text-2xl md:text-3xl lg:text-4xl font-instrument-serif italic 
-            leading-[1.2] text-neutral-900 max-w-[95%] mx-auto block">
-              Meet Our Rising Stars
+            <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+              Success Stories
             </span>
-            <span className="text-xl md:text-2xl lg:text-3xl font-instrument-serif 
-            leading-[1.2] text-neutral-800 normal-case block mt-2">
-              Your Success Story Starts Here
-            </span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-base md:text-lg text-neutral-600 max-w-2xl mx-auto mt-4"
-          >
-            Dari fresh graduate sampe jadi top achiever!
-          </motion.p>
+            
+            <h2 className="mt-6 font-instrument-serif">
+              <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
+                MEET OUR
+              </span>
+              <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2">
+                rising
+              </span>
+              <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
+                STARS
+              </span>
+            </h2>
+
+            <p className="text-neutral-600 leading-relaxed mt-6 max-w-2xl mx-auto">
+              Dari fresh graduate sampe jadi top achiever!
+            </p>
+          </motion.div>
         </div>
 
         {/* Magic Card Container - Updated colors */}
@@ -114,8 +108,8 @@ export default function SocialProof() {
 
           {/* Enhanced Card */}
           <div className="relative h-[300px] md:h-[320px]">
-            {/* Updated gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-radial from-neutral-200/50 via-transparent to-transparent blur-[100px] opacity-60" />
+            {/* Updated gradient overlays - more subtle */}
+            <div className="absolute inset-0 bg-gradient-radial from-neutral-100/30 via-transparent to-transparent blur-[80px] opacity-40" />
             
             <AnimatePresence mode="wait">
               <motion.div
@@ -127,14 +121,16 @@ export default function SocialProof() {
                 className="absolute inset-0"
               >
                 <div className="relative group">
-                  {/* Updated metallic effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-neutral-300/20 via-white/20 to-neutral-300/20 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
-                  <div className="relative bg-gradient-to-br from-white/90 via-neutral-50/90 to-white/90 rounded-xl overflow-hidden border border-neutral-200 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.1)] group-hover:border-neutral-300 transition duration-500">
+                  {/* Updated metallic effect - more subtle */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-neutral-200/10 via-neutral-100/10 to-neutral-200/10 rounded-xl blur-lg opacity-60 group-hover:opacity-80 transition duration-500" />
+                  
+                  {/* Updated card background - more subtle */}
+                  <div className="relative bg-gradient-to-br from-white/95 via-neutral-50/95 to-white/95 rounded-xl overflow-hidden border border-neutral-100 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.03)] group-hover:border-neutral-200 transition duration-500">
                     <div className="flex flex-col md:flex-row h-full">
-                      {/* Image Section - Adjusted height for mobile */}
+                      {/* Image Section - Updated overlay */}
                       <div className="relative w-full md:w-[280px] h-[180px] md:h-full overflow-hidden">
-                        {/* Background gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/40" />
+                        {/* Updated background gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/30 via-neutral-900/20 to-neutral-900/30" />
                         
                         {/* Image container with explicit dimensions */}
                         <div className="relative w-full h-full min-h-[280px]">
@@ -159,20 +155,20 @@ export default function SocialProof() {
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-red-500/10 via-transparent to-red-500/10 z-30" />
                       </div>
 
-                      {/* Content Section - Adjusted padding and font size for mobile */}
+                      {/* Content Section - Updated background */}
                       <div className="flex-1 p-5 md:p-8 flex flex-col justify-center relative">
-                        <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/90 via-black/80 to-zinc-900/90" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/90 via-white/80 to-neutral-50/90" />
                         <div className="relative z-10">
-                          <p className="text-xs md:text-lg text-white mb-4 md:mb-6 relative leading-relaxed">
-                            <span className="absolute -left-2 -top-2 text-xl md:text-2xl text-red-500/60">"</span>
+                          <p className="text-xs md:text-lg text-neutral-800 mb-4 md:mb-6 relative leading-relaxed">
+                            <span className="absolute -left-2 -top-2 text-xl md:text-2xl text-neutral-300">"</span>
                             {testimonials[currentIndex].quote}
-                            <span className="absolute -right-2 bottom-0 text-xl md:text-2xl text-red-500/60">"</span>
+                            <span className="absolute -right-2 bottom-0 text-xl md:text-2xl text-neutral-300">"</span>
                           </p>
                           <div>
-                            <h3 className="text-xs md:text-sm text-white">
+                            <h3 className="text-xs md:text-sm text-neutral-900">
                               {testimonials[currentIndex].name}
                             </h3>
-                            <p className="text-[10px] md:text-xs text-gray-400">
+                            <p className="text-[10px] md:text-xs text-neutral-500">
                               {testimonials[currentIndex].role}
                             </p>
                           </div>
