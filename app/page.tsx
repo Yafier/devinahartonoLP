@@ -15,12 +15,13 @@ import Hero from '@/components/hero'
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
+      <Navbar />
       <Hero />
       <Problem />
-      <Transformation />
+      <Benefits />
       <CaseStudies />
       <Included />
-      <Benefits />
+      <Transformation />
       <SocialProof />
       <FAQ />
       <CTA />

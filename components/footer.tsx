@@ -1,7 +1,7 @@
 "use client";
 
-import { CircleDot } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -25,10 +25,19 @@ export default function Footer() {
               {/* Subtle glow effect */}
               <div className="absolute inset-0 bg-gradient-radial from-neutral-500/5 via-transparent to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <CircleDot className="h-8 w-8 text-neutral-900 transition-transform group-hover:rotate-90 duration-500" />
+              {/* Logo Image */}
+              <div className="relative w-10 h-10 md:w-12 md:h-12">
+                <Image
+                  src="/alife_logo.png"
+                  alt="Alife Logo"
+                  fill
+                  className="object-contain transition-transform group-hover:scale-105 duration-500"
+                  priority
+                />
+              </div>
               
               <span className="text-xl font-instrument-serif tracking-wide text-neutral-900">
-                Devina Hartono Team
+                Alife
               </span>
             </Link>
 

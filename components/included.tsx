@@ -95,28 +95,27 @@ export default function Included() {
           className="text-center mb-20"
         >
           <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
-            What You'll Get
+            Mau Mulai untuk Berubah?
           </span>
           
           <h2 className="mt-6 font-instrument-serif">
             <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
-              EVERYTHING
+              LANGKAH MUDAH
             </span>
             <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2 text-neutral-800">
-              you need to
+              yang kamu butuhkan untuk
             </span>
             <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
-              SUCCEED
+              BERGABUNG BERSAMA KAMI
             </span>
           </h2>
-          
           <motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
             className="mt-6 text-neutral-600 max-w-xl mx-auto text-sm md:text-base"
           >
-            Tools lengkap buat kamu jadi agen sukses dengan sistem yang teruji
+            Perjalanan menuju kebebasan finansial dimulai di sini. Kami akan membimbing setiap langkah Anda.
           </motion.p>
         </motion.div>
 
@@ -171,18 +170,26 @@ export default function Included() {
                       >
                         <CheckCircle className="w-3 h-3 mr-1" />
                         <span className="text-zinc-400">
-                          {feature.id === 1 && "System"}
-                          {feature.id === 2 && "Training"}
-                          {feature.id === 3 && "Support"}
-                          {feature.id === 4 && "Tools"}
-                          {feature.id === 5 && "Rewards"}
+                          {feature.id === 1 && "Pendaftaran"}
+                          {feature.id === 2 && "Interview"}
+                          {feature.id === 3 && "Orientasi"}
+                          {feature.id === 4 && "Mentoring"}
+                          {feature.id === 5 && "Pertumbuhan"}
                         </span>
                       </Badge>
                       <h3 className="text-xl font-instrument-serif text-neutral-900">
-                        {feature.title}
+                        {feature.id === 1 && "Langkah Pertama Anda"}
+                        {feature.id === 2 && "Mari Berkenalan"}
+                        {feature.id === 3 && "Selamat Datang di Keluarga"}
+                        {feature.id === 4 && "Perjalanan Sukses Dimulai"}
+                        {feature.id === 5 && "Tumbuh Bersama"}
                       </h3>
                       <p className="text-sm text-neutral-600 leading-relaxed">
-                        {feature.description}
+                        {feature.id === 1 && "Siap untuk berubah? Isi form pendaftaran agar kami bisa memahami goals dan impian kamu. Ini langkah pertama menuju kebebasan finansial."}
+                        {feature.id === 2 && "Kita akan ngobrol santai tentang motivasi dan visi kamu. Pastikan kita cocok untuk perjalanan sukses kamu."}
+                        {feature.id === 3 && "Ikuti seminar eksklusif kami dimana kamu akan menemukan peluang luar biasa dan bertemu partner sukses masa depan kamu."}
+                        {feature.id === 4 && "Rasakan sistem proven kami dengan support 100% dari mentor berpengalaman. Kami akan membimbing step-by-step sampai closing pertama."}
+                        {feature.id === 5 && "Seiring pertumbuhan kamu, buka peluang dan rewards yang lebih besar. Sukses kamu adalah sukses kami - mari raih kesuksesan bersama."}
                       </p>
                     </div>
                   </motion.div>
@@ -241,18 +248,26 @@ export default function Included() {
                     >
                       <CheckCircle className="w-3 h-3 mr-1" />
                       <span className="text-zinc-400">
-                        {feature.id === 1 && "System"}
-                        {feature.id === 2 && "Training"}
-                        {feature.id === 3 && "Support"}
-                        {feature.id === 4 && "Tools"}
-                        {feature.id === 5 && "Rewards"}
+                        {feature.id === 1 && "Pendaftaran"}
+                        {feature.id === 2 && "Interview"}
+                        {feature.id === 3 && "Orientasi"}
+                        {feature.id === 4 && "Mentoring"}
+                        {feature.id === 5 && "Pertumbuhan"}
                       </span>
                     </Badge>
                     <h3 className="text-base font-semibold text-neutral-900">
-                      {feature.title}
+                        {feature.id === 1 && "Langkah Pertama Anda"}
+                        {feature.id === 2 && "Mari Berkenalan"}
+                        {feature.id === 3 && "Selamat Datang di Keluarga"}
+                        {feature.id === 4 && "Perjalanan Sukses Dimulai"}
+                        {feature.id === 5 && "Tumbuh Bersama"}
                     </h3>
                     <p className="text-sm text-neutral-600 leading-relaxed">
-                      {feature.description}
+                        {feature.id === 1 && "Siap untuk berubah? Isi form pendaftaran agar kami bisa memahami goals dan impian kamu. Ini langkah pertama menuju kebebasan finansial."}
+                        {feature.id === 2 && "Kita akan ngobrol santai tentang motivasi dan visi kamu. Pastikan kita cocok untuk perjalanan sukses kamu."}
+                        {feature.id === 3 && "Ikuti seminar eksklusif kami dimana kamu akan menemukan peluang luar biasa dan bertemu partner sukses masa depan kamu."}
+                        {feature.id === 4 && "Rasakan sistem proven kami dengan support 100% dari mentor berpengalaman. Kami akan membimbing step-by-step sampai closing pertama."}
+                        {feature.id === 5 && "Seiring pertumbuhan kamu, buka peluang dan rewards yang lebih besar. Sukses kamu adalah sukses kami - mari raih kesuksesan bersama."}
                     </p>
                   </div>
                 </div>

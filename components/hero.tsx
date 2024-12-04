@@ -9,44 +9,43 @@ import { useEffect, useState, useRef } from "react";
 import { useScroll, useTransform, useSpring } from "framer-motion";
 
 const requirements = [
-  "Without Previous Experience",
-  "Without Spending Millions",
-  "Without Age Limit",
-  "Without Capital Required",
-  "Without Sales Target",
-  "Without Complex Requirements"
+  "Tanpa Pengalaman Sebelumnya",
+  "Tanpa Modal Besar",
+  "Tanpa Batasan Usia",
+  "Tanpa Target Penjualan",
+  "Tanpa Syarat Rumit",
+  "Tanpa Biaya Pendaftaran"
 ];
 
 const slides = [
   {
     id: 1,
     image: "/thumb-dev.png",
-    title: "COMMUNITY GATHERING",
-    date: "02.03.2024", 
-    description: "Celebrating transformative success stories and building lifelong connections in our exclusive high-value community"
+    title: "EXCLUSIVE GATHERING",
+    date: "02.03.2024",
+    description: "Bergabung dengan komunitas eksklusif kami dan bangun koneksi seumur hidup dengan para high achievers"
   },
   {
     id: 2,
     image: "/thumb-dev2.png",
-    title: "COMMUNITY PROJECT",
-    date: "18.09.2024",
-    description: "Collaborating on impactful initiatives that create positive change while developing leadership skills"
+    title: "TRANSFORMASI BISNIS",
+    date: "18.09.2024", 
+    description: "Pelajari rahasia scaling bisnis dari para expert yang telah membuktikan kesuksesannya"
   },
   {
     id: 3,
     image: "/thumb-dev3.png",
-    title: "COMMUNITY EVENT",
+    title: "MASTERMIND SESSION",
     date: "18.09.2024",
-    description: "Fostering growth through engaging activities that bring our vibrant community together"
+    description: "Diskusi eksklusif dan sharing pengalaman dengan para entrepreneur sukses di komunitas kami"
   },
   {
     id: 4,
     image: "/thumb-dev4.png",
-    title: "COMMUNITY ACHIEVEMENT",
+    title: "CELEBRATION OF SUCCESS",
     date: "18.09.2024",
-    description: "Recognizing outstanding accomplishments and celebrating the remarkable success of our community members"
+    description: "Rayakan pencapaian luar biasa bersama member komunitas yang telah mencapai kebebasan finansial"
   }
-  // Add more slides with same image for now
 ];
 
 export default function Hero() {
@@ -63,12 +62,7 @@ export default function Hero() {
 
   return (
     <div ref={containerRef} className="relative min-h-screen overflow-hidden bg-gradient-to-b from-neutral-100 to-white">
-      {/* Simplified navbar with centered logo */}
-      <div className="absolute top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3 sm:py-4 bg-white/80 backdrop-blur-sm border-b border-neutral-200">
-        <div className="container mx-auto flex justify-center items-center">
-          <div className="gradient-text text-xl sm:text-2xl font-light tracking-[0.2em]">ALIFE</div>
-        </div>
-      </div>
+
 
       {/* Main hero content - adjusted spacing for tighter title */}
       <div className="relative z-10 container mx-auto min-h-[calc(100vh-64px)] pt-16 sm:pt-20 px-4 sm:px-6">
@@ -82,7 +76,7 @@ export default function Hero() {
             className="text-xs sm:text-sm tracking-[0.3em] text-neutral-500 uppercase metallic-effect inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full"
             shimmerWidth={200}
           >
-            Exclusive Opportunity
+            Kesempatan Terbatas
           </AnimatedShinyText>
           
           <div className="relative mt-3 sm:mt-4">
@@ -93,11 +87,11 @@ export default function Hero() {
               className="text-[1.6rem] sm:text-6xl md:text-7xl lg:text-8xl font-instrument-serif italic 
               leading-[1] sm:leading-[0.85] text-neutral-900 max-w-[95%] mx-auto block"
             >
-              <span className="whitespace-nowrap">Earn & Grow Together</span>
+              <span className="whitespace-nowrap">Sukses Bersama</span>
               <br className="hidden sm:block" />
               <span className="text-[1.4rem] sm:text-5xl md:text-6xl lg:text-7xl font-instrument-serif 
               leading-[1.1] sm:leading-[0.85] text-neutral-800 normal-case block sm:inline whitespace-nowrap">
-                Community Based Business
+                High-Value Community
               </span>
             </motion.h1>
           </div>
@@ -162,7 +156,7 @@ export default function Hero() {
               className="px-6 sm:px-8 py-6 sm:py-9 text-base sm:text-lg tracking-[0.2em] bg-neutral-900 
               text-white hover:bg-neutral-800 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl"
             >
-              START YOUR JOURNEY
+              JOIN SEKARANG
             </Button>
           </motion.div>
 
@@ -172,8 +166,8 @@ export default function Hero() {
             transition={{ delay: 0.5 }}
             className="text-neutral-600 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base mb-6 sm:mb-8 pt-6 sm:pt-8 px-4"
           >
-            Sementara kamu ragu, orang lain sudah melangkah maju. 
-            Don't get left behind in your journey to financial freedom.
+            Setiap detik yang kamu habiskan untuk ragu, orang lain sudah mengambil langkah untuk mengubah hidup mereka.
+            Jangan biarkan kesempatan ini berlalu begitu saja.
           </motion.p>
         </div>
 
@@ -208,57 +202,57 @@ export default function Hero() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 text-left">
               <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
-                About Us
+                Kisah Perjalananku
               </span>
               
               <h2 className="mt-6 font-instrument-serif">
                 <span className="block text-[2.5rem] sm:text-6xl leading-[1.1] text-neutral-900">
-                  More than
+                  Dari Introvert
                 </span>
                 <span className="block text-[2rem] sm:text-5xl uppercase mt-2">
-                  BUSINESS
+                  MENJADI PEMIMPIN
                 </span>
                 <span className="block text-[1.8rem] sm:text-4xl italic font-light mt-1">
-                  we create
+                  perjalanan
                 </span>
                 <span className="block text-[2.2rem] sm:text-5xl uppercase mt-1">
-                  LEGACY
+                  TRANSFORMASIKU
                 </span>
               </h2>
             </div>
 
             <div className="lg:col-span-7 lg:pl-12">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-instrument-serif leading-snug text-neutral-800 mb-8">
-                Ready to change your life? Join a high-value community where dreams become reality.
+                Sudah siap keluar dari zona nyamanmu? Mari kuceritakan bagaimana aku berubah dari seorang introvert pemalu menjadi business leader yang percaya diri.
               </h3>
               
               <p className="text-neutral-600 leading-relaxed mb-6">
-                Di ALIFE, kami tidak hanya berbicara tentang kesuksesan finansial. We're building a movement of ambitious individuals who dare to dream bigger. Bersama tim kami, Anda akan menemukan IKIGAI — purpose dan goal dalam menjalankan bisnis yang meaningful.
+                4 tahun yang lalu, aku hanyalah seorang introvert yang takut berbicara di depan umum. Sekarang, aku telah membangun bisnis yang menghasilkan pendapatan 8-digit setiap bulannya. Perjalananku membuktikan bahwa kepribadianmu tidak menentukan kesuksesanmu - tekadmu yang menentukan.
               </p>
 
               <p className="text-neutral-600 leading-relaxed">
-                Stop wasting your time with limited income potential. Bergabunglah dengan komunitas yang telah menghasilkan puluhan successful entrepreneurs dengan penghasilan 100 juta hingga miliaran per bulan.
+                Jangan biarkan sifat introvertmu menghalangi kesuksesanmu. Aku telah membangun jaringan dengan ratusan individu high-value dan menemukan kebahagiaan sejati dalam prosesnya. Siap untuk menulis kisah suksesmu sendiri? Join sekarang dan temukan potensi tersembunyimu.
               </p>
 
               <div className="grid grid-cols-2 gap-8 mt-12">
                 <div>
-                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">100JT+</p>
-                  <p className="text-sm text-neutral-600 mt-2">Monthly Income Potential</p>
+                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">4 Tahun</p>
+                  <p className="text-sm text-neutral-600 mt-2">Waktu Transformasi Total</p>
                 </div>
                 <div>
-                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">3X</p>
-                  <p className="text-sm text-neutral-600 mt-2">Income Growth in First Year</p>
+                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">8 Digit</p>
+                  <p className="text-sm text-neutral-600 mt-2">Pendapatan Bulanan</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-8 mt-8">
                 <div>
-                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">50+</p>
-                  <p className="text-sm text-neutral-600 mt-2">High-Value Leaders</p>
+                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">500+</p>
+                  <p className="text-sm text-neutral-600 mt-2">Koneksi Bisnis</p>
                 </div>
                 <div>
-                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">24/7</p>
-                  <p className="text-sm text-neutral-600 mt-2">Community Support</p>
+                  <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">100%</p>
+                  <p className="text-sm text-neutral-600 mt-2">Kepuasan Hidup</p>
                 </div>
               </div>
             </div>
@@ -273,18 +267,18 @@ export default function Hero() {
           {/* Video Title Section */}
           <div className="text-center mb-16 max-w-4xl mx-auto px-4">
             <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
-              Watch Our Story
+              Saksikan Kisah Kami
             </span>
             
             <h2 className="mt-6 font-instrument-serif">
               <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
-                DISCOVER
+                TEMUKAN
               </span>
               <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2 text-neutral-800">
-                the journey of
+                perjalanan menuju
               </span>
               <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
-                SUCCESS
+                KESUKSESAN
               </span>
             </h2>
           </div>
@@ -310,7 +304,7 @@ export default function Hero() {
             {/* Caption */}
             <div className="absolute -bottom-8 left-4 right-4">
               <div className="flex items-center justify-between max-w-screen-2xl mx-auto">
-                <span className="text-xs tracking-[0.2em] text-neutral-500">ALIFE COMMUNITY</span>
+                <span className="text-xs tracking-[0.2em] text-neutral-500">KOMUNITAS ALIFE</span>
                 <span className="text-xs tracking-[0.2em] text-neutral-500">2024</span>
               </div>
             </div>
