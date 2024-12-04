@@ -36,25 +36,40 @@ const accordionTriggerClassName = "flex flex-1 items-center justify-between py-4
 
 export default function FAQ() {
   return (
-    <section id="faq" className="pt-8 md:pt-12 pb-16 md:pb-20 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
+    <section id="faq" className="pt-8 md:pt-12 pb-16 md:pb-20 relative bg-white" style={{ backgroundColor: '#ffffff' }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-100 via-white to-neutral-100" />
 
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto relative">
-          {/* Header */}
-          <div className="text-center mb-8 md:mb-12">
-            <p className="text-xs md:text-sm text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
-              Got Questions?
-            </p>
-            <h2 className="text-2xl md:text-4xl text-white mb-3">
-              Frequently Asked Questions ✨
-            </h2>
-            <p className="text-sm md:text-base text-gray-400 max-w-xl mx-auto leading-relaxed">
-              Temukan jawaban untuk pertanyaan umum tentang karir bersama kami.
-            </p>
+          {/* Header - Updated to match social-proof style */}
+          <div className="text-center mb-20 relative z-10">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+            >
+              <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+                Got Questions?
+              </span>
+              
+              <h2 className="mt-6 font-instrument-serif">
+                <span className="block text-2xl md:text-4xl leading-[1.1] text-neutral-900">
+                  FREQUENTLY
+                </span>
+                <span className="block text-xl md:text-3xl italic font-light mt-2">
+                  asked
+                </span>
+                <span className="block text-2xl md:text-4xl uppercase mt-1">
+                  QUESTIONS
+                </span>
+              </h2>
+
+              <p className="text-neutral-600 leading-relaxed mt-6 max-w-2xl mx-auto">
+                Temukan jawaban untuk pertanyaan umum tentang karir bersama kami.
+              </p>
+            </motion.div>
           </div>
 
-          {/* FAQ Items */}
+          {/* FAQ Items - Updated with neutral theme */}
           <Accordion type="single" collapsible className="w-full space-y-3 md:space-y-4">
             {faqs.map((faq, index) => (
               <motion.div
@@ -67,15 +82,15 @@ export default function FAQ() {
                   value={`item-${index}`}
                   className="relative group border-none"
                 >
-                  {/* Metallic Effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 via-gray-100/20 to-red-500/20 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
+                  {/* Updated Metallic Effect */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-neutral-200/10 via-neutral-100/10 to-neutral-200/10 rounded-xl blur-lg opacity-60 group-hover:opacity-80 transition duration-500" />
                   
-                  {/* Content Background */}
-                  <div className="relative bg-gradient-to-br from-black/90 via-zinc-900/90 to-black/90 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.4)] group-hover:border-red-500/20 transition duration-500">
+                  {/* Updated Content Background */}
+                  <div className="relative bg-gradient-to-br from-white/95 via-neutral-50/95 to-white/95 rounded-xl overflow-hidden border border-neutral-100 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.03)] group-hover:border-neutral-200 transition duration-500">
                     <AccordionTrigger 
                       className={accordionTriggerClassName}
                     >
-                      <div className="text-sm md:text-base text-white font-normal group-hover:text-red-200 transition-all duration-300">
+                      <div className="text-sm md:text-base text-neutral-800 font-normal group-hover:text-neutral-950 transition-all duration-300">
                         {faq.question}
                       </div>
                     </AccordionTrigger>
@@ -83,7 +98,7 @@ export default function FAQ() {
                     {/* Answer Section */}
                     <AccordionContent>
                       <div className="px-6 pb-6">
-                        <p className="text-xs md:text-sm text-gray-300 font-normal">
+                        <p className="text-xs md:text-sm text-neutral-600 font-normal">
                           {faq.answer}
                         </p>
                       </div>
@@ -94,15 +109,15 @@ export default function FAQ() {
             ))}
           </Accordion>
 
-          {/* Radial gradient overlay */}
+          {/* Updated Radial gradient overlay */}
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute inset-0 bg-gradient-radial from-red-500/10 via-transparent to-transparent blur-[100px] opacity-60" />
+            <div className="absolute inset-0 bg-gradient-radial from-neutral-100/30 via-transparent to-transparent blur-[80px] opacity-40" />
           </div>
         </div>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0">
-        <SilverGradientDivider />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
       </div>
     </section>
   );
