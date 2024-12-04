@@ -9,22 +9,40 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    name: "Jessica Wijaya",
-    role: "Senior Insurance Advisor",
-    image: "/steam3.png",
-    quote: "Gak nyangka banget bisa achieve my dreams disini! From zero knowledge about insurance sampe bisa jadi top performer. The training system disini bener-bener next level dan supportive banget. Best decision ever! 🌟"
+    name: "Mariska Karsana",
+    role: "Joined Alife 2019 • Monthly Income: 300jt+",
+    image: "/mariskakarsana.jpg",
+    quote: "Semenjak join Alife menemukan IKIGAI — purpose dan goal dalam menjalankan bisnis bukan hanya sekedar mencari uang tapi mendapatkan personal dan financial growth. Yang membuat aku jatuh cinta dengan Alife adalah komunitasnya yang solid dan positive."
   },
   {
-    name: "Melinda Kusuma",
-    role: "Protection Specialist",
-    image: "/steam3.png",
-    quote: "Awalnya ragu untuk join industri asuransi, tapi sistem mentoring disini changed everything! In just 8 months, udah bisa beli apartment sendiri. Super grateful for the opportunity dan team yang super solid! ✨"
+    name: "Gwen Sembada",
+    role: "MDiT 4 Stars • Joined Alife 2019",
+    image: "/gwensembada.jpg",
+    quote: "Alife has been a life-changing experience, offering not only financial growth but also incredible opportunities for personal development. What truly sets Alife apart is its supportive and inspiring community—a network of high-achievers who uplift one another like family."
   },
   {
-    name: "Angela Hartono",
-    role: "Financial Freedom Advisor",
-    image: "/steam3.png",
-    quote: "Who knew kalau jadi insurance advisor bisa se-rewarding ini! Started from scratch, sekarang udah punya passive income yang stable. The best part? Bisa bantu banyak orang while living my dream life! 💫"
+    name: "Jessica Suwarsono",
+    role: "Monthly Income: 100jt+ • Joined Alife 2020",
+    image: "/jessicasuwarsono.jpg",
+    quote: "Sejak join ALIFE aku merasakan perubahan hidup yg signifikan since now I can have flexible working hours jadi bisa punya lebih banyak waktu untuk keluarga dan income nya pun sudah mencapai 3x lipat dari gaji aku sebelumnya."
+  },
+  {
+    name: "Martha Teja",
+    role: "3 Digit Monthly Income • Joined Alife 2019",
+    image: "/marthateja.jpg",
+    quote: "Satu satunya komunitas yang kasi full support dari segi edukasi maupun entertainnya. Di alife bener2 bisa menjadi kendaraan tercepat gw buat numbuhin growth income yang bisa ngebantu hidup gw dan seluruh tim."
+  },
+  {
+    name: "Shannon Subeno",
+    role: "Monthly Income: 120jt+",
+    image: "/shannonsubeno.jpg",
+    quote: "Devina is a straightforward and nurturing leader. When it comes to other aspects of growing the business, such as working together with other leaders, she's very reliable and is such an amazing team player!"
+  },
+  {
+    name: "Anastasia Inez",
+    role: "Monthly Income: 110jt+",
+    image: "/anastasiainez.jpg",
+    quote: "Environment yg positive, creative & smart! Income acceleration nya luar biasa dengan plenty of room for growth in many different aspects. Devina itu calm but organized and fun, consistent, selalu ada, dan sangat dependable!"
   }
 ];
 
@@ -40,43 +58,58 @@ export default function SocialProof() {
   };
 
   return (
-    <section className="pt-8 md:pt-12 pb-16 md:pb-20 relative bg-black/80" style={{ backgroundColor: '#0a0a0a' }}>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
+    <section className="pt-8 md:pt-12 pb-16 md:pb-20 relative bg-white" style={{ backgroundColor: '#ffffff' }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-100 via-white to-neutral-100" />
 
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12 relative z-10">
-          <p className="text-xs md:text-sm text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
-            Success Stories
-          </p>
-          <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
-            Meet Our Rising Stars ✨
-          </h2>
-          <p className="text-sm md:text-base text-gray-400 max-w-xl mx-auto leading-relaxed">
-            Dari fresh graduate sampe jadi top achiever. Your success story starts here!
-          </p>
+        {/* Header - Updated to match problem.tsx magazine style */}
+        <div className="text-center mb-20 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+              Success Stories
+            </span>
+            
+            <h2 className="mt-6 font-instrument-serif">
+              <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
+                MEET OUR
+              </span>
+              <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2">
+                rising
+              </span>
+              <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
+                STARS
+              </span>
+            </h2>
+
+            <p className="text-neutral-600 leading-relaxed mt-6 max-w-2xl mx-auto">
+              Dari fresh graduate sampe jadi top achiever!
+            </p>
+          </motion.div>
         </div>
 
-        {/* Magic Card Container */}
+        {/* Magic Card Container - Updated colors */}
         <div className="max-w-4xl mx-auto relative">
           {/* Navigation Buttons */}
           <button 
             onClick={prevSlide}
-            className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-red-950/10 border border-red-900/10 backdrop-blur-sm hover:bg-red-900/20 transition-colors"
+            className="absolute -left-2 md:-left-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-neutral-100 border border-neutral-200 backdrop-blur-sm hover:bg-neutral-200 transition-colors"
           >
-            <ChevronLeft className="w-5 h-5 text-white" />
+            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-neutral-600" />
           </button>
           <button 
             onClick={nextSlide}
-            className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-red-950/10 border border-red-900/10 backdrop-blur-sm hover:bg-red-900/20 transition-colors"
+            className="absolute -right-2 md:-right-12 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-neutral-100 border border-neutral-200 backdrop-blur-sm hover:bg-neutral-200 transition-colors"
           >
-            <ChevronRight className="w-5 h-5 text-white" />
+            <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-neutral-600" />
           </button>
 
           {/* Enhanced Card */}
-          <div className="relative h-[280px] md:h-[320px]">
-            {/* Radial Gradient Overlay - Sunshine Effect */}
-            <div className="absolute inset-0 bg-gradient-radial from-red-500/10 via-transparent to-transparent blur-[100px] opacity-60" />
+          <div className="relative h-[300px] md:h-[320px]">
+            {/* Updated gradient overlays - more subtle */}
+            <div className="absolute inset-0 bg-gradient-radial from-neutral-100/30 via-transparent to-transparent blur-[80px] opacity-40" />
             
             <AnimatePresence mode="wait">
               <motion.div
@@ -88,14 +121,16 @@ export default function SocialProof() {
                 className="absolute inset-0"
               >
                 <div className="relative group">
-                  {/* Metallic Effect behind testimonials */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 via-gray-100/20 to-red-500/20 rounded-xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
-                  <div className="relative bg-gradient-to-br from-black/90 via-zinc-900/90 to-black/90 rounded-xl overflow-hidden border border-white/10 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.4)] group-hover:border-red-500/20 transition duration-500">
+                  {/* Updated metallic effect - more subtle */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-neutral-200/10 via-neutral-100/10 to-neutral-200/10 rounded-xl blur-lg opacity-60 group-hover:opacity-80 transition duration-500" />
+                  
+                  {/* Updated card background - more subtle */}
+                  <div className="relative bg-gradient-to-br from-white/95 via-neutral-50/95 to-white/95 rounded-xl overflow-hidden border border-neutral-100 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.03)] group-hover:border-neutral-200 transition duration-500">
                     <div className="flex flex-col md:flex-row h-full">
-                      {/* Image Section with fixed dimensions */}
-                      <div className="relative w-full md:w-[280px] h-[280px] md:h-full overflow-hidden">
-                        {/* Background gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/40" />
+                      {/* Image Section - Updated overlay */}
+                      <div className="relative w-full md:w-[280px] h-[180px] md:h-full overflow-hidden">
+                        {/* Updated background gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-neutral-900/30 via-neutral-900/20 to-neutral-900/30" />
                         
                         {/* Image container with explicit dimensions */}
                         <div className="relative w-full h-full min-h-[280px]">
@@ -120,21 +155,20 @@ export default function SocialProof() {
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-red-500/10 via-transparent to-red-500/10 z-30" />
                       </div>
 
-                      {/* Content Section with Metallic Background */}
-                      <div className="flex-1 p-6 md:p-8 flex flex-col justify-center relative">
-                        {/* Metallic background for testimonial text */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/90 via-black/80 to-zinc-900/90" />
+                      {/* Content Section - Updated background */}
+                      <div className="flex-1 p-5 md:p-8 flex flex-col justify-center relative">
+                        <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/90 via-white/80 to-neutral-50/90" />
                         <div className="relative z-10">
-                          <p className="text-base md:text-lg text-white mb-6 relative leading-relaxed">
-                            <span className="absolute -left-2 -top-2 text-2xl text-red-500/60">"</span>
+                          <p className="text-xs md:text-lg text-neutral-800 mb-4 md:mb-6 relative leading-relaxed">
+                            <span className="absolute -left-2 -top-2 text-xl md:text-2xl text-neutral-300">"</span>
                             {testimonials[currentIndex].quote}
-                            <span className="absolute -right-2 bottom-0 text-2xl text-red-500/60">"</span>
+                            <span className="absolute -right-2 bottom-0 text-xl md:text-2xl text-neutral-300">"</span>
                           </p>
                           <div>
-                            <h3 className="text-sm text-white">
+                            <h3 className="text-xs md:text-sm text-neutral-900">
                               {testimonials[currentIndex].name}
                             </h3>
-                            <p className="text-xs text-gray-400">
+                            <p className="text-[10px] md:text-xs text-neutral-500">
                               {testimonials[currentIndex].role}
                             </p>
                           </div>
@@ -148,15 +182,15 @@ export default function SocialProof() {
           </div>
 
           {/* Navigation Dots */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-4 md:mt-6">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
                   index === currentIndex 
-                    ? 'bg-red-800 w-4' 
-                    : 'bg-gray-600 hover:bg-gray-500'
+                    ? 'bg-neutral-800 w-4' 
+                    : 'bg-neutral-300 hover:bg-neutral-400'
                 }`}
               />
             ))}
@@ -165,7 +199,7 @@ export default function SocialProof() {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0">
-        <SilverGradientDivider />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
       </div>
     </section>
   );
