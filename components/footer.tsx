@@ -2,22 +2,67 @@
 
 import { CircleDot } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="py-12 relative bg-black/80 border-t border-red-900/20" style={{ backgroundColor: '#0a0a0a' }}>
+    <footer className="pt-24 md:pt-32 pb-16 md:pb-20 relative bg-white overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.05),rgba(255,255,255,0))]" />
+      
       <div className="container mx-auto px-4">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-red-900/10 via-transparent to-transparent" />
+        <div className="max-w-6xl mx-auto relative">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center space-y-8"
+          >
+            {/* Logo */}
+            <Link 
+              href="/" 
+              className="group relative flex items-center space-x-3 overflow-hidden"
+            >
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 bg-gradient-radial from-neutral-500/5 via-transparent to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <CircleDot className="h-8 w-8 text-neutral-900 transition-transform group-hover:rotate-90 duration-500" />
+              
+              <span className="text-xl font-instrument-serif tracking-wide text-neutral-900">
+                Devina Hartono Team
+              </span>
+            </Link>
 
-        <div className="flex flex-col items-center space-y-8 relative">
-          <Link href="/" className="flex items-center space-x-2 group">
-            <CircleDot className="h-8 w-8 transition-transform group-hover:rotate-90 duration-500 text-red-400" />
-            <span className="text-xl font-medium bg-gradient-to-r from-red-400 to-red-500 bg-clip-text text-transparent">
-              Devina Hartono Team
-            </span>
-          </Link>
+            {/* Optional: Additional footer content */}
+            <div className="text-center space-y-4">
+              <p className="text-sm text-neutral-600">
+                © {new Date().getFullYear()} All rights reserved.
+              </p>
+              
+              {/* Optional: Social links */}
+              <div className="flex items-center justify-center space-x-6">
+                {['Instagram', 'LinkedIn', 'Twitter'].map((social) => (
+                  <Link
+                    key={social}
+                    href="#"
+                    className="text-xs tracking-wide text-neutral-500 hover:text-neutral-900 transition-colors duration-200"
+                  >
+                    {social}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Subtle gradient effect */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-radial from-neutral-500/5 via-transparent to-transparent blur-[100px] opacity-60" />
+          </div>
         </div>
+      </div>
+
+      {/* Top border */}
+      <div className="absolute top-0 left-0 right-0">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
       </div>
     </footer>
   );

@@ -32,45 +32,48 @@ const faqs = [
   },
 ];
 
-const accordionTriggerClassName = "flex flex-1 items-center justify-between py-4 px-6 text-sm transition-all hover:underline [&[data-state=open]]:pb-4 !no-underline";
-
 export default function FAQ() {
   return (
-    <section id="faq" className="pt-8 md:pt-12 pb-16 md:pb-20 relative bg-white" style={{ backgroundColor: '#ffffff' }}>
-      <div className="absolute inset-0 bg-gradient-to-b from-neutral-100 via-white to-neutral-100" />
+    <section className="pt-24 md:pt-32 pb-24 md:pb-32 relative bg-white overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.05),rgba(255,255,255,0))]" />
 
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto relative">
-          {/* Header - Updated to match social-proof style */}
-          <div className="text-center mb-20 relative z-10">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-            >
-              <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
-                Got Questions?
+          {/* Header */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+              Got Questions?
+            </span>
+            
+            <h2 className="mt-6 font-instrument-serif">
+              <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
+                FREQUENTLY
               </span>
-              
-              <h2 className="mt-6 font-instrument-serif">
-                <span className="block text-2xl md:text-4xl leading-[1.1] text-neutral-900">
-                  FREQUENTLY
-                </span>
-                <span className="block text-xl md:text-3xl italic font-light mt-2">
-                  asked
-                </span>
-                <span className="block text-2xl md:text-4xl uppercase mt-1">
-                  QUESTIONS
-                </span>
-              </h2>
+              <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2 text-neutral-800">
+                asked
+              </span>
+              <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
+                QUESTIONS
+              </span>
+            </h2>
+            
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="mt-6 text-neutral-600 max-w-xl mx-auto text-sm md:text-base"
+            >
+              Temukan jawaban untuk pertanyaan umum tentang karir bersama kami
+            </motion.p>
+          </motion.div>
 
-              <p className="text-neutral-600 leading-relaxed mt-6 max-w-2xl mx-auto">
-                Temukan jawaban untuk pertanyaan umum tentang karir bersama kami.
-              </p>
-            </motion.div>
-          </div>
-
-          {/* FAQ Items - Updated with neutral theme */}
-          <Accordion type="single" collapsible className="w-full space-y-3 md:space-y-4">
+          {/* FAQ Items */}
+          <Accordion type="single" collapsible className="w-full space-y-4 md:space-y-6">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -82,23 +85,23 @@ export default function FAQ() {
                   value={`item-${index}`}
                   className="relative group border-none"
                 >
-                  {/* Updated Metallic Effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-neutral-200/10 via-neutral-100/10 to-neutral-200/10 rounded-xl blur-lg opacity-60 group-hover:opacity-80 transition duration-500" />
+                  {/* Subtle gradient effect */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-neutral-200/20 via-neutral-100/20 to-neutral-200/20 rounded-xl blur-lg opacity-60 group-hover:opacity-80 transition duration-500" />
                   
-                  {/* Updated Content Background */}
+                  {/* Content Background */}
                   <div className="relative bg-gradient-to-br from-white/95 via-neutral-50/95 to-white/95 rounded-xl overflow-hidden border border-neutral-100 backdrop-blur-sm shadow-[0_8px_32px_rgba(0,0,0,0.03)] group-hover:border-neutral-200 transition duration-500">
                     <AccordionTrigger 
-                      className={accordionTriggerClassName}
+                      className="flex flex-1 items-center justify-between py-6 px-8 text-base transition-all hover:no-underline"
                     >
-                      <div className="text-sm md:text-base text-neutral-800 font-normal group-hover:text-neutral-950 transition-all duration-300">
+                      <span className="text-base md:text-lg text-neutral-800 font-medium group-hover:text-neutral-900 transition-all duration-300">
                         {faq.question}
-                      </div>
+                      </span>
                     </AccordionTrigger>
                     
                     {/* Answer Section */}
                     <AccordionContent>
-                      <div className="px-6 pb-6">
-                        <p className="text-xs md:text-sm text-neutral-600 font-normal">
+                      <div className="px-8 pb-6">
+                        <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -109,15 +112,15 @@ export default function FAQ() {
             ))}
           </Accordion>
 
-          {/* Updated Radial gradient overlay */}
+          {/* Subtle radial gradient overlay */}
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute inset-0 bg-gradient-radial from-neutral-100/30 via-transparent to-transparent blur-[80px] opacity-40" />
+            <div className="absolute inset-0 bg-gradient-radial from-neutral-500/5 via-transparent to-transparent blur-[100px] opacity-60" />
           </div>
         </div>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0">
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
+        <SilverGradientDivider />
       </div>
     </section>
   );
