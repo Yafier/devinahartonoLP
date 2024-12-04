@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import { SilverGradientDivider } from "@/components/ui/silver-gradient-divider";
 import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useScroll, useTransform, useSpring } from "framer-motion";
 
 const requirements = [
   "Without Previous Experience",
@@ -50,18 +51,18 @@ const slides = [
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const videoRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
 
-  // Auto-change slide every 5 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
 
-    return () => clearInterval(timer);
-  }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-neutral-100 to-white">
+    <div ref={containerRef} className="relative min-h-screen overflow-hidden bg-gradient-to-b from-neutral-100 to-white">
       {/* Simplified navbar with centered logo */}
       <div className="absolute top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3 sm:py-4 bg-white/80 backdrop-blur-sm border-b border-neutral-200">
         <div className="container mx-auto flex justify-center items-center">
@@ -259,6 +260,58 @@ export default function Hero() {
                   <p className="text-3xl sm:text-4xl font-instrument-serif text-neutral-900">24/7</p>
                   <p className="text-sm text-neutral-600 mt-2">Community Support</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Video Section */}
+        <motion.div 
+          ref={videoRef}
+          className="relative -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-16 xl:-mx-24 mt-32 mb-24"
+        >
+          {/* Video Title Section */}
+          <div className="text-center mb-16 max-w-4xl mx-auto px-4">
+            <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+              Watch Our Story
+            </span>
+            
+            <h2 className="mt-6 font-instrument-serif">
+              <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
+                DISCOVER
+              </span>
+              <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2 text-neutral-800">
+                the journey of
+              </span>
+              <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
+                SUCCESS
+              </span>
+            </h2>
+          </div>
+
+          {/* Full Width Video Container */}
+          <div className="group relative">
+            <div className="relative w-full aspect-video bg-white">
+              {/* Video */}
+              <iframe
+                src="https://www.youtube.com/embed/0r0J62Q5Mgc?controls=0&autoplay=0&rel=0"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+
+              {/* Simple Corner Accents */}
+              <div className="absolute top-0 left-0 w-16 h-16 border-l border-t border-neutral-200" />
+              <div className="absolute top-0 right-0 w-16 h-16 border-r border-t border-neutral-200" />
+              <div className="absolute bottom-0 left-0 w-16 h-16 border-l border-b border-neutral-200" />
+              <div className="absolute bottom-0 right-0 w-16 h-16 border-r border-b border-neutral-200" />
+            </div>
+
+            {/* Caption */}
+            <div className="absolute -bottom-8 left-4 right-4">
+              <div className="flex items-center justify-between max-w-screen-2xl mx-auto">
+                <span className="text-xs tracking-[0.2em] text-neutral-500">ALIFE COMMUNITY</span>
+                <span className="text-xs tracking-[0.2em] text-neutral-500">2024</span>
               </div>
             </div>
           </div>
