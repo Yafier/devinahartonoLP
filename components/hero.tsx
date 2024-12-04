@@ -63,12 +63,7 @@ export default function Hero() {
 
   return (
     <div ref={containerRef} className="relative min-h-screen overflow-hidden bg-gradient-to-b from-neutral-100 to-white">
-      {/* Simplified navbar with centered logo */}
-      <div className="absolute top-0 left-0 right-0 z-50 px-4 sm:px-6 py-3 sm:py-4 bg-white/80 backdrop-blur-sm border-b border-neutral-200">
-        <div className="container mx-auto flex justify-center items-center">
-          <div className="gradient-text text-xl sm:text-2xl font-light tracking-[0.2em]">ALIFE</div>
-        </div>
-      </div>
+
 
       {/* Main hero content - adjusted spacing for tighter title */}
       <div className="relative z-10 container mx-auto min-h-[calc(100vh-64px)] pt-16 sm:pt-20 px-4 sm:px-6">

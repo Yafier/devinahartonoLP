@@ -7,24 +7,20 @@ export default function Navbar() {
   return (
     <div className="relative">
       {/* Simple Glass Background */}
-      <div className="relative bg-black/10 backdrop-blur-sm rounded-full border border-white/5 overflow-hidden">
-        {/* Subtle Shine Effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-        
+      <div className="relative bg-white/80 backdrop-blur-sm border-b border-neutral-200/50">
         {/* Navbar Content */}
-        <nav className="px-4 md:px-6 py-2 flex items-center justify-center">
+        <nav className="container mx-auto px-4 py-3 flex items-center justify-center">
           <Link href="/" className="relative flex items-center gap-2">
             {/* Logo Container */}
-            <div className="relative w-8 h-8 md:w-10 md:h-10">
+            <div className="relative w-12 h-12 md:w-16 md:h-16">
               <Image
-                src="/alife_logo.png" // Make sure to add your logo to public folder
-                alt=""
+                src="/alife_logo.png"
+                alt="Alife Logo"
                 fill
                 className="object-contain"
                 priority
               />
             </div>
-            {/* Optional: Company Name */}
           </Link>
         </nav>
       </div>
