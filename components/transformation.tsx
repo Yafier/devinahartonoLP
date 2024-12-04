@@ -104,8 +104,42 @@ export default function Transformation() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="col-span-12 md:col-span-8 row-span-2 relative rounded-2xl overflow-hidden group"
             >
+
               <VideoCard {...steps[0]} featured />
             </motion.article>
+
+              {/* Enhanced Border Effect */}
+              <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-red-500/30 via-white/20 to-red-500/30 blur-sm opacity-50 group-hover:opacity-100 transition-all duration-500" />
+              
+              <div className="relative h-full">
+                <Image
+                  src="/transform.jpg"
+                  alt="Transformation Step"
+                  fill
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="text-xs md:text-lg text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
+                    Step 1: Transform
+                  </p>
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 via-white/5 to-red-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
+                    <h2 className="relative text-lg md:text-3xl font-bold mb-3 z-10">
+                      <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
+                        Mindset Upgrade
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    </h2>
+                  </div>
+                  <p className="text-sm md:text-xl text-white/90 leading-relaxed">
+                    The only thing that holding you back is your mind. Kalau kamu belum lihat what's possible, kamu gak bakal percaya.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
 
             {/* Tall Portrait */}
             <motion.article 
@@ -124,8 +158,41 @@ export default function Transformation() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="col-span-12 md:col-span-6 relative rounded-2xl overflow-hidden group"
             >
+
               <VideoCard {...steps[2]} />
             </motion.article>
+
+              <div className="absolute -inset-2 bg-gradient-radial from-red-500/20 via-red-500/5 to-transparent blur-xl" />
+              <div className="relative h-full">
+                <Image
+                  src="/learn.jpg"
+                  alt="Transformation Step"
+                  fill
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-sm md:text-lg text-red-400 px-2 py-1 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-2">
+                    Step 2: Learn
+                  </p>
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-red-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <h2 className="relative text-lg md:text-3xl font-bold mb-3 z-10">
+                      <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
+                        Belajar dari Orang yang Sudah Berhasil.
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    </h2>
+                  </div>
+                  <p className="text-sm md:text-xl text-white/90 leading-relaxed">
+                    Belajar langsung dari orang yang sudah berhasil, and the person yang udah punya apa yang kamu ingin. The blind can't lead the blind, right?
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
 
             <motion.article 
               initial={{ opacity: 0, y: 40 }}
@@ -143,8 +210,41 @@ export default function Transformation() {
               transition={{ duration: 0.7, delay: 0.5 }}
               className="col-span-12 md:col-span-8 relative rounded-2xl overflow-hidden group"
             >
+
               <VideoCard {...steps[4]} />
             </motion.article>
+
+              {/* Enhanced Border Effect */}
+              <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-r from-red-500/30 via-white/20 to-red-500/30 blur-sm opacity-50 group-hover:opacity-100 transition-all duration-500" />
+              
+              <div className="relative h-full">
+                <Image
+                  src="/implement.jpg"
+                  alt="Transformation Step"
+                  fill
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="text-xs md:text-lg text-red-400 px-3 py-1.5 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-3">
+                    Step 3: Implement
+                  </p>
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 via-white/5 to-red-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500" />
+                    <h2 className="relative text-lg md:text-3xl font-bold mb-3 z-10">
+                      <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
+                        Terjun Langsung ke Lapangan
+                      </span>
+                    </h2>
+                  </div>
+                  <p className="text-sm md:text-xl text-white/90 leading-relaxed max-w-xl">
+                    Theory and Preparation bakal nge hold you back from impactful result. The only way to learn is by doing and we are here to make sure you do, learn, and grow.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
 
             {/* Final Portrait */}
             <motion.article 
@@ -153,8 +253,40 @@ export default function Transformation() {
               transition={{ duration: 0.7, delay: 0.6 }}
               className="col-span-12 md:col-span-4 relative rounded-2xl overflow-hidden group"
             >
+
               <VideoCard {...steps[5]} />
             </motion.article>
+
+              <div className="absolute -inset-2 bg-gradient-radial from-red-500/20 via-red-500/5 to-transparent blur-xl" />
+              <div className="relative h-full">
+                <Image
+                  src="/Action.jpg"
+                  alt="Transformation Step"
+                  fill
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.4)_30%,rgba(0,0,0,0.05)_70%,rgba(0,0,0,0)_100%)]" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-sm md:text-lg text-red-400 px-2 py-1 rounded-full border border-red-800 bg-red-950/30 backdrop-blur-sm inline-block mb-2">
+                    Step 4: Consistent
+                  </p>
+                  <div className="relative">
+                    <div className="absolute -inset-4 bg-red-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <h2 className="relative text-lg md:text-3xl font-bold mb-3 z-10">
+                      <span className="bg-gradient-to-r from-red-800 via-red-500 to-red-800 text-transparent bg-clip-text group-hover:from-red-700 group-hover:via-red-400 group-hover:to-red-700 transition-all duration-300">
+                        Take Action & Keep It Going.
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    </h2>
+                  </div>
+                  <p className="text-sm md:text-xl text-white/90 leading-relaxed max-w-xl">
+                    Yes there are no overnight success, but kecepatan kamu bakal capai sukses dengan komunitas yang benar will be massive.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
           </div>
 
           {/* Enhanced Call to Action */}
