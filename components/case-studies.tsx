@@ -74,13 +74,13 @@ export default function CaseStudies() {
               
               <h2 className="mt-6 font-instrument-serif">
                 <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
-                  SHARED BY
+                  NEVER TRUST WORDS
                 </span>
                 <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2">
-                  perspective
+                  tapi lihat bukti sukses
                 </span>
                 <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
-                  OUR CLIENTS
+                  DARI MEREKA
                 </span>
               </h2>
             </motion.div>
@@ -191,19 +191,17 @@ export default function CaseStudies() {
             className="text-center mb-24"
           >
             <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
-              Featured Video
+              THOSE WHO TRUST IN CHANGES
             </span>
             
             <h2 className="mt-6 font-instrument-serif">
               <span className="block text-[2.5rem] sm:text-7xl leading-[1.1] text-neutral-900">
-                WATCH THE
+                9-DIGIT INCOME
               </span>
               <span className="block text-[2rem] sm:text-6xl italic font-light mt-2 text-neutral-800">
-                transformation
+                in 6 years
               </span>
-              <span className="block text-[2.5rem] sm:text-7xl uppercase mt-1">
-                JOURNEY
-              </span>
+              <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-neutral-300 to-transparent my-6" />
             </h2>
           </motion.div>
 
@@ -211,43 +209,33 @@ export default function CaseStudies() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-16 xl:-mx-24 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24"
+            className="relative max-w-[2000px] mx-auto px-4"
           >
-            <div className="relative max-w-[2000px] mx-auto">
-              <div className="relative aspect-video bg-white shadow-2xl">
-                <iframe
-                  src="https://www.youtube.com/embed/ewO-PvUV1go?controls=1&autoplay=0&rel=0&playsinline=1"
-                  className="absolute inset-0 w-full h-full z-20"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title="Transformation Journey"
-                />
+            <div className="relative aspect-video w-full">
+              <iframe
+                src="https://www.youtube.com/embed/ewO-PvUV1go?controls=1&autoplay=0&rel=0&playsinline=1"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Transformation Journey"
+              />
+            </div>
 
-                <div className="absolute top-0 left-0 w-24 h-24 border-l-2 border-t-2 border-neutral-200 z-30" />
-                <div className="absolute top-0 right-0 w-24 h-24 border-r-2 border-t-2 border-neutral-200 z-30" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 border-l-2 border-b-2 border-neutral-200 z-30" />
-                <div className="absolute bottom-0 right-0 w-24 h-24 border-r-2 border-b-2 border-neutral-200 z-30" />
-
-                <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white via-white/50 to-transparent z-30 pointer-events-none" />
-                <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white via-white/50 to-transparent z-30 pointer-events-none" />
+            <div className="mt-12 flex items-center justify-between max-w-screen-xl mx-auto">
+              <div className="flex items-center space-x-6">
+                <span className="text-xs tracking-[0.4em] text-neutral-500">JULIANA PARMADI</span>
+                <div className="w-[1px] h-4 bg-neutral-300" />
+                <span className="text-xs tracking-[0.4em] text-neutral-500">GRWN SEMBADA</span>
+                <div className="w-[1px] h-4 bg-neutral-300" />
+                <span className="text-xs tracking-[0.4em] text-neutral-500">CHRISTINA DIRJOHADI</span>
               </div>
+              <span className="text-xs tracking-[0.2em] text-neutral-400">2024</span>
+            </div>
 
-              <div className="mt-12 flex items-center justify-between max-w-screen-xl mx-auto px-4">
-                <div className="flex items-center space-x-6">
-                  <span className="text-xs tracking-[0.4em] text-neutral-500">WATCH THE</span>
-                  <div className="w-[1px] h-4 bg-neutral-300" />
-                  <span className="text-xs tracking-[0.4em] text-neutral-500">TRANSFORMATION</span>
-                  <div className="w-[1px] h-4 bg-neutral-300" />
-                  <span className="text-xs tracking-[0.4em] text-neutral-500">JOURNEY</span>
-                </div>
-                <span className="text-xs tracking-[0.2em] text-neutral-400">2024</span>
-              </div>
-
-              <div className="mt-20 text-center max-w-2xl mx-auto px-4">
-                <p className="text-sm tracking-wide text-neutral-600 leading-relaxed">
-                  Watch how our community members transform their lives and achieve extraordinary success through dedication and our proven system.
-                </p>
-              </div>
+            <div className="mt-20 text-center max-w-2xl mx-auto">
+              <p className="text-sm tracking-wide text-neutral-600 leading-relaxed">
+                Mereka yang berani memulai, percaya kepada apa yang mereka kerjakan, dan sekarang sudah sukses menghasilkan passive income 9-digit per bulan.
+              </p>
             </div>
           </motion.div>
         </div>

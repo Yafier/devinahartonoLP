@@ -64,26 +64,23 @@ export default function Benefits() {
       ref={containerRef}
       className="relative min-h-[400vh] bg-black"
     >
-      <div className="absolute top-[10vh] left-0 right-0 z-10">
+      <div className="absolute top-[3vh] left-0 right-0 z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="container mx-auto px-4 text-center"
         >
           <span className="text-xs tracking-[0.3em] text-white/70 uppercase">
-            What You'll Get
+            Inside our community
           </span>
           
           <h2 className="mt-6 font-instrument-serif">
             <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-white">
-              EXCLUSIVE
+              Can you start to Imagine?
             </span>
 
             <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2 text-white">
-              benefits worth
-            </span>
-            <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1 bg-gradient-to-r from-white via-white/90 to-white text-transparent bg-clip-text">
-              100JT+ PER YEAR
+              What can you achieve if you just start?
             </span>
           </h2>
         </motion.div>

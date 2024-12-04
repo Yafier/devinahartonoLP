@@ -7,30 +7,30 @@ import Image from "next/image";
 const problems = [
   {
     id: 1,
-    title: "Stuck in the Comfort Zone",
+    title: "Corporate Ladder Trap",
     location: "JAKARTA",
-    description: "Kerja 9-5, income terbatas, dan waktu habis untuk perusahaan. Deep inside, you know you're meant for something bigger. Ready for change?",
+    description: "Kerja 9-5, income terbatas, dan waktu habis untuk perusahaan. Waktu dan kerjaan di atur sama atasa, kita yang kerja kerjas, tapi mereka yang dapat penghargaan. Deep inside, you know you're meant for something bigger. Don't we all deserve something more?",
     image: "/thumb-dev.png"
   },
   {
     id: 2,
-    title: "Dream of Financial Freedom",
+    title: "Waktu kita itu terbatas",
     location: "SINGAPORE",
-    description: "Bayangkan punya passive income yang konsisten tanpa harus trading time for money. Di ALIFE, this isn't just a dream—it's our reality.",
+    description: "Time is money. You'll get it more when you'll become older. Instead of trading time for money why don't we let the money work for us. Buat apa? Buat bisa spend more time sama keluarga, ngelakuin hobby, atau bahkan buat kelarin masalah yang ada di hidup. ",
     image: "/thumb-dev.png"
   },
   {
     id: 3,
-    title: "Need a Proven System",
+    title: "Harus Mulai Dari Mana?",
     location: "BALI",
-    description: "Mau mulai tapi takut salah langkah? Our community has a tested system that's helped create multiple 6-7 figure earners. Your success is our blueprint.",
+    description: "Mau coba sesuatu yang baru, tapi bingung mau mulai dari mana? bisa dipercaya atau ngga? kesempatan nya bagus tapi resikonya terlalu besar. Terus perubahan dalam hidup kita mau mulai kapan yaa?",
     image: "/thumb-dev.png"
   },
   {
     id: 4,
-    title: "Looking for Real Mentorship",
+    title: "Bisnis itu Beresiko, Gabisa ambil resiko?",
     location: "SURABAYA",
-    description: "Stop following random advice. Join a community of high-achievers who've been where you are and achieved what you dream of. Real guidance, real results.",
+    description: "Pengen buka usaha sendiri, tapi liat teman buka usaha harus keluar puluhan hingga milyaran rupiah. Apalagi kalo gagal, mau ngapain? Sekarang mikir terus apa yang bisa kita lakuin, tapi waktu nya udah hampir habis. ",
     image: "/thumb-dev.png"
   }
 ];
@@ -52,13 +52,13 @@ export default function Problem() {
             
             <h2 className="mt-6 font-instrument-serif">
               <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
-                PERSPECTIVE
+                MASALAH 
               </span>
               <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2">
-                by
+                that we all
               </span>
               <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
-                OUR CLIENTS
+                FEEL BEFORE JOINING
               </span>
             </h2>
           </motion.div>
@@ -107,12 +107,12 @@ export default function Problem() {
             className="text-center mt-24"
           >
             <div className="max-w-2xl mx-auto">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-instrument-serif leading-snug text-neutral-800 mb-6">
-                Stop watching others succeed while you stay behind.
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-instrument-serif leading-snug text-neutral-800 mb-6 whitespace-nowrap max-w-4xl mx-auto">
+                Stop worrying about your future.
               </h3>
               <p className="text-neutral-600 leading-relaxed italic">
-                "Sementara kamu ragu, orang lain sudah melangkah maju. 
-                The time for change is now."
+                "Kamu takut, orang lain sudah mulai maju. 
+                Orang lain udah sukses, kamu baru mau mulai?""
               </p>
             </div>
           </motion.div>
