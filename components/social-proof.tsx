@@ -21,25 +21,25 @@ const testimonials = [
   {
     name: "Jessica Suwarsono",
     role: "Monthly Income: 100jt+ • Joined Alife 2020",
-    image: "/mariskakarsana.jpg",
+    image: "/jessica.jpg",
     quote: "Sejak join ALIFE aku merasakan perubahan hidup yg signifikan since now I can have flexible working hours."
   },
   {
     name: "Martha Teja",
     role: "3 Digit Monthly Income • Joined Alife 2019",
-    image: "/mariskakarsana.jpg",
+    image: "/martateja.jpg",
     quote: "Satu satunya komunitas yang kasi full support dari segi edukasi maupun entertainnya."
   },
   {
     name: "Shannon Subeno",
     role: "Monthly Income: 120jt+",
-    image: "/mariskakarsana.jpg",
+    image: "/shannon.png",
     quote: "Devina is a straightforward and nurturing leader. When it comes to other aspects of growing the business."
   },
   {
     name: "Anastasia Inez",
     role: "Monthly Income: 110jt+",
-    image: "/mariskakarsana.jpg",
+    image: "/anastasia.jpg",
     quote: "Environment yg positive, creative & smart! Income acceleration nya luar biasa dengan plenty of room for growth."
   }
 ];
