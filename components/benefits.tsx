@@ -261,11 +261,11 @@ export default function Benefits() {
 
         {/* Seamless transition overlay */}
         <motion.div 
-          className="absolute bottom-0 left-0 right-0 h-screen bg-black"
+          className="absolute bottom-0 left-0 right-0 h-screen bg-white"
           style={{
             opacity: useTransform(
               scrollYProgress,
-              [0.8, 0.95],  // Start fading in near the end
+              [0.7, 0.85],  // Adjusted timing to start and complete fade earlier
               [0, 1]
             )
           }}
