@@ -47,18 +47,18 @@ export default function Problem() {
             className="text-center mb-20"
           >
             <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
-              Shared by
+              Kita semua pernah ada di Posisi yang sama.
             </span>
             
             <h2 className="mt-6 font-instrument-serif">
               <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
-                MASALAH 
+                The Mindset that Holds Us Back.
               </span>
               <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2">
-                that we all
+                I Know You've
               </span>
               <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
-                FEEL BEFORE JOINING
+                Felt this Before.
               </span>
             </h2>
           </motion.div>
