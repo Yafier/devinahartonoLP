@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: "Gwen Sembada",
     role: "MDiT 4 Stars • Joined Alife 2019",
-    image: "/gwensembada.jpg",
+    image: "/gwenSembada.jpg",
     quote: "Alife has been a life-changing experience, offering not only financial growth but also incredible opportunities for personal development."
   },
   {
