@@ -82,11 +82,11 @@ const steps: Step[] = [
 export default function Transformation() {
   return (
     <section className="relative bg-neutral-100">
-      <div className="container mx-auto px-4 py-24 md:py-32">
+      <div className="container mx-auto px-4 pt-16 pb-12 md:pt-20 md:pb-16">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-16"
         >
           <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
             The Process
@@ -107,20 +107,8 @@ export default function Transformation() {
       </div>
 
       <div className="relative w-full space-y-1 md:space-y-0">
-        <div className="grid grid-cols-1 gap-1">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="relative h-[70vh] md:h-[80vh]"
-          >
-            <TransformationCard {...steps[0]} />
-          </motion.div>
-        </div>
-
-        <div className="h-1 md:h-2" />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
-          {steps.slice(1, 3).map((step, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+          {steps.slice(0, 3).map((step, index) => (
             <motion.div
               key={step.id}
               initial={{ opacity: 0, y: 20 }}
@@ -142,7 +130,7 @@ export default function Transformation() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="relative h-[50vh] md:h-[60vh]"
+              className="relative h-[60vh] md:h-[70vh]"
             >
               <TransformationCard {...step} />
             </motion.div>
@@ -150,7 +138,7 @@ export default function Transformation() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-24 md:py-32">
+      <div className="container mx-auto px-4 pt-16 pb-20 md:pt-20 md:pb-24">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
