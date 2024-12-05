@@ -26,9 +26,9 @@ const steps: Step[] = [
   {
     id: 1,
     step: "Step 01 — Exclusive Access",
-    title: "Private Mentoring with Devina",
+    title: "Private Mentoring",
     description: "Dapatkan akses langsung ke sesi mentoring private dengan Devina Hartono. Belajar dari pengalaman nyata transformasi dari introvert menjadi business leader.",
-    video: "/tablet.mp4",
+    video: "/mentor.mp4",
     type: "landscape", 
     tag: "EXCLUSIVE"
   },
@@ -37,7 +37,7 @@ const steps: Step[] = [
     step: "Step 02 — Elite Network",
     title: "High-Value Connections",
     description: "Bergabung dengan circle eksklusif para high achievers. Network dengan entrepreneurs yang sudah menghasilkan 8-9 digit income. Your network is your net worth.",
-    video: "/meeting.mp4",
+    video: "/network.mp4",
     type: "square",
     tag: "PREMIUM"
   },
@@ -46,16 +46,16 @@ const steps: Step[] = [
     step: "Step 03 — Expert Training",
     title: "International Speakers",
     description: "Akses ke training dari international speakers dan industry experts. Upgrade skillset dan mindset-mu dengan knowledge yang tidak bisa didapat di tempat lain.",
-    video: "/deal.mp4",
+    video: "/speaker.mp4",
     type: "landscape",
     tag: "GLOBAL"
   },
   {
     id: 4,
-    step: "Step 04 — Luxury Events",
-    title: "VIP Business Retreats",
-    description: "Exclusive business retreats di lokasi-lokasi premium. Network sambil menikmati pengalaman luxury yang memorable bersama komunitas high achievers.",
-    video: "/worker.mp4",
+    step: "Step 04 — Outside Events",
+    title: "More than just Business",
+    description: "Akses ke event-event yang tidak hanya tentang bisnis, tapi juga tentang lifestyle, entertainment, dan pengalaman yang luar biasa.",
+    video: "/tennis.mp4",
     type: "square",
     tag: "LUXURY"
   },
@@ -64,7 +64,7 @@ const steps: Step[] = [
     step: "Step 05 — Personal Growth",
     title: "Transformational Program",
     description: "Program transformasi personal yang sudah proven berhasil mengubah ribuan lives. Dari public speaking, leadership, hingga wealth management.",
-    video: "/meeting.mp4",
+    video: "/transformation.mp4",
     type: "landscape",
     tag: "GROWTH"
   },
@@ -73,7 +73,7 @@ const steps: Step[] = [
     step: "Step 06 — Business Support",
     title: "Complete System",
     description: "Akses ke sistem bisnis yang proven dan tim support dedicated. Mulai dari marketing, sales, hingga operational guidance untuk scale your business.",
-    video: "/tablet.mp4",
+    video: "/system.mp4",
     type: "square",
     tag: "SYSTEM"
   }
