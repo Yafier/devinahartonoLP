@@ -115,97 +115,90 @@ export default function CaseStudies() {
 
   return (
     <section className="py-24 md:py-32 relative bg-neutral-100">
-      <div className="px-4 md:px-0">
-        <div className="max-w-screen-2xl mx-auto">
-          <div className="max-w-[1400px] mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="text-center mb-20"
+      <div className="max-w-[1400px] mx-auto px-4 mb-20">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center"
+        >
+          <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
+            Don't Trust Our Words.
+          </span>
+          
+          <h2 className="mt-6 font-instrument-serif">
+            <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
+            But see the Transformation.
+            </span>
+            <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2">
+              Langsung dari mereka yang ada di dalamnya.
+            </span>
+          </h2>
+        </motion.div>
+      </div>
+
+      <div className="w-full overflow-hidden">
+        <Marquee 
+          className="py-4" 
+          pauseOnHover 
+          speed={10}
+        >
+          {cases.map((item: Case, index: number) => (
+            <motion.article
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="w-[300px] md:w-[450px] flex-shrink-0 px-2 md:px-3"
+              whileHover={{ scale: 1.02 }}
             >
-              <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
-                Don't Trust Our Words.
-              </span>
-              
-              <h2 className="mt-6 font-instrument-serif">
-                <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
-                But see the Transformation.
-                </span>
-                <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2">
-                  Langsung dari mereka yang ada di dalamnya.
-                </span>
-              </h2>
-            </motion.div>
-          </div>
-
-          <div className="relative mt-20">
-            <div className="absolute left-0 top-0 bottom-0 w-40 md:w-60 bg-gradient-to-r from-neutral-100 via-neutral-100/80 to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-40 md:w-60 bg-gradient-to-l from-neutral-100 via-neutral-100/80 to-transparent z-10" />
-
-            <Marquee 
-              className="py-4" 
-              pauseOnHover 
-              speed={10}
-            >
-              {cases.map((item: Case, index: number) => (
-                <motion.article
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="w-[240px] md:w-[380px] flex-shrink-0 px-2 md:px-6"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <div className="relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
-                    <div className="aspect-[3/4] relative overflow-hidden">
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                      
-                      <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full">
-                        <p className="text-[10px] md:text-xs tracking-[0.2em] text-neutral-600 uppercase">
-                          {item.category}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="p-3 md:p-6 h-[180px] md:h-[220px] flex flex-col justify-between">
-                      <div className="space-y-3">
-                        <div className="flex justify-between items-start">
-                          <h3 className="text-[11px] md:text-lg font-medium text-neutral-900">
-                            {item.name}
-                          </h3>
-                          <p className="text-[9px] md:text-xs text-neutral-500">
-                            {item.date}
-                          </p>
-                        </div>
-
-                        <p className="text-[9px] md:text-xs text-neutral-500">
-                          {item.position}
-                        </p>
-
-                        <p className="text-[9px] md:text-sm text-neutral-600 leading-relaxed line-clamp-2">
-                          {item.story}
-                        </p>
-                      </div>
-
-                      <div className="pt-3 border-t border-neutral-200">
-                        <p className="text-[9px] md:text-xs text-neutral-500">
-                          Monthly Income: 
-                          <span className="font-medium text-neutral-900 ml-1">{item.income}</span>
-                        </p>
-                      </div>
-                    </div>
+              <div className="relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+                <div className="aspect-[3/4] relative overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  
+                  <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full">
+                    <p className="text-[10px] md:text-xs tracking-[0.2em] text-neutral-600 uppercase">
+                      {item.category}
+                    </p>
                   </div>
-                </motion.article>
-              ))}
-            </Marquee>
-          </div>
-        </div>
+                </div>
+
+                <div className="p-3 md:p-6 h-[180px] md:h-[220px] flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-[11px] md:text-lg font-medium text-neutral-900">
+                        {item.name}
+                      </h3>
+                      <p className="text-[9px] md:text-xs text-neutral-500">
+                        {item.date}
+                      </p>
+                    </div>
+
+                    <p className="text-[9px] md:text-xs text-neutral-500">
+                      {item.position}
+                    </p>
+
+                    <p className="text-[9px] md:text-sm text-neutral-600 leading-relaxed line-clamp-2">
+                      {item.story}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-neutral-200">
+                    <p className="text-[9px] md:text-xs text-neutral-500">
+                      Monthly Income: 
+                      <span className="font-medium text-neutral-900 ml-1">{item.income}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </Marquee>
       </div>
 
       <div className="max-w-[1400px] mx-auto px-4">
