@@ -21,14 +21,69 @@ interface Case {
 
 const cases: Case[] = [
   {
-    name: "Michael Wijaya",
-    image: "/galaxy.mp4",
-    income: "Rp 150.000.000+",
-    yearsJoined: 2,
+    name: "Mariska Karsana",
+    image: "/mariskakarsana.jpg",
+    income: "Monthly Income: 300jt+",
+    yearsJoined: 5,
     position: "Senior Insurance Advisor",
-    story: "Dulu aku cuma karyawan biasa dengan gaji UMR. Sekarang? Income aku naik 10x lipat dalam 2 tahun aja! Semua berkat sistem dan support yang keren dari tim.",
-    englishStory: "From a minimum wage employee to a successful advisor. The amazing system and team support made it possible.",
-    date: "Jul 24, 2024",
+    story: "Semenjak join Alife menemukan IKIGAI — purpose dan goal dalam menjalankan bisnis",
+    englishStory: "Since joining Alife, I found IKIGAI — purpose and goal in running the business.",
+    date: "Joined Alife 2019",
+    category: "Success Story",
+  },
+  {
+    name: "Gwen Sembada",
+    image: "/gwenSembada.jpg",
+    income: "MDiT 4 Stars • Joined Alife 2019",
+    yearsJoined: 5,
+    position: "Senior Insurance Advisor",
+    story: "Alife has been a life-changing experience, offering not only financial growth but also incredible opportunities for personal development.",
+    englishStory: "Alife has been a life-changing experience, offering not only financial growth but also incredible opportunities for personal development.",
+    date: "Joined Alife 2019",
+    category: "Success Story",
+  },
+  {
+    name: "Jessica Suwarsono",
+    image: "/jessica.jpg",
+    income: "Monthly Income: 100jt+ • Joined Alife 2020",
+    yearsJoined: 4,
+    position: "Senior Insurance Advisor",
+    story: "Sejak join ALIFE aku merasakan perubahan hidup yg signifikan since now I can have flexible working hours.",
+    englishStory: "Since joining ALIFE, I felt a significant life change since now I can have flexible working hours.",
+    date: "Joined Alife 2020",
+    category: "Success Story",
+  },
+  {
+    name: "Martha Teja",
+    image: "/martateja.jpg",
+    income: "3 Digit Monthly Income • Joined Alife 2019",
+    yearsJoined: 5,
+    position: "Senior Insurance Advisor",
+    story: "Satu satunya komunitas yang kasi full support dari segi edukasi maupun entertainnya. Gw photographer yang rela tutup bisnis dan sekarang fokus di alife. Krn disini gw bisa bertumbuh baik secara personal maupun income yang jauh lebih sustain. Jd kerja nga cuma untuk diri sendiri tapi bisa jadi berkat untuk orang lain juga.",
+    englishStory: "The only community that provides full support for education and entertainment. A photographer who willingly closed their business to focus on Alife. Working not just for ourselves but to be a blessing for others.",
+    date: "Joined Alife 2019",
+    category: "Success Story",
+  },
+  {
+    name: "Shannon Subeno",
+    image: "/shannon.png",
+    income: "Monthly Income: 120jt+",
+    yearsJoined: 4,
+    position: "Senior Insurance Advisor",
+    story: "Devina is a straightforward and nurturing leader. When it comes to other aspects of growing the business.",
+    englishStory: "Devina is a straightforward and nurturing leader. When it comes to other aspects of growing the business.",
+    date: "Joined Alife 2020",
+    category: "Success Story",
+  },
+  {
+    name: "Anastasia Inez",
+    image: "/anastasia.jpg",
+    income: "Monthly Income: 110jt+",
+    yearsJoined: 5,
+    position: "Senior Insurance Advisor",
+    story: "Environment yg positive, creative & smart! Income acceleration nya luar biasa dengan plenty of room for growth.",
+    englishStory: "Environment yg positive, creative & smart! Income acceleration nya luar biasa dengan plenty of room for growth.",
+    date: "Joined Alife 2019",
     category: "Success Story",
   },
   // Add more cases as needed
@@ -90,18 +145,18 @@ export default function CaseStudies() {
             <div className="absolute left-0 top-0 bottom-0 w-40 md:w-60 bg-gradient-to-r from-neutral-100 via-neutral-100/80 to-transparent z-10" />
             <div className="absolute right-0 top-0 bottom-0 w-40 md:w-60 bg-gradient-to-l from-neutral-100 via-neutral-100/80 to-transparent z-10" />
 
-            <Marquee className="py-4" pauseOnHover>
+            <Marquee className="py-4" pauseOnHover speed={20}>
               {cases.map((item: Case, index: number) => (
                 <motion.article
                   key={index}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="w-[400px] flex-shrink-0 px-3 md:px-6"
+                  className="w-[240px] md:w-[380px] flex-shrink-0 px-2 md:px-6"
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className="relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
-                    <div className="aspect-[4/5] relative overflow-hidden">
+                    <div className="aspect-[3/4] relative overflow-hidden">
                       <Image
                         src={item.image}
                         alt={item.name}
@@ -111,44 +166,37 @@ export default function CaseStudies() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                       
                       <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full">
-                        <p className="text-xs tracking-[0.2em] text-neutral-600 uppercase">
+                        <p className="text-[10px] md:text-xs tracking-[0.2em] text-neutral-600 uppercase">
                           {item.category}
                         </p>
                       </div>
                     </div>
 
-                    <div className="p-6 space-y-4">
-                      <div className="flex justify-between items-center">
-                        <h3 className="text-2xl sm:text-3xl font-instrument-serif group-hover:text-neutral-700 transition-colors">
-                          {item.name}
-                        </h3>
-                        <p className="text-xs tracking-[0.2em] text-neutral-500 uppercase">
-                          {item.date}
+                    <div className="p-3 md:p-6 h-[180px] md:h-[220px] flex flex-col justify-between">
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-start">
+                          <h3 className="text-[11px] md:text-lg font-medium text-neutral-900">
+                            {item.name}
+                          </h3>
+                          <p className="text-[9px] md:text-xs text-neutral-500">
+                            {item.date}
+                          </p>
+                        </div>
+
+                        <p className="text-[9px] md:text-xs text-neutral-500">
+                          {item.position}
+                        </p>
+
+                        <p className="text-[9px] md:text-sm text-neutral-600 leading-relaxed line-clamp-2">
+                          {item.story}
                         </p>
                       </div>
 
-                      <p className="text-xs tracking-[0.2em] text-neutral-500 uppercase">
-                        {item.position}
-                      </p>
-
-                      <p className="text-neutral-600 leading-relaxed line-clamp-3">
-                        {item.story}
-                      </p>
-                      
-                      <p className="text-sm text-neutral-500 italic line-clamp-2">
-                        {item.englishStory}
-                      </p>
-
-                      <div className="pt-4 flex justify-between items-center border-t border-neutral-200">
-                        <p className="text-sm text-neutral-500">
-                          Monthly Income: <span className="font-semibold text-neutral-900">{item.income}</span>
+                      <div className="pt-3 border-t border-neutral-200">
+                        <p className="text-[9px] md:text-xs text-neutral-500">
+                          Monthly Income: 
+                          <span className="font-medium text-neutral-900 ml-1">{item.income}</span>
                         </p>
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          className="text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors"
-                        >
-                          Read More →
-                        </motion.button>
                       </div>
                     </div>
                   </div>
