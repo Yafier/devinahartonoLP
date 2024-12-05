@@ -10,27 +10,27 @@ import { IoPlayCircle } from "react-icons/io5";
 const videos = [
   {
     id: 1,
-    src: "/LangkahPertama.mp4",
+    src: "/pendaftaran.mp4",
     type: "video/mp4"
   },
   {
     id: 2,
-    src: "/astronout.mp4",
+    src: "/interview2.mp4",
     type: "video/mp4"
   },
   {
     id: 3,
-    src: "/galaxy.mp4",
+    src: "/orientasi.mp4",
     type: "video/mp4"
   },
   {
     id: 4,
-    src: "/astronout.mp4",
+    src: "/mentoring.mp4",
     type: "video/mp4"
   },
   {
     id: 5,
-    src: "/galaxy.mp4",
+    src: "/tumbuhbersama.mp4",
     type: "video/mp4"
   }
 ];
@@ -121,9 +121,9 @@ export default function Included() {
 
         <div className="container mx-auto px-4 relative">
           {/* Desktop View */}
-          <div className="hidden md:flex relative max-w-6xl mx-auto flex-row gap-8">
+          <div className="hidden md:flex relative max-w-7xl mx-auto flex-row gap-16">
             {/* Timeline Section */}
-            <div className="relative lg:w-1/2">
+            <div className="relative lg:w-2/5 pr-8">
               {/* Timeline Line */}
               <div className="absolute left-[20px] md:left-[28px] top-[40px] bottom-[40px] w-[2px]">
                 <div className="absolute inset-0 bg-gradient-to-b from-neutral-200 via-neutral-300 to-neutral-200" />
@@ -197,41 +197,45 @@ export default function Included() {
               </div>
             </div>
 
-            {/* Video Section */}
-            <div className="lg:w-1/2 relative aspect-[4/3] rounded-xl overflow-hidden group">
-              <div className="absolute -inset-2 bg-gradient-radial from-neutral-300/30 via-neutral-300/5 to-transparent blur-2xl group-hover:from-neutral-300/40 transition-all duration-700" />
-              
-              <div className="relative h-full">
-                <AnimatePresence mode="wait" initial={false}>
-                  <motion.div
-                    key={activeNumber}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.1 }}
-                    className="relative h-full"
-                  >
-                    <video
-                      key={`video-${activeNumber}`}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    >
-                      <source src={videos[activeNumber - 1].src} type={videos[activeNumber - 1].type} />
-                    </video>
-                  </motion.div>
-                </AnimatePresence>
+            {/* Video Section - Updated with larger size */}
+            <div className="lg:w-3/5 relative">
+              <div className="sticky top-[35%] pt-12">
+                <div className="relative w-full pt-[100%] rounded-3xl overflow-hidden group">
+                  <div className="absolute -inset-1.5 bg-gradient-radial from-neutral-300/30 via-neutral-300/5 to-transparent blur-xl group-hover:from-neutral-300/40 transition-all duration-700" />
+                  
+                  <div className="absolute inset-0">
+                    <AnimatePresence mode="wait" initial={false}>
+                      <motion.div
+                        key={activeNumber}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.1 }}
+                        className="absolute inset-0"
+                      >
+                        <video
+                          key={`video-${activeNumber}`}
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className="absolute inset-0 w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                        >
+                          <source src={videos[activeNumber - 1].src} type={videos[activeNumber - 1].type} />
+                        </video>
+                      </motion.div>
+                    </AnimatePresence>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Mobile View */}
-          <div className="md:hidden">
+          {/* Mobile View - Updated */}
+          <div className="md:hidden space-y-16">
             {features.map((feature) => (
-              <div key={feature.id} className="mb-16">
-                <div className="flex items-start gap-4 relative pl-10 mb-6">
+              <div key={feature.id} className="space-y-6">
+                <div className="flex items-start gap-4 relative pl-10">
                   <div 
                     className={`absolute left-0 w-7 h-7 rounded-lg flex items-center justify-center 
                       bg-gradient-to-br from-zinc-900 via-zinc-800 to-black border-zinc-700/40 
@@ -272,13 +276,13 @@ export default function Included() {
                   </div>
                 </div>
 
-                <div className="w-full aspect-video rounded-xl overflow-hidden">
+                <div className="relative w-full pt-[100%] rounded-2xl overflow-hidden shadow-lg">
                   <video
                     autoPlay
                     muted
                     loop
                     playsInline
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                   >
                     <source src={videos[feature.id - 1].src} type={videos[feature.id - 1].type} />
                   </video>
