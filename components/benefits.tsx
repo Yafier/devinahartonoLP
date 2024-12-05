@@ -71,7 +71,7 @@ export default function Benefits() {
           className="container mx-auto px-4 text-center"
         >
           <span className="text-xs tracking-[0.3em] text-white/70 uppercase">
-            Inside our community
+            Now Is the Time
           </span>
           
           <h2 className="mt-6 font-instrument-serif">

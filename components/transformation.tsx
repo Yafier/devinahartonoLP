@@ -25,57 +25,57 @@ interface VideoCardProps {
 const steps: Step[] = [
   {
     id: 1,
-    step: "Step 01 — Foundation",
-    title: "Mindset Upgrade",
-    description: "The only thing holding you back is your mind. Di ALIFE, kami akan membuka perspektif kamu tentang what's truly possible.",
+    step: "Step 01 — Exclusive Access",
+    title: "Private Mentoring with Devina",
+    description: "Dapatkan akses langsung ke sesi mentoring private dengan Devina Hartono. Belajar dari pengalaman nyata transformasi dari introvert menjadi business leader.",
     video: "/tablet.mp4",
-    type: "landscape",
-    tag: "MINDSET"
+    type: "landscape", 
+    tag: "EXCLUSIVE"
   },
   {
     id: 2,
-    step: "Step 02 — Growth",
-    title: "Learn from the Best",
-    description: "Belajar langsung dari successful entrepreneurs yang sudah menghasilkan 6-7 digit income per bulan. Real mentors, real results.",
+    step: "Step 02 — Elite Network",
+    title: "High-Value Connections",
+    description: "Bergabung dengan circle eksklusif para high achievers. Network dengan entrepreneurs yang sudah menghasilkan 8-9 digit income. Your network is your net worth.",
     video: "/meeting.mp4",
     type: "square",
-    tag: "MENTORSHIP"
+    tag: "PREMIUM"
   },
   {
     id: 3,
-    step: "Step 03 — Action",
-    title: "Take Massive Action",
-    description: "Stop overthinking, start doing. Our proven system will guide you through every step, ensuring your success journey starts right away.",
+    step: "Step 03 — Expert Training",
+    title: "International Speakers",
+    description: "Akses ke training dari international speakers dan industry experts. Upgrade skillset dan mindset-mu dengan knowledge yang tidak bisa didapat di tempat lain.",
     video: "/deal.mp4",
     type: "landscape",
-    tag: "ACTION"
+    tag: "GLOBAL"
   },
   {
     id: 4,
-    step: "Step 04 — Growth",
-    title: "Build Your Empire",
-    description: "Join a supportive community of high-achievers. Your success accelerates when you're surrounded by people who inspire you.",
+    step: "Step 04 — Luxury Events",
+    title: "VIP Business Retreats",
+    description: "Exclusive business retreats di lokasi-lokasi premium. Network sambil menikmati pengalaman luxury yang memorable bersama komunitas high achievers.",
     video: "/worker.mp4",
     type: "square",
-    tag: "GROWTH"
+    tag: "LUXURY"
   },
   {
     id: 5,
-    step: "Step 05 — Scale",
-    title: "Scale Your Success",
-    description: "Leverage our proven systems and network to multiply your income. From 6 to 7 figures, we'll show you the way.",
+    step: "Step 05 — Personal Growth",
+    title: "Transformational Program",
+    description: "Program transformasi personal yang sudah proven berhasil mengubah ribuan lives. Dari public speaking, leadership, hingga wealth management.",
     video: "/meeting.mp4",
     type: "landscape",
-    tag: "SCALE"
+    tag: "GROWTH"
   },
   {
     id: 6,
-    step: "Step 06 — Legacy",
-    title: "Create Impact",
-    description: "Transform not just your life, but help others achieve their dreams. Build a legacy that matters.",
+    step: "Step 06 — Business Support",
+    title: "Complete System",
+    description: "Akses ke sistem bisnis yang proven dan tim support dedicated. Mulai dari marketing, sales, hingga operational guidance untuk scale your business.",
     video: "/tablet.mp4",
     type: "square",
-    tag: "LEGACY"
+    tag: "SYSTEM"
   }
 ];
 
@@ -89,18 +89,18 @@ export default function Transformation() {
           className="text-center mb-12 md:mb-16"
         >
           <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
-            The Process
+            What to Expect.
           </span>
           
           <h2 className="mt-6 font-instrument-serif">
             <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
-              TRANSFORM
+              
             </span>
             <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2">
-              your life with
+              The Experience & Knowledge
             </span>
             <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
-              PROVEN STEPS
+              That You Will Get.
             </span>
           </h2>
         </motion.div>

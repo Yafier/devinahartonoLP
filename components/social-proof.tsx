@@ -62,13 +62,13 @@ export default function SocialProof() {
           
           <h2 className="mt-6 font-instrument-serif">
             <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
-              MEET OUR
+              Sukses Itu Untuk Semua Orang.
             </span>
             <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2 text-neutral-800">
-              rising
+              Semua yang Berani Mencoba. 
             </span>
             <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
-              STARS
+              Pasti akhirnya Reach Their Goals.
             </span>
           </h2>
           
@@ -78,7 +78,7 @@ export default function SocialProof() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-neutral-600 max-w-xl mx-auto text-sm md:text-base"
           >
-            Meet our rising stars and their incredible journeys
+            Ini Bukti Nyata dari Mereka yang Percaya. 
           </motion.p>
         </motion.div>
 
