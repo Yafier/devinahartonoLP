@@ -7,33 +7,33 @@ const problems = [
   {
     id: 1,
     title: "Corporate Ladder Trap",
-    location: "JAKARTA",
+    location: "Problem 1",
     description: "Kerja 9-5, income terbatas, dan waktu habis untuk perusahaan. Waktu dan kerjaan di atur sama atasa, kita yang kerja kerjas, tapi mereka yang dapat penghargaan. Deep inside, you know you're meant for something bigger. Don't we all deserve something more?",
-    video: "/cta-v.mp4",
+    video: "/stuck.mp4",
     type: "video/mp4"
   },
   {
     id: 2,
     title: "Waktu kita itu terbatas",
-    location: "SINGAPORE",
+    location: "Problem 2",
     description: "Time is money. You'll get it more when you'll become older. Instead of trading time for money why don't we let the money work for us. Buat apa? Buat bisa spend more time sama keluarga, ngelakuin hobby, atau bahkan buat kelarin masalah yang ada di hidup. ",
-    video: "/cta-v.mp4",
+    video: "/old.mp4",
     type: "video/mp4"
   },
   {
     id: 3,
     title: "Harus Mulai Dari Mana?",
-    location: "BALI",
+    location: "Problem 3",
     description: "Mau coba sesuatu yang baru, tapi bingung mau mulai dari mana? bisa dipercaya atau ngga? kesempatan nya bagus tapi resikonya terlalu besar. Terus perubahan dalam hidup kita mau mulai kapan yaa?",
-    video: "/cta-v.mp4",
+    video: "/confused.mp4",
     type: "video/mp4"
   },
   {
     id: 4,
     title: "Bisnis itu Beresiko, Gabisa ambil resiko?",
-    location: "SURABAYA",
+    location: "Problem 4",
     description: "Pengen buka usaha sendiri, tapi liat teman buka usaha harus keluar puluhan hingga milyaran rupiah. Apalagi kalo gagal, mau ngapain? Sekarang mikir terus apa yang bisa kita lakuin, tapi waktu nya udah hampir habis. ",
-    video: "/cta-v.mp4",
+    video: "/bankrupt.mp4",
     type: "video/mp4"
   }
 ];
