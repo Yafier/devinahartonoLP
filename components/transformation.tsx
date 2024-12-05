@@ -106,8 +106,8 @@ export default function Transformation() {
         </motion.div>
       </div>
 
-      <div className="relative w-full space-y-1 md:space-y-0">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+      <div className="relative w-full space-y-0.5 md:space-y-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5">
           {steps.slice(0, 3).map((step, index) => (
             <motion.div
               key={step.id}
@@ -121,9 +121,9 @@ export default function Transformation() {
           ))}
         </div>
 
-        <div className="h-1 md:h-2" />
+        <div className="h-0.5 md:h-1"/>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5">
           {steps.slice(3, 6).map((step, index) => (
             <motion.div
               key={step.id}
