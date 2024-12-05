@@ -145,7 +145,11 @@ export default function CaseStudies() {
             <div className="absolute left-0 top-0 bottom-0 w-40 md:w-60 bg-gradient-to-r from-neutral-100 via-neutral-100/80 to-transparent z-10" />
             <div className="absolute right-0 top-0 bottom-0 w-40 md:w-60 bg-gradient-to-l from-neutral-100 via-neutral-100/80 to-transparent z-10" />
 
-            <Marquee className="py-4" pauseOnHover speed={20}>
+            <Marquee 
+              className="py-4" 
+              pauseOnHover 
+              speed={10}
+            >
               {cases.map((item: Case, index: number) => (
                 <motion.article
                   key={index}
