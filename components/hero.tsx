@@ -267,18 +267,14 @@ export default function Hero() {
           {/* Video Title Section */}
           <div className="text-center mb-16 max-w-4xl mx-auto px-4">
             <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
-              Saksikan Kisah Kami
+              JIKA KAMU INGIN BERUBAH
             </span>
-            
             <h2 className="mt-6 font-instrument-serif">
-              <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
-                TEMUKAN
-              </span>
               <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2 text-neutral-800">
-                perjalanan menuju
+                Luangkan Waktumu untuk Mendengarkan
               </span>
               <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
-                KESUKSESAN
+                Apa yang Ingin Aku Sampaikan..
               </span>
             </h2>
           </div>
@@ -304,7 +300,7 @@ export default function Hero() {
             {/* Caption */}
             <div className="absolute -bottom-8 left-4 right-4">
               <div className="flex items-center justify-between max-w-screen-2xl mx-auto">
-                <span className="text-xs tracking-[0.2em] text-neutral-500">KOMUNITAS ALIFE</span>
+                <span className="text-xs tracking-[0.2em] text-neutral-500">DEVINA HARTONO</span>
                 <span className="text-xs tracking-[0.2em] text-neutral-500">2024</span>
               </div>
             </div>

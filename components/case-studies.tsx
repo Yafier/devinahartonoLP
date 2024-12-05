@@ -69,18 +69,15 @@ export default function CaseStudies() {
               className="text-center mb-20"
             >
               <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase">
-                Success Stories
+                Don't Trust Our Words.
               </span>
               
               <h2 className="mt-6 font-instrument-serif">
                 <span className="block text-[2rem] sm:text-6xl leading-[1.1] text-neutral-900">
-                  SHARED BY
+                But see the Transformation.
                 </span>
                 <span className="block text-[1.8rem] sm:text-5xl italic font-light mt-2">
-                  perspective
-                </span>
-                <span className="block text-[2.2rem] sm:text-6xl uppercase mt-1">
-                  OUR CLIENTS
+                  Langsung dari mereka yang ada di dalamnya.
                 </span>
               </h2>
             </motion.div>
@@ -195,15 +192,13 @@ export default function CaseStudies() {
             </span>
             
             <h2 className="mt-6 font-instrument-serif">
-              <span className="block text-[2.5rem] sm:text-7xl leading-[1.1] text-neutral-900">
-                WATCH THE
+            <span className="block text-[2.5rem] sm:text-7xl uppercase mt-1">
+                The top success.
               </span>
               <span className="block text-[2rem] sm:text-6xl italic font-light mt-2 text-neutral-800">
-                transformation
+                Testimonials.
               </span>
-              <span className="block text-[2.5rem] sm:text-7xl uppercase mt-1">
-                JOURNEY
-              </span>
+              
             </h2>
           </motion.div>
 

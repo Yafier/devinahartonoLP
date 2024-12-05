@@ -18,10 +18,11 @@ export default function Home() {
       <Hero />
       <Problem />
       <Benefits />
-      <CaseStudies />
+      <SocialProof />
       <Included />
       <Transformation />
-      <SocialProof />
+      
+      <CaseStudies />
       <FAQ />
       <CTA />
       <Footer />
