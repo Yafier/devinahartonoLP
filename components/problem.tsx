@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { SilverGradientDivider } from "./ui/silver-gradient-divider";
-import Image from "next/image";
 
 const problems = [
   {
@@ -10,28 +9,32 @@ const problems = [
     title: "Corporate Ladder Trap",
     location: "JAKARTA",
     description: "Kerja 9-5, income terbatas, dan waktu habis untuk perusahaan. Waktu dan kerjaan di atur sama atasa, kita yang kerja kerjas, tapi mereka yang dapat penghargaan. Deep inside, you know you're meant for something bigger. Don't we all deserve something more?",
-    image: "/thumb-dev.png"
+    video: "/cta-v.mp4",
+    type: "video/mp4"
   },
   {
     id: 2,
     title: "Waktu kita itu terbatas",
     location: "SINGAPORE",
     description: "Time is money. You'll get it more when you'll become older. Instead of trading time for money why don't we let the money work for us. Buat apa? Buat bisa spend more time sama keluarga, ngelakuin hobby, atau bahkan buat kelarin masalah yang ada di hidup. ",
-    image: "/thumb-dev.png"
+    video: "/cta-v.mp4",
+    type: "video/mp4"
   },
   {
     id: 3,
     title: "Harus Mulai Dari Mana?",
     location: "BALI",
     description: "Mau coba sesuatu yang baru, tapi bingung mau mulai dari mana? bisa dipercaya atau ngga? kesempatan nya bagus tapi resikonya terlalu besar. Terus perubahan dalam hidup kita mau mulai kapan yaa?",
-    image: "/thumb-dev.png"
+    video: "/cta-v.mp4",
+    type: "video/mp4"
   },
   {
     id: 4,
     title: "Bisnis itu Beresiko, Gabisa ambil resiko?",
     location: "SURABAYA",
     description: "Pengen buka usaha sendiri, tapi liat teman buka usaha harus keluar puluhan hingga milyaran rupiah. Apalagi kalo gagal, mau ngapain? Sekarang mikir terus apa yang bisa kita lakuin, tapi waktu nya udah hampir habis. ",
-    image: "/thumb-dev.png"
+    video: "/cta-v.mp4",
+    type: "video/mp4"
   }
 ];
 
@@ -63,7 +66,7 @@ export default function Problem() {
             </h2>
           </motion.div>
 
-          {/* Problems Grid - Magazine Layout with Images */}
+          {/* Problems Grid - Updated with Videos */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
             {problems.map((problem, index) => (
               <motion.article
@@ -73,14 +76,17 @@ export default function Problem() {
                 transition={{ delay: index * 0.1 }}
                 className="relative group"
               >
-                {/* Image Container */}
-                <div className="aspect-[4/5] relative overflow-hidden mb-6">
-                  <Image
-                    src={problem.image}
-                    alt={problem.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                {/* Video Container - Replaced Image */}
+                <div className="aspect-[4/5] relative overflow-hidden mb-6 rounded-xl">
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  >
+                    <source src={problem.video} type={problem.type} />
+                  </video>
                 </div>
 
                 {/* Content */}

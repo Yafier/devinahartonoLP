@@ -10,7 +10,7 @@ import { IoPlayCircle } from "react-icons/io5";
 const videos = [
   {
     id: 1,
-    src: "/Included 1.mp4",
+    src: "/LangkahPertama.mp4",
     type: "video/mp4"
   },
   {
