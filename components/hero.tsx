@@ -7,6 +7,7 @@ import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { useScroll, useTransform, useSpring } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const requirements = [
   "Tanpa Pengalaman Sebelumnya",
@@ -52,13 +53,16 @@ export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const videoRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
   });
 
-
+  const navigateToContact = () => {
+    router.push('/contact');
+  };
 
   return (
     <div ref={containerRef} className="relative min-h-screen overflow-hidden bg-gradient-to-b from-neutral-100 to-white">
@@ -153,8 +157,10 @@ export default function Hero() {
             transition={{ delay: 0.8 }}
           >
             <Button 
+              onClick={navigateToContact}
               className="px-6 sm:px-8 py-6 sm:py-9 text-base sm:text-lg tracking-[0.2em] bg-neutral-900 
-              text-white hover:bg-neutral-800 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl"
+              text-white hover:bg-neutral-800 active:scale-95 transition-all duration-300 rounded-full 
+              shadow-lg hover:shadow-xl focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2"
             >
               JOIN SEKARANG
             </Button>
